@@ -1,4 +1,3 @@
-/* General Settings */
 body {
   background-color: #121212;
   background-image: url('background.jpg');
@@ -12,65 +11,76 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* Header Section */
 header {
   text-align: center;
-  padding: 60px 20px 30px 20px;
+  padding: 50px 20px 20px 20px;
 }
 
-/* Profile Image */
 .profile-img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  object-position: top; /* Important: focus top part */
+  width: 180px;
+  height: 180px;
+  object-fit: contain; /* Adjust so head is not cropped */
   border-radius: 50%;
-  margin-bottom: 20px;
-  border: 3px solid #00bcd4;
-}
-
-/* Text Animations */
-h1, h2, h3 {
-  animation: slideIn 1s ease-out;
+  margin-bottom: 15px;
+  border: 2px solid #00bcd4;
+  box-shadow: 0px 4px 8px rgba(0, 188, 212, 0.5);
+  animation: zoomIn 1.5s ease;
 }
 
 h1 {
-  font-size: 2.8em;
-  margin: 10px 0;
+  font-size: 2.5em;
+  margin-bottom: 0;
+  animation: slideIn 1s ease-out;
+}
+
+h2, h3 {
+  font-size: 2em;
+  animation: slideIn 1.2s ease-out;
 }
 
 p {
-  font-size: 1.1em;
+  animation: fadeIn 2s;
 }
 
-/* Buttons */
+.button-group {
+  margin-top: 15px;
+}
+
 .contact-btn, .btn {
   display: inline-block;
-  margin: 15px 10px 0 10px;
-  padding: 10px 22px;
+  margin: 10px;
+  padding: 12px 24px;
   background-color: #00bcd4;
-  color: #121212;
-  border-radius: 5px;
-  text-decoration: none;
+  color: black;
+  border-radius: 30px;
   font-weight: bold;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.contact-btn:hover, .btn:hover {
-  background-color: #218838;
+.btn {
+  background-color: #28a745;
   color: white;
-  transform: scale(1.05);
 }
 
-/* Sections */
+.contact-btn:hover {
+  background-color: #0196a6;
+  transform: scale(1.1);
+}
+
+.btn:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
 section {
-  padding: 40px 20px;
+  padding: 60px 20px;
   max-width: 900px;
   margin: auto;
+  background: rgba(18, 18, 18, 0.8);
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0px 8px 15px rgba(0,0,0,0.3);
 }
 
 .projects ul {
@@ -79,21 +89,11 @@ section {
 }
 
 .projects li {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  border-top: 1px solid #333;
-}
-
-/* Links */
 a {
   color: #00bcd4;
-  transition: color 0.3s;
 }
 
 a:hover {
@@ -101,51 +101,87 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Scroll to Top Button */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-top: 1px solid #333;
+}
+
+/* Scroll to top button */
 .scroll-to-top {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  padding: 10px 15px;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
   background-color: #007bff;
   color: white;
   font-size: 22px;
   border-radius: 50%;
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 .scroll-to-top:hover {
   background-color: #0056b3;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
-/* Keyframes */
+/* Fade in animation */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
+/* Slide in animation */
 @keyframes slideIn {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0); }
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
 }
 
-/* Responsive Design */
+/* Zoom in animation */
+@keyframes zoomIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 16px;
   }
-  header {
-    padding: 40px 10px 20px 10px;
-  }
-  .profile-img {
-    width: 130px;
-    height: 130px;
-  }
+
   .btn, .contact-btn {
-    padding: 8px 15px;
+    padding: 10px 18px;
     font-size: 16px;
+  }
+
+  header {
+    padding: 30px 10px;
   }
 }
