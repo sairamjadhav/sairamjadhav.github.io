@@ -1,100 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Typewriter Script -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sairam Jadhav - AI-ML Enthusiast</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
 </head>
 <body>
+    <header>
+        <img src="profile.jpg" alt="Sairam Jadhav" class="profile-img">
+        <h1 class="typewriter"></h1>
+        <p class="subtitle"></p>
 
-  <header>
-    <img src="profile.jpg" alt="Profile Photo" class="profile-img">
-    <h1>Hello, I'm [Your Name]</h1>
-    <h2><span class="typed-text"></span></h2>
-    <p>I design and build stunning websites and applications. 🚀</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://x.com/sairam_jadhav_?s=21" target="_blank">
+                <img src="twitter.png" alt="Twitter">
+            </a>
+            <a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
 
-    <div class="button-group">
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="contact-btn">Contact Me</a>
-    </div>
-  </header>
+        <a href="mailto:sairamjadhav12@gmail.com" class="contact-btn">Contact Me</a>
+        <a href="resume.pdf" download="Resume" class="btn">Download Resume</a>
+        <a href="#" class="scroll-to-top">↑</a>
+    </header>
 
-  <section id="about" class="reveal">
-    <h2>About Me</h2>
-    <p>I'm a full-stack developer with a strong passion for creating elegant solutions, beautiful designs, and high-performance web applications. I love exploring new technologies and continually growing my skillset.</p>
-  </section>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Final-year B.Tech student passionate about Artificial Intelligence and Machine Learning, blending technical expertise with communication and management skills to bridge technology and business seamlessly.</p>
+    </section>
 
-  <section id="projects" class="projects reveal">
-    <h2>My Projects</h2>
-    <div class="project-cards">
-      <div class="project-card">
-        <h3>Project One</h3>
-        <p>A web app for managing daily tasks efficiently and easily.</p>
-        <a href="#">View Project</a>
-      </div>
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="card" data-tilt>
+                <h3>Drowsiness Detection within the ADAS Framework</h3>
+                <p>Real-time Driver Drowsiness Detection using CNN models.</p>
+            </div>
+            <div class="card" data-tilt>
+                <h3>Healthcare System for Diabetes Detection</h3>
+                <p>Two-stage ML system using Catboost & LightGBM.</p>
+            </div>
+            <div class="card" data-tilt>
+                <h3>Denoising in Medical Imaging</h3>
+                <p>Deep Learning models (Diffusion, GANs) for healthcare image enhancement.</p>
+            </div>
+            <div class="card" data-tilt>
+                <h3>Sentiment Analysis on Social Media</h3>
+                <p>Analyzing Twitter and Reddit data using NLP.</p>
+            </div>
+            <div class="card" data-tilt>
+                <h3>Market Trends Prediction</h3>
+                <p>Stock market prediction using LSTM models.</p>
+            </div>
+        </div>
+    </section>
 
-      <div class="project-card">
-        <h3>Project Two</h3>
-        <p>An e-commerce platform with smooth checkout and payment integration.</p>
-        <a href="#">View Project</a>
-      </div>
+    <section class="contact">
+        <h2>Connect with Me</h2>
+        <p>Email: <a href="mailto:sairamjadhav12@gmail.com">sairamjadhav12@gmail.com</a></p>
+    </section>
 
-      <div class="project-card">
-        <h3>Project Three</h3>
-        <p>Portfolio website built using HTML, CSS, and modern design principles.</p>
-        <a href="#">View Project</a>
-      </div>
-    </div>
-  </section>
+    <footer>
+        <p>&copy; 2025 Sairam Jadhav</p>
+    </footer>
 
-  <section id="contact" class="reveal">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 [Your Name]. All Rights Reserved.</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank" class="social instagram">Instagram</a>
-      <a href="https://x.com/sairam_jadhav_?s=21" target="_blank" class="social twitter">Twitter</a>
-      <a href="https://www.linkedin.com/in/sairamjadhav" target="_blank" class="social linkedin">LinkedIn</a>
-    </div>
-  </footer>
-
-  <a href="#" class="scroll-to-top">↑</a>
-
-  <!-- Scroll reveal script -->
-  <script>
-    const reveals = document.querySelectorAll(".reveal");
-    window.addEventListener("scroll", () => {
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 100;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
-    });
-
-    // Typed.js Script
-    var typed = new Typed(".typed-text", {
-      strings: ["Passionate Developer", "Creative Coder", "Web Designer", "Lifelong Learner"],
-      typeSpeed: 80,
-      backSpeed: 50,
-      loop: true
-    });
-  </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
