@@ -5,23 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sairam Jadhav - AI-ML Enthusiast</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Sairam Jadhav - AI-ML Enthusiast Portfolio">
+  <meta property="og:title" content="Sairam Jadhav - AI-ML Enthusiast">
+  <meta property="og:description" content="Final-year Engineering student passionate about AI-ML, blending tech and business expertise.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="profile.jpg">
+  <meta property="og:url" content="https://your-username.github.io">
 </head>
-<body>
 
+<body>
   <header>
     <img src="profile.jpg" alt="Sairam Jadhav" class="profile-img">
     <h1>Sairam Jadhav</h1>
     <p>AI-ML Enthusiast | Final Year Engineering Student</p>
-    <a href="mailto:sairamjadhav12@gmail.com" class="contact-btn">Contact Me</a>
-    <a href="resume.pdf" download="Resume" class="btn">Download Resume</a>
+    <div class="button-group">
+      <a href="mailto:sairamjadhav12@gmail.com" class="contact-btn">Contact Me</a>
+      <a href="resume.pdf" download class="btn">Download Resume</a>
+    </div>
+    <a href="#" class="scroll-to-top">↑</a>
   </header>
 
-  <section class="about">
+  <section class="about reveal">
     <h2>About Me</h2>
     <p>Final-year B.Tech student passionate about Artificial Intelligence and Machine Learning, blending technical expertise with communication and management skills to bridge technology and business seamlessly.</p>
   </section>
 
-  <section class="projects">
+  <section class="projects reveal">
     <h2>Projects</h2>
     <ul>
       <li><strong>Drowsiness Detection within the ADAS Framework</strong><br>Real-time Driver Drowsiness Detection using CNN models.</li>
@@ -32,17 +41,38 @@
     </ul>
   </section>
 
-  <section class="contact">
+  <section class="contact reveal">
     <h2>Connect with Me</h2>
     <p>Email: <a href="mailto:sairamjadhav12@gmail.com">sairamjadhav12@gmail.com</a></p>
     <p><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank">LinkedIn Profile</a></p>
+    <form action="mailto:sairamjadhav12@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Sairam Jadhav | <a href="mailto:sairamjadhav12@gmail.com">Email Me</a> | <a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank">LinkedIn</a></p>
+    <p>&copy; 2025 Sairam Jadhav</p>
   </footer>
 
-  <a href="#" class="scroll-to-top">↑</a>
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
 
+    window.addEventListener("scroll", function() {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    });
+  </script>
 </body>
 </html>
