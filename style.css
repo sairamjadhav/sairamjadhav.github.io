@@ -60,3 +60,37 @@ footer {
     font-size: 0.9em;
     border-top: 1px solid #333;
 }
+html {
+  scroll-behavior: smooth;
+}
+/* Fade-in animation for page load */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+body {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Slide-in animation for headers */
+@keyframes slideIn {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+h1, h2, h3 {
+  animation: slideIn 1s ease-out;
+}
+/* Hover effect for links */
+a:hover {
+  color: #ff6347; /* Change to a highlight color */
+  text-decoration: underline;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #007bff;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
