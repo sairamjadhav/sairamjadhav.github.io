@@ -2,69 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sairam Jadhav - AI-ML Enthusiast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Sairam Jadhav - AI-ML Enthusiast Portfolio">
-  <meta property="og:title" content="Sairam Jadhav - AI-ML Enthusiast">
-  <meta property="og:description" content="Final-year Engineering student passionate about AI-ML, blending tech and business expertise.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="profile.jpg">
-  <meta property="og:url" content="https://your-username.github.io">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Typewriter Script -->
 </head>
-
 <body>
+
   <header>
-    <img src="profile.jpg" alt="Sairam Jadhav" class="profile-img">
-    <h1>Sairam Jadhav</h1>
-    <p>AI-ML Enthusiast | Final Year Engineering Student</p>
+    <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+    <h1>Hello, I'm [Your Name]</h1>
+    <h2><span class="typed-text"></span></h2>
+    <p>I design and build stunning websites and applications. 🚀</p>
+
     <div class="button-group">
-      <a href="mailto:sairamjadhav12@gmail.com" class="contact-btn">Contact Me</a>
-      <a href="resume.pdf" download class="btn">Download Resume</a>
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="contact-btn">Contact Me</a>
     </div>
-    <a href="#" class="scroll-to-top">↑</a>
   </header>
 
-  <section class="about reveal">
+  <section id="about" class="reveal">
     <h2>About Me</h2>
-    <p>Final-year B.Tech student passionate about Artificial Intelligence and Machine Learning, blending technical expertise with communication and management skills to bridge technology and business seamlessly.</p>
+    <p>I'm a full-stack developer with a strong passion for creating elegant solutions, beautiful designs, and high-performance web applications. I love exploring new technologies and continually growing my skillset.</p>
   </section>
 
-  <section class="projects reveal">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Drowsiness Detection within the ADAS Framework</strong><br>Real-time Driver Drowsiness Detection using CNN models.</li>
-      <li><strong>Healthcare System for Diabetes Detection</strong><br>Two-stage ML system using Catboost & LightGBM.</li>
-      <li><strong>Denoising in Medical Imaging</strong><br>Deep Learning models (Diffusion, GANs) for healthcare image enhancement.</li>
-      <li><strong>Sentiment Analysis on Social Media</strong><br>Analyzing Twitter and Reddit data using NLP.</li>
-      <li><strong>Market Trends Prediction</strong><br>Stock market prediction using LSTM models.</li>
-    </ul>
+  <section id="projects" class="projects reveal">
+    <h2>My Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>A web app for managing daily tasks efficiently and easily.</p>
+        <a href="#">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>An e-commerce platform with smooth checkout and payment integration.</p>
+        <a href="#">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Project Three</h3>
+        <p>Portfolio website built using HTML, CSS, and modern design principles.</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
   </section>
 
-  <section class="contact reveal">
-    <h2>Connect with Me</h2>
-    <p>Email: <a href="mailto:sairamjadhav12@gmail.com">sairamjadhav12@gmail.com</a></p>
-    <p><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank">LinkedIn Profile</a></p>
-    <form action="mailto:sairamjadhav12@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+  <section id="contact" class="reveal">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Sairam Jadhav</p>
+    <p>© 2025 [Your Name]. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank" class="social instagram">Instagram</a>
+      <a href="https://x.com/sairam_jadhav_?s=21" target="_blank" class="social twitter">Twitter</a>
+      <a href="https://www.linkedin.com/in/sairamjadhav" target="_blank" class="social linkedin">LinkedIn</a>
+    </div>
   </footer>
 
+  <a href="#" class="scroll-to-top">↑</a>
+
+  <!-- Scroll reveal script -->
   <script>
     const reveals = document.querySelectorAll(".reveal");
-
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", () => {
       for (let i = 0; i < reveals.length; i++) {
         const windowHeight = window.innerHeight;
         const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 150;
+        const elementVisible = 100;
 
         if (elementTop < windowHeight - elementVisible) {
           reveals[i].classList.add("active");
@@ -73,6 +86,15 @@
         }
       }
     });
+
+    // Typed.js Script
+    var typed = new Typed(".typed-text", {
+      strings: ["Passionate Developer", "Creative Coder", "Web Designer", "Lifelong Learner"],
+      typeSpeed: 80,
+      backSpeed: 50,
+      loop: true
+    });
   </script>
+
 </body>
 </html>
