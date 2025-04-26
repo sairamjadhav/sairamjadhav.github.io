@@ -38,8 +38,15 @@ h2 {
     color: #333;
 }
 
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
 .socials a {
-    margin: 0 10px;
+    display: inline-block;
 }
 
 .social-icon {
