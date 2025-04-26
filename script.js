@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Portfolio loaded with pro animations!');
+    console.log('Portfolio loaded successfully!');
 
     const sections = document.querySelectorAll('.fade-in');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.classList.add('visible');
+                entry.target.classList.add('visible');
             }
         });
     }, { threshold: 0.1 });
