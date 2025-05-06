@@ -53,7 +53,8 @@ function scrollToTop() {
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
   loadSection('home');
-  window.addEventListener('load', function() {
+  // Hide preloader after 2 seconds to ensure it doesn't get stuck
+  setTimeout(() => {
     document.getElementById('preloader').style.display = 'none';
-  });
+  }, 2000);
 });
