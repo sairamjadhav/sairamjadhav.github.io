@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sairam Jadhav | AI Odyssey</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="preloader"></div>
   <!-- NAVIGATION -->
   <nav class="navbar">
     <ul>
@@ -25,10 +27,10 @@
       <div class="intro-wrap">
         <img src="profile.jpg" alt="Profile" class="profile-pic">
         <div class="intro-text">
-          <h1>Welcome to My AI Odyssey!</h1>
-          <p>As a final-year engineering student, I’m fueled by an insatiable passion for Artificial Intelligence & Machine Learning. To me, AI isn’t just code or algorithms—it’s the art of teaching machines to see, think, and create, unlocking infinite possibilities for a smarter, more connected world. My journey is one of curiosity and innovation, where every dataset is a puzzle, every model a story, and every breakthrough a step toward transforming industries.</p>
-          <p>From building neural networks that decipher images to crafting NLP models that understand human emotions, I thrive at the intersection of mathematics, creativity, and technology. My portfolio showcases projects that blend cutting-edge techniques with real-world impact, reflecting my dedication to pushing boundaries and solving complex challenges. Whether it’s predicting trends, generating art, or optimizing systems, I’m driven to explore the endless horizons of AI.</p>
-          <p>Join me as I navigate this exciting frontier, turning data into insights and ideas into reality. Let’s shape the future, one model at a time!</p>
+          <h1><span id="typewriter"></span></h1>
+          <p data-sr-id="1">As a final-year engineering student, I’m fueled by an insatiable passion for Artificial Intelligence & Machine Learning. To me, AI isn’t just code or algorithms—it’s the art of teaching machines to see, think, and create, unlocking infinite possibilities for a smarter, more connected world. My journey is one of curiosity and innovation, where every dataset is a puzzle, every model a story, and every breakthrough a step toward transforming industries.</p>
+          <p data-sr-id="2">From building neural networks that decipher images to crafting NLP models that understand human emotions, I thrive at the intersection of mathematics, creativity, and technology. My portfolio showcases projects that blend cutting-edge techniques with real-world impact, reflecting my dedication to pushing boundaries and solving complex challenges. Whether it’s predicting trends, generating art, or optimizing systems, I’m driven to explore the endless horizons of AI.</p>
+          <p data-sr-id="3">Join me as I navigate this exciting frontier, turning data into insights and ideas into reality. Let’s shape the future, one model at a time!</p>
         </div>
       </div>
 
@@ -45,19 +47,19 @@
       <div class="connect-wrap" data-aos="fade-up" data-aos-delay="400">
         <h2>Connect with Me</h2>
         <ul class="socials">
-          <li><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a></li>
-          <li><a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><img src="instagram.png" alt="Instagram"></a></li>
-          <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><img src="x.png" alt="X"></a></li>
+          <li><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-twitter"></i></a></li>
         </ul>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section" data-aos="fade-up" style="background-image: url('projects-bg.jpg'); background-size: cover; background-position: center;">
+    <section id="projects" class="section" data-aos="fade-up">
       <h2>Projects</h2>
       <ul class="project-list">
         <li data-aos="fade-up" data-aos-delay="100">
-          <svg class="project-icon" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 5l6 10H6l6-10z"/></svg>
+          <svg class="project-icon" viewBox="0 0 24 24"><path d="M20 10h-3V8h-2v2h-3l-2-2H8l-2 2H3v2h3l2 2h2l2-2h3v2h2v-2h3v-2zM8 14v2H6v-2H4v2H2v2h2v2h2v-2h2v2h2v-2H8v-2H6v2H4v-2h2v-2H8zm8 0v2h-2v-2h-2v2h-2v2h2v2h2v-2h2v2h2v-2h-2v-2h2v-2h-2z"/></svg>
           <div>
             <h3>Drowsiness Detection within the ADAS Framework for Accident Prevention Using Deep Learning</h3>
             <p>Implemented a real-time Driver Drowsiness Detection System using CNN-based deep learning models, designed to monitor facial cues and alert drivers to prevent accidents caused by fatigue.</p>
@@ -65,34 +67,34 @@
           </div>
         </li>
         <li data-aos="fade-up" data-aos-delay="200">
-          <svg class="project-icon" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 5l6 10H6l6-10z"/></svg>
+          <svg class="project-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10c0 5.5 4.5 10 10 10s10-4.5 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
           <div>
             <h3>Two Stage Healthcare System For Diabetes Detection Using Ensemble Models</h3>
-            <p>Designed a two-stage healthcare system for early diabetes prediction, integrating ensemble learning techniques to improve diagnostic accuracy. The system first screens for potential risk factors, followed by refined predictive modeling for timely and effective intervention.</p>
+            <p>Designed a two-stage healthcare system for early diabetes prediction, integrating ensemble learning techniques to improve diagnostic accuracy.</p>
             <p><strong>Key Skills:</strong> Machine Learning, CatBoost, LightGBM</p>
           </div>
         </li>
         <li data-aos="fade-up" data-aos-delay="300">
-          <svg class="project-icon" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 5l6 10H6l6-10z"/></svg>
+          <svg class="project-icon" viewBox="0 0 24 24"><path d="M21 3H3v18h18V3zm-2 16H5V5h14v14zM10 7H8v2h2V7zm0 4H8v2h2v-2zm0 4H8v2h2v-2zm4-8h-2v2h2V7zm0 4h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
           <div>
             <h3>Denoising in Medical Imaging Using Deep Learning</h3>
-            <p>Developed a deep learning model for denoising medical images, enhancing image quality and accuracy for improved diagnostics and analysis in healthcare applications.</p>
+            <p>Developed a deep learning model for denoising medical images, enhancing image quality and accuracy for improved diagnostics.</p>
             <p><strong>Key Skills:</strong> Deep Learning, Diffusion Models, GANs</p>
           </div>
         </li>
         <li data-aos="fade-up" data-aos-delay="400">
-          <svg class="project-icon" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 5l6 10H6l6-10z"/></svg>
+          <svg class="project-icon" viewBox="0 0 24 24"><path d="M21 3H3v18h18V3zm-2 16H5V5h14v14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/></svg>
           <div>
             <h3>Sentiment Analysis on Twitter and Reddit Comments Using NLP</h3>
-            <p>Conducted sentiment analysis on Twitter and Reddit comments using NLP techniques, extracting insights from user opinions to understand public sentiment and trends.</p>
+            <p>Conducted sentiment analysis on Twitter and Reddit comments using NLP techniques to understand public sentiment and trends.</p>
             <p><strong>Key Skills:</strong> Machine Learning, NLP</p>
           </div>
         </li>
         <li data-aos="fade-up" data-aos-delay="500">
-          <svg class="project-icon" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 5l6 10H6l6-10z"/></svg>
+          <svg class="project-icon" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/></svg>
           <div>
             <h3>Predicting Market Trends with LSTM</h3>
-            <p>Developed a stock price prediction model using LSTM to capture sequential dependencies and predict future stock prices with improved accuracy. The model leverages time-series data to provide trend insights, supporting data-driven investment strategies.</p>
+            <p>Developed a stock price prediction model using LSTM to capture sequential dependencies and predict future stock prices.</p>
             <p><strong>Key Skills:</strong> Time Series Analysis, LSTM</p>
           </div>
         </li>
@@ -100,7 +102,7 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="section" data-aos="fade-up" style="background-image: url('skills-bg.jpg'); background-size: cover; background-position: center;">
+    <section id="skills" class="section" data-aos="fade-up">
       <h2>Skills</h2>
       <h3>Programming & Tools</h3>
       <ul class="skill-list">
@@ -140,7 +142,7 @@
     </section>
 
     <!-- ACADEMICS -->
-    <section id="academics" class="section" data-aos="fade-up" style="background-image: url('academics-bg.jpg'); background-size: cover; background-position: center;">
+    <section id="academics" class="section" data-aos="fade-up">
       <h2>Academics</h2>
       <ul class="academics-list">
         <li><strong>MIT Academy of Engineering (2021–2025)</strong> – CGPA: 8.41/10</li>
@@ -150,7 +152,10 @@
     </section>
   </main>
 
+  <button id="back-to-top" onclick="scrollToTop()">Top</button>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="script.js"></script>
 </body>
 </html>
