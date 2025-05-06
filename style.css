@@ -11,6 +11,13 @@ body {
   color: #e0e0e0;
   overflow-x: hidden;
   line-height: 1.6;
+  animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Preloader */
@@ -133,6 +140,14 @@ main {
   font-size: 1.1rem;
   margin-bottom: 20px;
   max-width: 800px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.intro-text p.sr-active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Feedback */
@@ -257,6 +272,14 @@ main {
   margin-bottom: 15px;
   padding-left: 20px;
   position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.skill-list li.sr-active, .academics-list li.sr-active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .skill-list li:before, .academics-list li:before {
@@ -278,6 +301,9 @@ h3 {
   font-size: 1.5rem;
   color: #e0e0e0;
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Back to Top */
