@@ -3,239 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sairam Jadhav Portfolio</title>
-  <!-- Google Fonts -->
+  <title>Home | Sairam Jadhav</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="navbar">
+  <!-- NAVBAR -->
+  <nav class="navbar fade-in">
     <div class="logo">Sairam Jadhav</div>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#academics">Academics</a></li>
-      <li><a href="#interests">Interests</a></li>
-      <li><a href="#accomplishments">Accomplishments</a></li>
-      <li><a href="#feedback">Feedback</a></li>
-      <li><a href="#connect">Connect</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="academics.html">Academics</a></li>
     </ul>
   </nav>
 
-  <!-- HEADER / INTRO -->
-  <header>
-    <div class="header-content">
-      <div class="profile-container">
-        <img src="profile.jpg" alt="Sairam Jadhav" class="profile-img">
-      </div>
-      <div class="intro">
-        <h1>Welcome to My AI Odyssey!</h1>
-        <p>
-          As a final-year engineering student, I’m fueled by an insatiable passion for Artificial Intelligence,
-          Machine Learning, Deep Learning, and Data Science. To me, AI isn’t just code or algorithms—it’s the art
-          of teaching machines to see, think, and create, unlocking infinite possibilities for a smarter, more connected world.
-          My journey is one of curiosity and innovation, where every dataset is a puzzle, every model a story,
-          and every breakthrough a step toward transforming industries.<br><br>
-          From building neural networks that decipher images to crafting NLP models that understand human emotions,
-          I thrive at the intersection of mathematics, creativity, and technology. My portfolio showcases projects that blend
-          cutting-edge techniques with real-world impact, reflecting my dedication to pushing boundaries and solving complex challenges.
-          Whether it’s predicting trends, generating art, or optimizing systems, I’m driven to explore the endless horizons of AI.<br><br>
-          Join me as I navigate this exciting frontier, turning data into insights and ideas into reality.
-          Let’s shape the future, one model at a time!
-        </p>
-      </div>
+  <!-- INTRO -->
+  <header class="fade-in">
+    <div class="intro">
+      <h1>Welcome to My AI Odyssey!</h1>
+      <p>
+        As a final-year engineering student, I’m fueled by an insatiable passion for Artificial Intelligence &amp; Machine Learning.
+        To me, AI isn’t just code or algorithms—it’s the art of teaching machines to see, think, and create, unlocking infinite
+        possibilities for a smarter, more connected world. My journey is one of curiosity and innovation, where every dataset
+        is a puzzle, every model a story, and every breakthrough a step toward transforming industries.
+      </p>
+      <p>
+        From building neural networks that decipher images to crafting NLP models that understand human emotions, I thrive at the
+        intersection of mathematics, creativity, and technology. My portfolio showcases projects that blend cutting-edge techniques
+        with real-world impact, reflecting my dedication to pushing boundaries and solving complex challenges. Whether it’s
+        predicting trends, generating art, or optimizing systems, I’m driven to explore the endless horizons of AI.
+      </p>
+      <p>
+        Join me as I navigate this exciting frontier, turning data into insights and ideas into reality. Let’s shape the future,
+        one model at a time!
+      </p>
     </div>
   </header>
 
-  <main>
-    <!-- SKILLS -->
-    <section id="skills" class="fade-in">
-      <h2>Skills</h2>
-      <!-- 1. Programming and Tools -->
-      <h3>Programming &amp; Tools</h3>
-      <ul class="skill-list">
-        <li><i class="fab fa-python"></i> Python (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch)</li>
-        <li><i class="fas fa-database"></i> SQL</li>
-        <li><i class="fab fa-github"></i> Git &amp; GitHub</li>
-        <li><i class="fas fa-code"></i> Jupyter Notebook</li>
-      </ul>
-      <!-- 2. Machine Learning -->
-      <h3>Machine Learning</h3>
-      <ul class="skill-list">
-        <li>Supervised Learning (Regression, Classification)</li>
-        <li>Unsupervised Learning (Clustering, PCA)</li>
-        <li>Feature Engineering &amp; Model Evaluation</li>
-        <li>Hyperparameter Tuning (Grid/Random Search)</li>
-      </ul>
-      <!-- 3. Deep Learning -->
-      <h3>Deep Learning</h3>
-      <ul class="skill-list">
-        <li>Neural Networks &amp; CNNs</li>
-        <li>Transfer Learning (VGG, ResNet)</li>
-        <li>Basic NLP (Word2Vec, BERT)</li>
-      </ul>
-      <!-- 4. Data Science -->
-      <h3>Data Science</h3>
-      <ul class="skill-list">
-        <li>Exploratory Data Analysis (Matplotlib, Seaborn)</li>
-        <li>Data Wrangling &amp; Visualization</li>
-      </ul>
-      <!-- 5. Math & Statistics -->
-      <h3>Mathematics &amp; Statistics</h3>
-      <ul class="skill-list">
-        <li>Linear Algebra &amp; Probability</li>
-        <li>Optimization (Gradient Descent)</li>
-      </ul>
-      <!-- 6. Cloud & Deployment Basics -->
-      <h3>Cloud &amp; Deployment</h3>
-      <ul class="skill-list">
-        <li>Flask &amp; Streamlit</li>
-        <li>AWS / GCP / Azure (Free Tiers)</li>
-      </ul>
-      <!-- 7. Specialized Areas -->
-      <h3>Specialized AI Areas</h3>
-      <ul class="skill-list">
-        <li>Computer Vision (YOLOv5)</li>
-        <li>NLP (Hugging Face)</li>
-        <li>Generative AI (GANs, Stable Diffusion)</li>
-      </ul>
-      <!-- 8. Frameworks & Libraries -->
-      <h3>Key Frameworks</h3>
-      <ul class="skill-list">
-        <li>Scikit-learn</li>
-        <li>TensorFlow / PyTorch</li>
-        <li>Hugging Face</li>
-        <li>OpenCV</li>
-      </ul>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="fade-in">
-      <h2>Projects</h2>
-      <ul class="projects-list">
-        <li>
-          <i class="fas fa-car-side"></i>
-          <strong>Drowsiness Detection (ADAS)</strong>
-          <p>Real-time driver drowsiness detection using CNN-based models (ResNet, VGG) to prevent fatigue-related accidents.</p>
-        </li>
-        <li>
-          <i class="fas fa-heart"></i>
-          <strong>Two-Stage Diabetes Detection</strong>
-          <p>Ensemble learning (CatBoost, LightGBM) for early diabetes screening and refined predictive modeling.</p>
-        </li>
-        <li>
-          <i class="fas fa-image"></i>
-          <strong>Medical Imaging Denoising</strong>
-          <p>Diffusion models &amp; GANs to enhance medical image clarity for precise diagnostics.</p>
-        </li>
-        <li>
-          <i class="fas fa-comments"></i>
-          <strong>Sentiment Analysis</strong>
-          <p>NLP on Twitter &amp; Reddit comments to extract public sentiment trends.</p>
-        </li>
-        <li>
-          <i class="fas fa-chart-line"></i>
-          <strong>Market Trend Prediction</strong>
-          <p>LSTM networks for time-series analysis and stock price forecasting.</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ACADEMICS -->
-    <section id="academics" class="fade-in">
-      <h2>Academics</h2>
-      <ul class="academics-list">
-        <li>
-          <strong>MIT Academy of Engineering, Pune (2021–2025)</strong><br>
-          B.Tech in Electronics &amp; Telecommunication Engineering, CGPA: 8.41/10
-        </li>
-        <li>
-          <strong>Nutan Vidyamandir, Nashik (2021)</strong><br>
-          HSC (MSBSHSE), 91.33%
-        </li>
-        <li>
-          <strong>Strawberry English Medium School, Ahmednagar (2019)</strong><br>
-          SSC (CBSE), 91%
-        </li>
-      </ul>
-    </section>
-
-    <!-- INTERESTS -->
-    <section id="interests" class="fade-in">
-      <h2>Interests</h2>
-      <div class="interests-grid">
-        <div class="interest-item">
-          <img src="icons/deep_learning.png" alt="Deep Learning">
-          <span>Deep Learning</span>
-        </div>
-        <div class="interest-item">
-          <img src="icons/nlp.png" alt="NLP">
-          <span>Natural Language Processing</span>
-        </div>
-        <div class="interest-item">
-          <img src="icons/computer_vision.png" alt="Computer Vision">
-          <span>Computer Vision</span>
-        </div>
-        <div class="interest-item">
-          <img src="icons/data_analysis.png" alt="Data Analysis">
-          <span>Data Analysis</span>
-        </div>
-        <div class="interest-item">
-          <img src="icons/statistics.png" alt="Statistics">
-          <span>Statistics</span>
-        </div>
-        <div class="interest-item">
-          <img src="icons/cloud_computing.png" alt="Cloud">
-          <span>Cloud Computing</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACCOMPLISHMENTS -->
-    <section id="accomplishments" class="fade-in">
-      <h2>Accomplishments</h2>
-      <div class="certification">
-        <h3>Google AI-ML Certification</h3>
-        <p>Expertise in ML fundamentals, model building, cloud deployment. Real-world AI applications.</p>
-      </div>
-      <div class="certification">
-        <h3>Microsoft AI Skills Challenge</h3>
-        <p>Hands-on with AI tools &amp; frameworks. Solved practical problems effectively.</p>
-      </div>
-      <div class="certification">
-        <h3>Altair Data Science Certification</h3>
-        <p>Proficient in data analytics, statistical modeling, visualization. Business insights delivery.</p>
-      </div>
-      <div class="certification">
-        <h3>Power BI for Data Analytics</h3>
-        <p>Mastered dashboards, reports &amp; data visualization for actionable insights.</p>
-      </div>
-      <div class="certification">
-        <h3>MATLAB Onramp</h3>
-        <p>Foundations in MATLAB scripting, matrix ops &amp; data visualization.</p>
-      </div>
-      <div class="certification">
-        <h3>NPTEL Intro to Internet of Things</h3>
-        <p>IoT architecture, sensor data &amp; connectivity for smart systems.</p>
-      </div>
-    </section>
-
-    <!-- FEEDBACK -->
-    <section id="feedback" class="fade-in">
-      <h2>Feedback</h2>
-      <form class="feedback-form" action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="_replyto" placeholder="Your Email" required>
-        <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
-        <button type="submit">Send Feedback</button>
-      </form>
-    </section>
-  </main>
+  <!-- FEEDBACK -->
+  <section id="feedback" class="fade-in">
+    <h2>Feedback</h2>
+    <form class="feedback-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Feedback</button>
+    </form>
+  </section>
 
   <!-- CONNECT -->
   <section id="connect" class="fade-in socials">
@@ -246,11 +63,6 @@
       <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
     </ul>
   </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Sairam Jadhav
-  </footer>
 
   <script src="script.js"></script>
 </body>
