@@ -1,16 +1,11 @@
-// Fade-in Nav & Header on load
-window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.navbar, header').forEach(el => el.classList.add('visible'));
-});
-
-// Fade-in on scroll using IntersectionObserver
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      io.unobserve(e.target);
-    }
+// Show only one section at a time
+function loadSection(id) {
+  document.querySelectorAll('.section').forEach(sec => {
+    sec.classList.toggle('active', sec.id === id);
   });
-}, { threshold: 0.1 });
+}
 
-document.querySelectorAll('section').forEach(sec => io.observe(sec));
+// Initialize: show home
+document.addEventListener('DOMContentLoaded', () => {
+  loadSection('home');
+});
