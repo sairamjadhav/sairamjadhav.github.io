@@ -3,66 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | Sairam Jadhav</title>
+  <title>Sairam Jadhav | AI Odyssey</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar fade-in">
-    <div class="logo">Sairam Jadhav</div>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
     <ul>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="academics.html">Academics</a></li>
+      <li><a href="#" onclick="loadSection('home')">Home</a></li>
+      <li><a href="#" onclick="loadSection('projects')">Projects</a></li>
+      <li><a href="#" onclick="loadSection('skills')">Skills</a></li>
+      <li><a href="#" onclick="loadSection('academics')">Academics</a></li>
     </ul>
   </nav>
 
-  <!-- INTRO -->
-  <header class="fade-in">
-    <div class="intro">
-      <h1>Welcome to My AI Odyssey!</h1>
-      <p>
-        As a final-year engineering student, I’m fueled by an insatiable passion for Artificial Intelligence &amp; Machine Learning.
-        To me, AI isn’t just code or algorithms—it’s the art of teaching machines to see, think, and create, unlocking infinite
-        possibilities for a smarter, more connected world. My journey is one of curiosity and innovation, where every dataset
-        is a puzzle, every model a story, and every breakthrough a step toward transforming industries.
-      </p>
-      <p>
-        From building neural networks that decipher images to crafting NLP models that understand human emotions, I thrive at the
-        intersection of mathematics, creativity, and technology. My portfolio showcases projects that blend cutting-edge techniques
-        with real-world impact, reflecting my dedication to pushing boundaries and solving complex challenges. Whether it’s
-        predicting trends, generating art, or optimizing systems, I’m driven to explore the endless horizons of AI.
-      </p>
-      <p>
-        Join me as I navigate this exciting frontier, turning data into insights and ideas into reality. Let’s shape the future,
-        one model at a time!
-      </p>
-    </div>
-  </header>
+  <main>
+    <!-- HOME -->
+    <section id="home" class="section active">
+      <div class="intro-wrap">
+        <img src="profile.png" alt="Profile" class="profile-pic">
+        <div class="intro-text">
+          <h1>Welcome to My AI Odyssey!</h1>
+          <p>As a final-year engineering student, I’m fueled by an insatiable passion for Artificial Intelligence &amp; Machine Learning. To me, AI isn’t just code or algorithms—it’s the art of teaching machines to see, think, and create, unlocking infinite possibilities for a smarter, more connected world. My journey is one of curiosity and innovation, where every dataset is a puzzle, every model a story, and every breakthrough a step toward transforming industries.</p>
+          <p>From building neural networks that decipher images to crafting NLP models that understand human emotions, I thrive at the intersection of mathematics, creativity, and technology. My portfolio showcases projects that blend cutting-edge techniques with real-world impact, reflecting my dedication to pushing boundaries and solving complex challenges. Whether it’s predicting trends, generating art, or optimizing systems, I’m driven to explore the endless horizons of AI.</p>
+          <p>Join me as I navigate this exciting frontier, turning data into insights and ideas into reality. Let’s shape the future, one model at a time!</p>
+        </div>
+      </div>
 
-  <!-- FEEDBACK -->
-  <section id="feedback" class="fade-in">
-    <h2>Feedback</h2>
-    <form class="feedback-form" action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
-      <button type="submit">Send Feedback</button>
-    </form>
-  </section>
+      <div class="feedback-wrap">
+        <h2>Feedback</h2>
+        <form class="feedback-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="_replyto" placeholder="Your Email" required>
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Feedback</button>
+        </form>
+      </div>
 
-  <!-- CONNECT -->
-  <section id="connect" class="fade-in socials">
-    <h2>Connect with Me</h2>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
-    </ul>
-  </section>
+      <div class="connect-wrap">
+        <h2>Connect with Me</h2>
+        <ul class="socials">
+          <li><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a></li>
+          <li><a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><img src="instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><img src="x.png" alt="X"></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <ul class="project-list">
+        <li>
+          <img src="project1.png" alt="">
+          <div>
+            <h3>Drowsiness Detection within the ADAS Framework for Accident Prevention Using Deep Learning</h3>
+            <p>Implemented a real-time Driver Drowsiness Detection System using CNN-based deep learning models, designed to monitor facial cues and alert drivers to prevent accidents caused by fatigue.</p>
+            <p><strong>Key Skills:</strong> Deep Learning, OpenCV, ResNet, VGG, Transfer Learning</p>
+          </div>
+        </li>
+        <li>
+          <img src="project2.png" alt="">
+          <div>
+            <h3>Two Stage Healthcare System For Diabetes Detection Using Ensemble Models</h3>
+            <p>Designed a two-stage healthcare system for early diabetes prediction, integrating ensemble learning techniques to improve diagnostic accuracy. The system first screens for potential risk factors, followed by refined predictive modeling for timely and effective intervention.</p>
+            <p><strong>Key Skills:</strong> Machine Learning, CatBoost, LightGBM</p>
+          </div>
+        </li>
+        <li>
+          <img src="project3.png" alt="">
+          <div>
+            <h3>Denoising in Medical Imaging Using Deep Learning</h3>
+            <p>Developed a deep learning model for denoising medical images, enhancing image quality and accuracy for improved diagnostics and analysis in healthcare applications.</p>
+            <p><strong>Key Skills:</strong> Deep Learning, Diffusion Models, GANs</p>
+          </div>
+        </li>
+        <li>
+          <img src="project4.png" alt="">
+          <div>
+            <h3>Sentiment Analysis on Twitter and Reddit Comments Using NLP</h3>
+            <p>Conducted sentiment analysis on Twitter and Reddit comments using NLP techniques, extracting insights from user opinions to understand public sentiment and trends.</p>
+            <p><strong>Key Skills:</strong> Machine Learning, NLP</p>
+          </div>
+        </li>
+        <li>
+          <img src="project5.png" alt="">
+          <div>
+            <h3>Predicting Market Trends with LSTM</h3>
+            <p>Developed a stock price prediction model using LSTM to capture sequential dependencies and predict future stock prices with improved accuracy. The model leverages time-series data to provide trend insights, supporting data-driven investment strategies.</p>
+            <p><strong>Key Skills:</strong> Time Series Analysis, LSTM</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <h3>Programming &amp; Tools</h3>
+      <ul class="skill-list">
+        <li>Python (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch), SQL</li>
+        <li>Git, GitHub, Jupyter Notebook</li>
+      </ul>
+      <h3>Machine Learning</h3>
+      <ul class="skill-list">
+        <li>Supervised Learning (Regression, Classification), Unsupervised Learning (Clustering, PCA)</li>
+        <li>Feature Engineering, Model Evaluation, Hyperparameter Tuning (Grid/Random Search)</li>
+      </ul>
+      <h3>Deep Learning</h3>
+      <ul class="skill-list">
+        <li>Neural Networks, CNNs</li>
+        <li>Transfer Learning (VGG, ResNet), Basic NLP (Word2Vec, BERT)</li>
+      </ul>
+      <h3>Data Science</h3>
+      <ul class="skill-list">
+        <li>Exploratory Data Analysis, Data Wrangling</li>
+        <li>Visualization (Matplotlib, Seaborn)</li>
+      </ul>
+      <h3>Cloud &amp; Deployment</h3>
+      <ul class="skill-list">
+        <li>Flask, Streamlit</li>
+        <li>AWS, GCP, Azure</li>
+      </ul>
+      <h3>Specialized AI</h3>
+      <ul class="skill-list">
+        <li>Computer Vision (YOLOv5, OpenCV)</li>
+        <li>NLP (Hugging Face Transformers)</li>
+        <li>Generative AI (GANs, Stable Diffusion)</li>
+      </ul>
+      <h3>Key Libraries &amp; Frameworks</h3>
+      <ul class="skill-list">
+        <li>Scikit-learn, TensorFlow, PyTorch, Hugging Face, OpenCV</li>
+      </ul>
+    </section>
+
+    <!-- ACADEMICS -->
+    <section id="academics" class="section">
+      <h2>Academics</h2>
+      <ul class="academics-list">
+        <li><strong>MIT Academy of Engineering (2021–2025)</strong> – CGPA: 8.41/10</li>
+        <li><strong>Nutan Vidyamandir (2021)</strong> – HSC: 91.33%</li>
+        <li><strong>Strawberry English Medium School (2019)</strong> – SSC: 91%</li>
+      </ul>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
