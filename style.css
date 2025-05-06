@@ -140,12 +140,16 @@ main {
   font-size: 1.1rem;
   margin-bottom: 20px;
   max-width: 800px;
+}
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.intro-text p.sr-active {
+.scroll-reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -272,14 +276,6 @@ main {
   margin-bottom: 15px;
   padding-left: 20px;
   position: relative;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.skill-list li.sr-active, .academics-list li.sr-active {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .skill-list li:before, .academics-list li:before {
