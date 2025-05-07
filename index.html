@@ -5,16 +5,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sairam Jadhav | AI Odyssey</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Preload key assets -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="style.css" as="style">
   <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- Rellax.js for Parallax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
 </head>
 <body>
-  <div id="preloader"></div>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+  <!-- Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_Stdaec.json"
+                   background="transparent" speed="1"
+                   style="width:150px; height:150px;"
+                   autoplay loop>
+    </lottie-player>
+  </div>
+
+  <!-- Dark/Light Mode Toggle -->
+  <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
 
   <!-- NAVIGATION -->
   <nav class="navbar">
-    <ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul id="nav-menu">
       <li><a href="#" onclick="loadSection('home')">Home</a></li>
       <li><a href="#" onclick="loadSection('projects')">Projects</a></li>
       <li><a href="#" onclick="loadSection('skills')">Skills</a></li>
@@ -24,7 +51,7 @@
 
   <main>
     <!-- HOME -->
-    <section id="home" class="section active">
+    <section id="home" class="section active rellax" data-rellax-speed="-2">
       <div class="intro-wrap">
         <img src="profile.jpg" alt="Profile" class="profile-pic">
         <div class="intro-text">
@@ -154,7 +181,7 @@
     </section>
 
     <!-- ACADEMICS -->
-    <section id="academics" class="section">
+    <section id="academics" class="section rellax" data-rellax-speed="-1">
       <h2><span id="typewriter-academics"></span></h2>
       <ul class="academics-list">
         <li>
@@ -183,7 +210,6 @@
   </main>
 
   <button id="back-to-top" onclick="scrollToTop()">Top</button>
-
   <script src="script.js"></script>
 </body>
 </html>
