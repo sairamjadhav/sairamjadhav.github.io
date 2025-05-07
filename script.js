@@ -1,33 +1,73 @@
 // script.js
 
-// Show only one section at a time
+// Custom Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+
+// Scroll Progress Bar
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const scrollPct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  document.getElementById('progress-bar').style.width = `${scrollPct}%`;
+});
+
+// Dark/Light Mode Toggle
+const toggleBtn = document.getElementById('theme-toggle');
+let theme = localStorage.getItem('theme') || 'dark';
+document.body.classList.add(theme);
+toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+toggleBtn.onclick = () => {
+  document.body.classList.toggle('dark');
+  document.body.classList.toggle('light');
+  theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+  toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+  localStorage.setItem('theme', theme);
+};
+
+// GSAP Section Animations
+function animateSection(id) {
+  gsap.to(`#${id}.section`, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' });
+}
+
+// Load Section
 function loadSection(id) {
   document.querySelectorAll('.section').forEach(sec => {
-    sec.classList.toggle('active', sec.id === id);
+    sec.classList.remove('active');
+    gsap.set(sec, { opacity: 0, y: 50 });
   });
-  // Typewriter for each section
-  if (id === 'home')      typeWriter('typewriter-home', 'Welcome to My AI Odyssey!');
-  else if (id === 'projects') typeWriter('typewriter-projects', 'Projects');
-  else if (id === 'skills')    typeWriter('typewriter-skills', 'Skills');
-  else if (id === 'academics') typeWriter('typewriter-academics', 'Academics');
-  resetAnimations();
+  const s = document.getElementById(id);
+  s.classList.add('active');
+  animateSection(id);
 }
 
-// Typewriter effect
-function typeWriter(elementId, text) {
-  const el = document.getElementById(elementId);
-  el.innerHTML = '';
-  let idx = 0;
-  function type() {
-    if (idx < text.length) {
-      el.innerHTML += text.charAt(idx++);
-      requestAnimationFrame(type);
-    }
-  }
-  type();
+// Parallax Init
+window.addEventListener('load', () => {
+  new Rellax('.rellax');
+});
+
+// Hamburger Menu
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('nav-menu');
+ham.onclick = () => nav.classList.toggle('active');
+
+// Preloader Hide & Initial Load
+window.addEventListener('load', () => {
+  document.getElementById('preloader').style.display = 'none';
+  loadSection('home');
+});
+
+// Back-to-top Button
+window.onscroll = () => {
+  document.getElementById('back-to-top').style.display =
+    window.scrollY > 100 ? 'block' : 'none';
+};
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Scroll reveal via Intersection Observer
+// Intersection Observer for scroll-reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -41,20 +81,7 @@ function resetAnimations() {
   });
 }
 
-// Back-to-top button
-window.onscroll = () => {
-  document.getElementById('back-to-top').style.display =
-    (window.scrollY > 100 ? 'block' : 'none');
-};
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// Initialize on DOM load
+// Initialize animations on DOM content loaded
 document.addEventListener('DOMContentLoaded', () => {
-  loadSection('home');
   resetAnimations();
-  setTimeout(() => {
-    document.getElementById('preloader').style.display = 'none';
-  }, 1000);
 });
