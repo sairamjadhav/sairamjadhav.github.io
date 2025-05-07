@@ -6,18 +6,11 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   background: linear-gradient(135deg, #121212 0%, #1c2526 100%);
   color: #e0e0e0;
   overflow-x: hidden;
   line-height: 1.6;
-  animation: gradientBG 10s ease infinite;
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 /* Preloader */
@@ -78,12 +71,12 @@ body {
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease;
+  animation: textPulse 2s infinite ease-in-out;
 }
 
 .navbar a:hover {
   color: #00d4ff;
-  transform: translateY(-2px);
 }
 
 /* Main Sections */
@@ -106,12 +99,38 @@ main {
   display: block;
 }
 
+/* Home Section Watermark Background */
+#home {
+  background-image: url('MainPage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.7); /* Watermark effect with overlay */
+  z-index: 0;
+}
+
+#home .intro-wrap, #home .feedback-wrap, #home .connect-wrap {
+  position: relative;
+  z-index: 1;
+}
+
 /* Intro */
 .intro-wrap {
   display: flex;
   align-items: center;
   gap: 30px;
   margin-bottom: 40px;
+  animation: slideInLeft 1s ease-out;
 }
 
 .profile-pic {
@@ -133,7 +152,8 @@ main {
   font-size: 2.5rem;
   color: #00d4ff;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
+  animation: textPulse 2s infinite ease-in-out;
 }
 
 .intro-text p {
@@ -145,8 +165,8 @@ main {
 /* Scroll Reveal Animation */
 .scroll-reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
 }
 
 .scroll-reveal.visible {
@@ -157,6 +177,7 @@ main {
 /* Feedback */
 .feedback-wrap {
   margin: 50px 0;
+  animation: fadeIn 1.5s ease-out;
 }
 
 .feedback-form {
@@ -206,6 +227,7 @@ main {
 .connect-wrap {
   text-align: center;
   margin: 50px 0;
+  animation: zoomIn 1s ease-out;
 }
 
 .socials {
@@ -239,12 +261,12 @@ main {
   background: rgba(30, 30, 30, 0.9);
   padding: 25px;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  animation: slideInUp 1s ease-out;
 }
 
 .project-list li:hover, .academics-list li:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
 }
 
 .project-icon, .academics-list i {
@@ -260,35 +282,12 @@ main {
   font-size: 1.8rem;
   margin-bottom: 10px;
   color: #00d4ff;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
+  animation: textPulse 2s infinite ease-in-out;
 }
 
 .project-list p, .academics-list p {
   font-size: 1rem;
-}
-
-/* Academics Section Background */
-#academics {
-  background-image: url('MIT.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-#academics::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(18, 18, 18, 0.8); /* Dark overlay to make text readable */
-  z-index: 0;
-}
-
-#academics .academics-list {
-  position: relative;
-  z-index: 1;
 }
 
 /* Section Headings */
@@ -297,6 +296,8 @@ h2 {
   color: #00d4ff;
   margin-bottom: 30px;
   text-align: center;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
+  animation: textPulse 2s infinite ease-in-out;
 }
 
 h3 {
@@ -306,6 +307,8 @@ h3 {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  animation: textPulse 2s infinite ease-in-out;
 }
 
 /* Back to Top */
@@ -352,4 +355,36 @@ h3 {
   .section {
     padding: 60px 5%;
   }
+}
+
+/* Advanced Animations */
+@keyframes textPulse {
+  0% { text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); transform: translateY(0); }
+  50% { text-shadow: 0 0 20px rgba(0, 212, 255, 0.8); transform: translateY(-2px); }
+  100% { text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+  0% { opacity: 0; transform: translateY(100px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Performance Optimization */
+.section, .intro-wrap, .feedback-wrap, .connect-wrap, .project-list li, .academics-list li {
+  will-change: transform, opacity;
 }
