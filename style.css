@@ -132,15 +132,21 @@ main {
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
-/* PROJECTS & ACADEMICS Lists */
+/* Consistent List Styling Across Sections */
 .project-list,
-.academics-list {
+.academics-list,
+.intro-list,
+.feedback-list,
+.connect-list {
   list-style: none;
   padding: 0;
 }
 
 .project-list li,
-.academics-list li {
+.academics-list li,
+.intro-list li,
+.feedback-list li,
+.connect-list li {
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -153,20 +159,31 @@ main {
 }
 
 .project-list li:hover,
-.academics-list li:hover {
+.academics-list li:hover,
+.intro-list li:hover,
+.feedback-list li:hover,
+.connect-list li:hover {
   transform: translateY(-10px);
 }
 
 .project-icon,
-.academics-list i {
+.academics-list i,
+.intro-list i,
+.feedback-list i,
+.connect-list i {
   width: 50px;
   height: 50px;
   fill: #00d4ff;
   flex-shrink: 0;
+  font-size: 2rem;
+  color: #00d4ff;
 }
 
 .project-list h3,
-.academics-list h3 {
+.academics-list h3,
+.intro-list h3,
+.feedback-list h3,
+.connect-list h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
   color: #00d4ff;
@@ -175,7 +192,10 @@ main {
 }
 
 .project-list p,
-.academics-list p {
+.academics-list p,
+.intro-list p,
+.feedback-list p,
+.connect-list p {
   font-size: 1rem;
   color: #e0e0e0;
 }
@@ -211,17 +231,21 @@ main {
 .skill-list li {
   margin-left: 20px;
   margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  animation: slideInUp 1s ease-out;
+}
+
+.skill-list li:hover {
+  transform: translateY(-10px);
 }
 
 /* Intro */
-.intro-wrap {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 40px;
-  animation: slideInUp 1s ease-out; /* Match animation with other sections */
-}
-
 .profile-pic {
   width: 150px;
   height: 150px;
@@ -234,21 +258,6 @@ main {
 
 .profile-pic:hover {
   transform: scale(1.1);
-}
-
-.intro-text h1 {
-  font-size: 2.2rem; /* Match h2 size for consistency */
-  color: #00d4ff;
-  margin-bottom: 30px;
-  text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
-  animation: textPulse 2s infinite ease-in-out;
-}
-
-.intro-text p {
-  font-size: 1rem; /* Match font size with other sections */
-  color: #e0e0e0;
-  margin-bottom: 20px;
-  max-width: 800px;
 }
 
 /* Scroll Reveal */
@@ -264,11 +273,6 @@ main {
 }
 
 /* Feedback Form */
-.feedback-wrap {
-  margin: 50px 0;
-  animation: slideInUp 1s ease-out; /* Match animation */
-}
-
 .feedback-form {
   display: flex;
   flex-direction: column;
@@ -313,12 +317,6 @@ main {
 }
 
 /* Connect */
-.connect-wrap {
-  text-align: center;
-  margin: 50px 0;
-  animation: slideInUp 1s ease-out; /* Match animation */
-}
-
 .socials {
   display: flex;
   justify-content: center;
@@ -360,7 +358,12 @@ main {
   .navbar ul {
     flex-direction: column;
   }
-  .intro-wrap {
+  .intro-list li,
+  .project-list li,
+  .academics-list li,
+  .skill-list li,
+  .feedback-list li,
+  .connect-list li {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -369,14 +372,11 @@ main {
     width: 120px;
     height: 120px;
   }
-  .intro-text h1 {
+  #skills h2,
+  #projects h2,
+  #academics h2,
+  #home h2 {
     font-size: 2rem;
-  }
-  .project-list li,
-  .academics-list li {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
   .section {
     padding: 60px 5%;
@@ -395,32 +395,18 @@ main {
   100% { text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); transform: translateY(0); }
 }
 
-@keyframes slideInLeft {
-  0% { opacity: 0; transform: translateX(-100px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-
 @keyframes slideInUp {
   0% { opacity: 0; transform: translateY(100px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes zoomIn {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
 /* Performance */
 .section,
-.intro-wrap,
-.feedback-wrap,
-.connect-wrap,
+.intro-list li,
+.feedback-list li,
+.connect-list li,
 .project-list li,
-.academics-list li {
+.academics-list li,
+.skill-list li {
   will-change: transform, opacity;
 }
