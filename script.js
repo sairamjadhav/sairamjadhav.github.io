@@ -1,38 +1,36 @@
+// script.js
+
 // Show only one section at a time
 function loadSection(id) {
   document.querySelectorAll('.section').forEach(sec => {
     sec.classList.toggle('active', sec.id === id);
   });
-  // Trigger typewriter for the active section
-  if (id === 'home') typeWriter('typewriter-home', 'Welcome to My AI Odyssey!');
+  // Typewriter for each section
+  if (id === 'home')      typeWriter('typewriter-home', 'Welcome to My AI Odyssey!');
   else if (id === 'projects') typeWriter('typewriter-projects', 'Projects');
-  else if (id === 'skills') typeWriter('typewriter-skills', 'Skills');
+  else if (id === 'skills')    typeWriter('typewriter-skills', 'Skills');
   else if (id === 'academics') typeWriter('typewriter-academics', 'Academics');
-  // Reset scroll reveal animations
   resetAnimations();
 }
 
 // Typewriter effect
 function typeWriter(elementId, text) {
-  const element = document.getElementById(elementId);
-  element.innerHTML = '';
-  let index = 0;
+  const el = document.getElementById(elementId);
+  el.innerHTML = '';
+  let idx = 0;
   function type() {
-    if (index < text.length) {
-      element.innerHTML += text.charAt(index);
-      index++;
-      requestAnimationFrame(type); // Use RAF for smoother execution
+    if (idx < text.length) {
+      el.innerHTML += text.charAt(idx++);
+      requestAnimationFrame(type);
     }
   }
   type();
 }
 
-// Scroll reveal effect with Intersection Observer for performance
+// Scroll reveal via Intersection Observer
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.1 });
 
@@ -43,23 +41,20 @@ function resetAnimations() {
   });
 }
 
-// Back to top
-window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    document.getElementById("back-to-top").style.display = "block";
-  } else {
-    document.getElementById("back-to-top").style.display = "none";
-  }
+// Back-to-top button
+window.onscroll = () => {
+  document.getElementById('back-to-top').style.display =
+    (window.scrollY > 100 ? 'block' : 'none');
 };
-
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Initialize
+// Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
   loadSection('home');
+  resetAnimations();
   setTimeout(() => {
     document.getElementById('preloader').style.display = 'none';
-  }, 1000); // Reduced preloader time for faster load
+  }, 1000);
 });
