@@ -8,6 +8,8 @@ function loadSection(id) {
   else if (id === 'projects') typeWriter('typewriter-projects', 'Projects');
   else if (id === 'skills') typeWriter('typewriter-skills', 'Skills');
   else if (id === 'academics') typeWriter('typewriter-academics', 'Academics');
+  // Reset scroll reveal animations
+  resetAnimations();
 }
 
 // Typewriter effect
@@ -19,26 +21,30 @@ function typeWriter(elementId, text) {
     if (index < text.length) {
       element.innerHTML += text.charAt(index);
       index++;
-      setTimeout(type, 100);
+      requestAnimationFrame(type); // Use RAF for smoother execution
     }
   }
   type();
 }
 
-// Scroll reveal effect using vanilla JavaScript
-function handleScroll() {
-  const elements = document.querySelectorAll('.scroll-reveal');
-  elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      el.classList.add('visible');
+// Scroll reveal effect with Intersection Observer for performance
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
     }
+  });
+}, { threshold: 0.1 });
+
+function resetAnimations() {
+  document.querySelectorAll('.scroll-reveal').forEach(el => {
+    el.classList.remove('visible');
+    observer.observe(el);
   });
 }
 
 // Back to top
 window.onscroll = function() {
-  handleScroll();
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     document.getElementById("back-to-top").style.display = "block";
   } else {
@@ -53,8 +59,7 @@ function scrollToTop() {
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
   loadSection('home');
-  // Hide preloader after 2 seconds to ensure it doesn't get stuck
   setTimeout(() => {
     document.getElementById('preloader').style.display = 'none';
-  }, 2000);
+  }, 1000); // Reduced preloader time for faster load
 });
