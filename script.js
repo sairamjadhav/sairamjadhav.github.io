@@ -50,10 +50,46 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Initialize on DOM load
+// Theme Toggle
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  document.body.classList.toggle('light-theme');
+  // Update particles color based on theme
+  const particlesColor = document.body.classList.contains('light-theme') ? '#007bff' : '#00d4ff';
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: particlesColor },
+      shape: { type: 'circle' },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      move: { enable: true, speed: 2 }
+    },
+    interactivity: {
+      events: { onhover: { enable: true, mode: 'repulse' } }
+    }
+  });
+});
+
+// Initialize Particles.js and Theme on DOM load
 document.addEventListener('DOMContentLoaded', () => {
   loadSection('home');
   resetAnimations();
+  
+  // Initialize Particles.js
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: '#00d4ff' },
+      shape: { type: 'circle' },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      move: { enable: true, speed: 2 }
+    },
+    interactivity: {
+      events: { onhover: { enable: true, mode: 'repulse' } }
+    }
+  });
+
   setTimeout(() => {
     document.getElementById('preloader').style.display = 'none';
   }, 1000);
