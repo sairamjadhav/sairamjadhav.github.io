@@ -18,6 +18,7 @@
       <li><a href="#" onclick="loadSection('projects')">Projects</a></li>
       <li><a href="#" onclick="loadSection('skills')">Skills</a></li>
       <li><a href="#" onclick="loadSection('academics')">Academics</a></li>
+      <li><a href="#" onclick="loadSection('certifications')">Certifications</a></li>
     </ul>
   </nav>
 
@@ -49,10 +50,12 @@
           <div>
             <h3>Feedback</h3>
             <div class="feedback-form">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="_replyto" placeholder="Your Email" required>
-              <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-              <button type="submit">Send Feedback</button>
+              <form action="https://formspree.io/f/mrbzkqdj" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Feedback</button>
+              </form>
             </div>
           </div>
         </li>
@@ -168,6 +171,7 @@
     <!-- ACADEMICS -->
     <section id="academics" class="section">
       <h2><span id="typewriter-academics"></span></h2>
+      <div class="loading-bar" id="academics-loading-bar"></div>
       <ul class="academics-list">
         <li>
           <i class="fas fa-university"></i>
@@ -188,6 +192,56 @@
           <div>
             <h3><a href="10.jpg" target="_blank">Strawberry English Medium School (2019)</a></h3>
             <p>SSC: 91%</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section">
+      <h2><span id="typewriter-certifications"></span></h2>
+      <div class="loading-bar" id="certifications-loading-bar"></div>
+      <ul class="certifications-list">
+        <li>
+          <i class="fab fa-google cert-icon"></i>
+          <div>
+            <h3><a href="C1.pdf" target="_blank">Google AI - ML</a></h3>
+            <p>Completed certification in AI and Machine Learning from Google.</p>
+          </div>
+        </li>
+        <li>
+          <i class="fab fa-microsoft cert-icon"></i>
+          <div>
+            <h3><a href="C2.pdf" target="_blank">Microsoft AI Skills Challenge</a></h3>
+            <p>Earned certification through Microsoft's AI Skills Challenge.</p>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-shield-alt cert-icon"></i>
+          <div>
+            <h3><a href="C3.pdf" target="_blank">Cisco Cloud Security</a></h3>
+            <p>Certified in Cloud Security by Cisco.</p>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-wifi cert-icon"></i>
+          <div>
+            <h3><a href="C4.pdf" target="_blank">NPTEL Introduction to Internet of Things</a></h3>
+            <p>Completed NPTEL course on IoT fundamentals.</p>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-lock cert-icon"></i>
+          <div>
+            <h3><a href="C5.pdf" target="_blank">Cisco Cyber Security</a></h3>
+            <p>Certified in Cyber Security by Cisco.</p>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-chart-bar cert-icon"></i>
+          <div>
+            <h3><a href="C6.pdf" target="_blank">Power BI for Data Analysis</a></h3>
+            <p>Certified in using Power BI for data analysis and visualization.</p>
           </div>
         </li>
       </ul>
