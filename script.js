@@ -10,17 +10,6 @@ function loadSection(id) {
   else if (id === 'academics') typeWriter('typewriter-academics', 'Academics');
   else if (id === 'certifications') typeWriter('typewriter-certifications', 'Certifications');
   
-  // Trigger loading bar animation for Academics and Certifications
-  if (id === 'academics') {
-    const bar = document.getElementById('academics-loading-bar');
-    bar.classList.remove('active'); // Reset
-    setTimeout(() => bar.classList.add('active'), 100); // Trigger
-  } else if (id === 'certifications') {
-    const bar = document.getElementById('certifications-loading-bar');
-    bar.classList.remove('active'); // Reset
-    setTimeout(() => bar.classList.add('active'), 100); // Trigger
-  }
-  
   resetAnimations();
 }
 
@@ -50,7 +39,21 @@ function resetAnimations() {
     el.classList.remove('visible');
     observer.observe(el);
   });
+  // Reset loading bars
+  document.querySelectorAll('.loading-bar').forEach(bar => {
+    bar.classList.remove('active');
+  });
 }
+
+// Trigger loading bar on link click
+document.querySelectorAll('.link-with-bar').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const bar = link.nextElementSibling;
+    if (bar && bar.classList.contains('loading-bar')) {
+      bar.classList.add('active');
+    }
+  });
+});
 
 // Back-to-top button
 window.onscroll = () => {
