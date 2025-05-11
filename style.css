@@ -133,28 +133,51 @@ main {
 }
 
 /* CERTIFICATIONS Section */
-#certifications .certifications-list {
+#certifications .certifications-grid {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.certification-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  animation: slideInUp 1s ease-out;
+}
+
+.certification-item:hover {
+  transform: translateY(-10px);
 }
 
 /* Uniform Certifications Text Color */
-#certifications .certifications-list h3,
-#certifications .certifications-list p,
-#certifications .certifications-list a {
+#certifications .certifications-grid h3,
+#certifications .certifications-grid p,
+#certifications .certifications-grid a {
   color: #00d4ff;
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
-/* Loading Bar for Academics and Certifications */
+/* Loading Bar for Links */
 .loading-bar {
   width: 100%;
   height: 5px;
   background: #333;
   border-radius: 5px;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-top: 5px;
   position: relative;
+  display: none;
+}
+
+.loading-bar.active {
+  display: block;
 }
 
 .loading-bar::after {
@@ -176,7 +199,6 @@ main {
 /* Consistent List Styling Across Sections */
 .project-list,
 .academics-list,
-.certifications-list,
 .intro-list,
 .feedback-list,
 .connect-list {
@@ -186,7 +208,6 @@ main {
 
 .project-list li,
 .academics-list li,
-.certifications-list li,
 .intro-list li,
 .feedback-list li,
 .connect-list li {
@@ -203,7 +224,6 @@ main {
 
 .project-list li:hover,
 .academics-list li:hover,
-.certifications-list li:hover,
 .intro-list li:hover,
 .feedback-list li:hover,
 .connect-list li:hover {
@@ -212,7 +232,7 @@ main {
 
 .project-icon,
 .academics-list i,
-.certifications-list i,
+.certification-item i,
 .intro-list i,
 .feedback-list i,
 .connect-list i {
@@ -243,7 +263,7 @@ main {
 
 .project-list h3,
 .academics-list h3,
-.certifications-list h3,
+.certification-item h3,
 .intro-list h3,
 .feedback-list h3,
 .connect-list h3 {
@@ -256,7 +276,7 @@ main {
 
 .project-list p,
 .academics-list p,
-.certifications-list p,
+.certification-item p,
 .intro-list p,
 .feedback-list p,
 .connect-list p {
@@ -426,13 +446,16 @@ main {
   .intro-list li,
   .project-list li,
   .academics-list li,
-  .certifications-list li,
+  .certification-item,
   .skill-list li,
   .feedback-list li,
   .connect-list li {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .certifications-grid {
+    grid-template-columns: 1fr;
   }
   .profile-pic {
     width: 120px;
@@ -474,7 +497,7 @@ main {
 .connect-list li,
 .project-list li,
 .academics-list li,
-.certifications-list li,
+.certification-item,
 .skill-list li {
   will-change: transform, opacity;
 }
