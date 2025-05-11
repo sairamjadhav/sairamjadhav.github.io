@@ -39,21 +39,7 @@ function resetAnimations() {
     el.classList.remove('visible');
     observer.observe(el);
   });
-  // Reset loading bars
-  document.querySelectorAll('.loading-bar').forEach(bar => {
-    bar.classList.remove('active');
-  });
 }
-
-// Trigger loading bar on link click
-document.querySelectorAll('.link-with-bar').forEach(link => {
-  link.addEventListener('click', (e) => {
-    const bar = link.nextElementSibling;
-    if (bar && bar.classList.contains('loading-bar')) {
-      bar.classList.add('active');
-    }
-  });
-});
 
 // Back-to-top button
 window.onscroll = () => {
