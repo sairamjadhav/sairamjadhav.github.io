@@ -15,36 +15,32 @@ body {
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* Gradient Animation */
+/* Gradient Animation for Dark Mode */
 @keyframes gradientShift {
   0% { background: linear-gradient(135deg, #121212 0%, #1c2526 100%); }
   50% { background: linear-gradient(135deg, #1c2526 0%, #121212 100%); }
   100% { background: linear-gradient(135deg, #121212 0%, #1c2526 100%); }
 }
 
-/* Light Theme */
+/* Light Theme - White Background */
 body.light-theme {
-  background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-  color: #121212;
-  animation: gradientShiftLight 10s ease infinite;
-}
-
-@keyframes gradientShiftLight {
-  0% { background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%); }
-  50% { background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); }
-  100% { background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%); }
+  background: #ffffff;
+  color: #333333;
+  animation: none;
 }
 
 body.light-theme .section {
-  background: rgba(255, 255, 255, 0.8);
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 body.light-theme .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 body.light-theme .navbar a {
-  color: #121212;
+  color: #333333;
 }
 
 body.light-theme .navbar a:hover {
@@ -58,7 +54,8 @@ body.light-theme .intro-list li,
 body.light-theme .feedback-list li,
 body.light-theme .connect-list li,
 body.light-theme .skill-list li {
-  background: rgba(200, 200, 200, 0.9);
+  background: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 body.light-theme #skills h2,
@@ -79,6 +76,15 @@ body.light-theme .certifications-grid a {
   text-shadow: none;
 }
 
+body.light-theme .project-list p,
+body.light-theme .academics-list p,
+body.light-theme .certification-item p,
+body.light-theme .intro-list p,
+body.light-theme .feedback-list p,
+body.light-theme .connect-list p {
+  color: #333333;
+}
+
 body.light-theme .project-icon,
 body.light-theme .academics-list i,
 body.light-theme .certification-item i,
@@ -95,7 +101,7 @@ body.light-theme .socials i {
 body.light-theme .feedback-form input,
 body.light-theme .feedback-form textarea {
   background: #f0f0f0;
-  color: #121212;
+  color: #333333;
 }
 
 body.light-theme .feedback-form button {
@@ -104,10 +110,6 @@ body.light-theme .feedback-form button {
 
 body.light-theme #back-to-top {
   background: #007bff;
-}
-
-body.light-theme #academics::before {
-  background: rgba(255, 255, 255, 0.8);
 }
 
 /* Preloader */
@@ -125,7 +127,7 @@ body.light-theme #academics::before {
 }
 
 body.light-theme #preloader {
-  background: #f5f5f5;
+  background: #ffffff;
 }
 
 #preloader::after {
@@ -266,26 +268,7 @@ main {
   display: block;
 }
 
-/* ACADEMICS Section Watermark */
-#academics {
-  background-image: url('MIT.jpg');
-  background-size: 110% auto;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-#academics::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(18, 18, 18, 0.8);
-  z-index: 0;
-}
-
+/* ACADEMICS Section - Removed MIT.jpg */
 #academics .academics-list {
   position: relative;
   z-index: 1;
@@ -478,7 +461,7 @@ main {
 
 body.light-theme .profile-pic {
   border: 3px solid #007bff;
-  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.1);
 }
 
 .profile-pic:hover {
@@ -611,11 +594,6 @@ body.light-theme .profile-pic {
   .section {
     padding: 60px 5%;
   }
-  /* Adapt backgrounds on mobile */
-  #academics {
-    background-size: cover;
-    background-attachment: scroll;
-  }
 }
 
 /* Animations */
@@ -630,9 +608,9 @@ body.light-theme [style*="textPulse"] {
 }
 
 @keyframes textPulseLight {
-  0% { text-shadow: 0 0 10px rgba(0, 123, 255, 0.5); transform: translateY(0); }
-  50% { text-shadow: 0 0 20px rgba(0, 123, 255, 0.8); transform: translateY(-2px); }
-  100% { text-shadow: 0 0 10px rgba(0, 123, 255, 0.5); transform: translateY(0); }
+  0% { text-shadow: 0 0 10px rgba(0, 123, 255, 0.3); transform: translateY(0); }
+  50% { text-shadow: 0 0 20px rgba(0, 123, 255, 0.5); transform: translateY(-2px); }
+  100% { text-shadow: 0 0 10px rgba(0, 123, 255, 0.3); transform: translateY(0); }
 }
 
 @keyframes slideInUp {
