@@ -25,7 +25,7 @@ body {
 /* Light Theme - White Background */
 body.light-theme {
   background: #ffffff;
-  color: #333333;
+  color: #222222;
   animation: none;
 }
 
@@ -40,7 +40,7 @@ body.light-theme .navbar {
 }
 
 body.light-theme .navbar a {
-  color: #333333;
+  color: #222222;
 }
 
 body.light-theme .navbar a:hover {
@@ -81,8 +81,9 @@ body.light-theme .academics-list p,
 body.light-theme .certification-item p,
 body.light-theme .intro-list p,
 body.light-theme .feedback-list p,
-body.light-theme .connect-list p {
-  color: #333333;
+body.light-theme .connect-list p,
+body.light-theme .skill-list li {
+  color: #222222;
 }
 
 body.light-theme .project-icon,
@@ -101,7 +102,7 @@ body.light-theme .socials i {
 body.light-theme .feedback-form input,
 body.light-theme .feedback-form textarea {
   background: #f0f0f0;
-  color: #333333;
+  color: #222222;
 }
 
 body.light-theme .feedback-form button {
