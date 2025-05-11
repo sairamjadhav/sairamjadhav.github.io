@@ -1,15 +1,26 @@
-// script.js
-
 // Show only one section at a time
 function loadSection(id) {
   document.querySelectorAll('.section').forEach(sec => {
     sec.classList.toggle('active', sec.id === id);
   });
   // Typewriter for each section
-  if (id === 'home')      typeWriter('typewriter-home', 'Welcome to My AI Odyssey!');
+  if (id === 'home') typeWriter('typewriter-home', 'Welcome to My AI Odyssey!');
   else if (id === 'projects') typeWriter('typewriter-projects', 'Projects');
-  else if (id === 'skills')    typeWriter('typewriter-skills', 'Skills');
+  else if (id === 'skills') typeWriter('typewriter-skills', 'Skills');
   else if (id === 'academics') typeWriter('typewriter-academics', 'Academics');
+  else if (id === 'certifications') typeWriter('typewriter-certifications', 'Certifications');
+  
+  // Trigger loading bar animation for Academics and Certifications
+  if (id === 'academics') {
+    const bar = document.getElementById('academics-loading-bar');
+    bar.classList.remove('active'); // Reset
+    setTimeout(() => bar.classList.add('active'), 100); // Trigger
+  } else if (id === 'certifications') {
+    const bar = document.getElementById('certifications-loading-bar');
+    bar.classList.remove('active'); // Reset
+    setTimeout(() => bar.classList.add('active'), 100); // Trigger
+  }
+  
   resetAnimations();
 }
 
