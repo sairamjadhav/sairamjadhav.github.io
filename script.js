@@ -11,9 +11,6 @@ function loadSection(id) {
   else if (id === 'certifications') typeWriter('typewriter-certifications', 'Certifications');
   
   resetAnimations();
-  
-  // Initialize particles for the active section
-  initializeParticles(id);
 }
 
 // Typewriter effect
@@ -53,33 +50,10 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Initialize Particles.js for a specific section
-function initializeParticles(sectionId) {
-  const particleDivId = `particles-${sectionId}`;
-  particlesJS(particleDivId, {
-    particles: {
-      number: { value: 50, density: { enable: true, value_area: 1000 } },
-      color: { value: '#00d4ff' },
-      shape: { type: 'circle' },
-      opacity: { value: 0.3 },
-      size: { value: 2 },
-      move: { enable: true, speed: 1 }
-    },
-    interactivity: {
-      events: { onhover: { enable: true, mode: 'repulse' } }
-    }
-  });
-}
-
-// Initialize Particles.js for all sections on DOM load
+// Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
   loadSection('home');
   resetAnimations();
-  
-  // Initialize particles for all sections
-  ['home', 'projects', 'skills', 'academics', 'certifications'].forEach(sectionId => {
-    initializeParticles(sectionId);
-  });
 
   setTimeout(() => {
     document.getElementById('preloader').style.display = 'none';
