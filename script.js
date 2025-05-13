@@ -11,6 +11,9 @@ function loadSection(id) {
   else if (id === 'certifications') typeWriter('typewriter-certifications', 'Certifications');
   
   resetAnimations();
+  
+  // Initialize particles for the active section
+  initializeParticles(id);
 }
 
 // Typewriter effect
@@ -50,44 +53,32 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Theme Toggle
-document.getElementById('theme-toggle').addEventListener('click', () => {
-  document.body.classList.toggle('light-theme');
-  // Update particles color based on theme
-  const particlesColor = document.body.classList.contains('light-theme') ? '#007bff' : '#00d4ff';
-  particlesJS('particles-js', {
+// Initialize Particles.js for a specific section
+function initializeParticles(sectionId) {
+  const particleDivId = `particles-${sectionId}`;
+  particlesJS(particleDivId, {
     particles: {
-      number: { value: 80, density: { enable: true, value_area: 800 } },
-      color: { value: particlesColor },
+      number: { value: 50, density: { enable: true, value_area: 1000 } },
+      color: { value: '#00d4ff' },
       shape: { type: 'circle' },
-      opacity: { value: 0.5 },
-      size: { value: 3 },
-      move: { enable: true, speed: 2 }
+      opacity: { value: 0.3 },
+      size: { value: 2 },
+      move: { enable: true, speed: 1 }
     },
     interactivity: {
       events: { onhover: { enable: true, mode: 'repulse' } }
     }
   });
-});
+}
 
-// Initialize Particles.js and Theme on DOM load
+// Initialize Particles.js for all sections on DOM load
 document.addEventListener('DOMContentLoaded', () => {
   loadSection('home');
   resetAnimations();
   
-  // Initialize Particles.js
-  particlesJS('particles-js', {
-    particles: {
-      number: { value: 80, density: { enable: true, value_area: 800 } },
-      color: { value: '#00d4ff' },
-      shape: { type: 'circle' },
-      opacity: { value: 0.5 },
-      size: { value: 3 },
-      move: { enable: true, speed: 2 }
-    },
-    interactivity: {
-      events: { onhover: { enable: true, mode: 'repulse' } }
-    }
+  // Initialize particles for all sections
+  ['home', 'projects', 'skills', 'academics', 'certifications'].forEach(sectionId => {
+    initializeParticles(sectionId);
   });
 
   setTimeout(() => {
