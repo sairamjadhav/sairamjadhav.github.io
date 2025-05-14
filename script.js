@@ -3,17 +3,17 @@ function loadSection(id) {
   document.querySelectorAll('.section').forEach(sec => {
     sec.classList.toggle('active', sec.id === id);
   });
-  // Typewriter for each section with simplified, uppercase headings
-  let title;
-  if (id === 'home') title = 'WELCOME TO MY AI ODYSSEY';
-  else if (id === 'projects') title = 'PROJECTS';
-  else if (id === 'skills') title = 'SKILLS';
-  else if (id === 'academics') title = 'ACADEMICS';
-  else if (id === 'certifications') title = 'CERTIFICATIONS';
-  
-  console.log(`Loading section: ${id}, Title: ${title}`); // Debug log
+
+  // Typewriter headings
+  let title = '';
+  switch(id) {
+    case 'home': title = 'WELCOME TO MY AI ODYSSEY'; break;
+    case 'projects': title = 'PROJECTS'; break;
+    case 'skills': title = 'SKILLS'; break;
+    case 'academics': title = 'ACADEMICS'; break;
+    case 'certifications': title = 'CERTIFICATIONS'; break;
+  }
   typeWriter(`typewriter-${id}`, title);
-  
   resetAnimations();
 }
 
@@ -70,15 +70,16 @@ document.addEventListener('DOMContentLoaded', () => {
   loadSection('home');
   resetAnimations();
 
-  // Add event listeners only to navbar links
+  // Hook up nav links by data-section
   document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', (e) => {
-      e.preventDefault(); // Prevent default only for navbar links
-      const sectionId = link.getAttribute('onclick').match(/'([^']+)'/)[1];
+      e.preventDefault();
+      const sectionId = link.getAttribute('data-section');
       loadSection(sectionId);
     });
   });
 
+  // Hide preloader after 1s
   setTimeout(() => {
     document.getElementById('preloader').style.display = 'none';
   }, 1000);
