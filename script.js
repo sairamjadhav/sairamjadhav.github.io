@@ -50,6 +50,20 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Parallax Background Effect on Mouse Move
+document.addEventListener('mousemove', (e) => {
+  const sections = document.querySelectorAll('.section.active');
+  sections.forEach(section => {
+    const before = section.querySelector('::before');
+    const after = section.querySelector('::after');
+    const mouseX = e.clientX / window.innerWidth - 0.5;
+    const mouseY = e.clientY / window.innerHeight - 0.5;
+
+    section.style.setProperty('--mouse-x', `${mouseX * 20}px`);
+    section.style.setProperty('--mouse-y', `${mouseY * 20}px`);
+  });
+});
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
   loadSection('home');
