@@ -3,12 +3,12 @@ function loadSection(id) {
   document.querySelectorAll('.section').forEach(sec => {
     sec.classList.toggle('active', sec.id === id);
   });
-  // Typewriter for each section
-  if (id === 'home') typeWriter('typewriter-home', 'Welcome to My AI Odyssey!');
-  else if (id === 'projects') typeWriter('typewriter-projects', 'Projects');
-  else if (id === 'skills') typeWriter('typewriter-skills', 'Skills');
-  else if (id === 'academics') typeWriter('typewriter-academics', 'Academics');
-  else if (id === 'certifications') typeWriter('typewriter-certifications', 'Certifications');
+  // Typewriter for each section with simplified, uppercase headings
+  if (id === 'home') typeWriter('typewriter-home', 'WELCOME TO MY AI ODYSSEY');
+  else if (id === 'projects') typeWriter('typewriter-projects', 'PROJECTS');
+  else if (id === 'skills') typeWriter('typewriter-skills', 'SKILLS');
+  else if (id === 'academics') typeWriter('typewriter-academics', 'ACADEMICS');
+  else if (id === 'certifications') typeWriter('typewriter-certifications', 'CERTIFICATIONS');
   
   resetAnimations();
 }
@@ -75,6 +75,17 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault(); // Prevent default only for navbar links
       const sectionId = link.getAttribute('onclick').match(/'([^']+)'/)[1];
       loadSection(sectionId);
+    });
+  });
+
+  // Ensure social media links work
+  document.querySelectorAll('.social-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent any parent event listeners from interfering
+      const href = link.getAttribute('href');
+      if (href) {
+        window.open(href, '_blank');
+      }
     });
   });
 
