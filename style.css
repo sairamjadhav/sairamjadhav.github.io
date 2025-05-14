@@ -57,7 +57,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  pointer-events: none;
+  pointer-events: none; /* allow clicks through */
 }
 
 .section::before {
@@ -136,10 +136,15 @@ main {
   display: block;
 }
 
-/* ACADEMICS Section */
-#academics .academics-list {
-  position: relative;
-  z-index: 1;
+/* Prevent pseudo‐element overlays from blocking clicks */
+.project-list li::before,
+.academics-list li::before,
+.intro-list li::before,
+.feedback-list li::before,
+.connect-list li::before,
+.skill-list li::before,
+.certification-item::before {
+  pointer-events: none;
 }
 
 /* Uniform Academics Text Color */
@@ -175,18 +180,6 @@ main {
   position: relative;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   animation: float 6s ease-in-out infinite;
-}
-
-.certification-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  transition: border-color 0.5s ease;
 }
 
 .certification-item:hover::before {
@@ -238,31 +231,6 @@ main {
   position: relative;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   animation: float 6s ease-in-out infinite;
-}
-
-.project-list li::before,
-.academics-list li::before,
-.intro-list li::before,
-.feedback-list li::before,
-.connect-list li::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  transition: border-color 0.5s ease;
-}
-
-.project-list li:hover::before,
-.academics-list li:hover::before,
-.intro-list li:hover::before,
-.feedback-list li:hover::before,
-.connect-list li:hover::before {
-  border-color: #ff5722;
-  box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
 }
 
 .project-list li:hover,
@@ -330,7 +298,7 @@ main {
   color: #d0d0d0;
 }
 
-/* SKILLS */
+/* SKILLS & HEADINGS */
 #skills h2,
 #projects h2,
 #academics h2,
@@ -359,6 +327,7 @@ main {
   animation: glowPulse 2s infinite ease-in-out;
 }
 
+/* Skill List Cards */
 .skill-list {
   margin-bottom: 40px;
 }
@@ -376,23 +345,6 @@ main {
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   animation: float 6s ease-in-out infinite;
   color: #d0d0d0;
-}
-
-.skill-list li::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  transition: border-color 0.5s ease;
-}
-
-.skill-list li:hover::before {
-  border-color: #ff5722;
-  box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
 }
 
 .skill-list li:hover {
@@ -551,12 +503,6 @@ main {
   .section {
     padding: 60px 5%;
   }
-}
-
-/* Animations */
-@keyframes slideInUp {
-  0% { opacity: 0; transform: translateY(100px); }
-  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Performance */
