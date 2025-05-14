@@ -42,22 +42,34 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-/* 3D Moving Background Layer */
-.background-layer {
+/* 3D Parallax Background Effect */
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before,
+.section::after {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(211, 47, 47, 0.1), rgba(255, 87, 34, 0.1));
   z-index: -1;
-  animation: subtleMove 20s ease-in-out infinite;
+  pointer-events: none;
 }
 
-@keyframes subtleMove {
-  0% { transform: translateZ(-50px) rotate(0deg); opacity: 0.8; }
-  50% { transform: translateZ(50px) rotate(5deg); opacity: 1; }
-  100% { transform: translateZ(-50px) rotate(0deg); opacity: 0.8; }
+.section::before {
+  background: radial-gradient(circle at 50% 50%, rgba(211, 47, 47, 0.2), transparent 70%);
+  transform: translateZ(-100px);
+  transition: transform 0.1s ease;
+}
+
+.section::after {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 87, 34, 0.1), transparent 70%);
+  transform: translateZ(-50px);
+  transition: transform 0.1s ease;
 }
 
 /* Navbar */
@@ -160,13 +172,31 @@ main {
   background: rgba(20, 20, 20, 0.9);
   padding: 25px;
   border-radius: 12px;
-  transition: transform 0.5s ease;
-  animation: slideInUp 1s ease-out;
-  perspective: 1000px;
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: float 6s ease-in-out infinite;
+}
+
+.certification-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: border-color 0.5s ease;
+}
+
+.certification-item:hover::before {
+  border-color: #ff5722;
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
 }
 
 .certification-item:hover {
-  transform: rotateX(5deg) rotateY(5deg) translateZ(20px);
+  transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+  box-shadow: 0 15px 30px rgba(211, 47, 47, 0.3);
 }
 
 /* Uniform Certifications Text Color */
@@ -205,9 +235,34 @@ main {
   background: rgba(20, 20, 20, 0.9);
   padding: 25px;
   border-radius: 12px;
-  transition: transform 0.5s ease;
-  animation: slideInUp 1s ease-out;
-  perspective: 1000px;
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: float 6s ease-in-out infinite;
+}
+
+.project-list li::before,
+.academics-list li::before,
+.intro-list li::before,
+.feedback-list li::before,
+.connect-list li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: border-color 0.5s ease;
+}
+
+.project-list li:hover::before,
+.academics-list li:hover::before,
+.intro-list li:hover::before,
+.feedback-list li:hover::before,
+.connect-list li:hover::before {
+  border-color: #ff5722;
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
 }
 
 .project-list li:hover,
@@ -215,7 +270,8 @@ main {
 .intro-list li:hover,
 .feedback-list li:hover,
 .connect-list li:hover {
-  transform: rotateX(5deg) rotateY(5deg) translateZ(20px);
+  transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+  box-shadow: 0 15px 30px rgba(211, 47, 47, 0.3);
 }
 
 .project-icon,
@@ -316,14 +372,32 @@ main {
   background: rgba(20, 20, 20, 0.9);
   padding: 25px;
   border-radius: 12px;
-  transition: transform 0.5s ease;
-  animation: slideInUp 1s ease-out;
-  perspective: 1000px;
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: float 6s ease-in-out infinite;
   color: #d0d0d0;
 }
 
+.skill-list li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: border-color 0.5s ease;
+}
+
+.skill-list li:hover::before {
+  border-color: #ff5722;
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+}
+
 .skill-list li:hover {
-  transform: rotateX(5deg) rotateY(5deg) translateZ(20px);
+  transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+  box-shadow: 0 15px 30px rgba(211, 47, 47, 0.3);
 }
 
 /* Intro */
@@ -432,6 +506,13 @@ main {
 
 #back-to-top:hover {
   transform: translateY(-5px);
+}
+
+/* Floating Animation for Cards */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 /* Responsive */
