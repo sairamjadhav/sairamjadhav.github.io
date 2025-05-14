@@ -69,6 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
   loadSection('home');
   resetAnimations();
 
+  // Add event listeners only to navbar links
+  document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default only for navbar links
+      const sectionId = link.getAttribute('onclick').match(/'([^']+)'/)[1];
+      loadSection(sectionId);
+    });
+  });
+
   setTimeout(() => {
     document.getElementById('preloader').style.display = 'none';
   }, 1000);
