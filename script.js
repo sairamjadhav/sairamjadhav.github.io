@@ -4,11 +4,15 @@ function loadSection(id) {
     sec.classList.toggle('active', sec.id === id);
   });
   // Typewriter for each section with simplified, uppercase headings
-  if (id === 'home') typeWriter('typewriter-home', 'WELCOME TO MY AI ODYSSEY');
-  else if (id === 'projects') typeWriter('typewriter-projects', 'PROJECTS');
-  else if (id === 'skills') typeWriter('typewriter-skills', 'SKILLS');
-  else if (id === 'academics') typeWriter('typewriter-academics', 'ACADEMICS');
-  else if (id === 'certifications') typeWriter('typewriter-certifications', 'CERTIFICATIONS');
+  let title;
+  if (id === 'home') title = 'WELCOME TO MY AI ODYSSEY';
+  else if (id === 'projects') title = 'PROJECTS';
+  else if (id === 'skills') title = 'SKILLS';
+  else if (id === 'academics') title = 'ACADEMICS';
+  else if (id === 'certifications') title = 'CERTIFICATIONS';
+  
+  console.log(`Loading section: ${id}, Title: ${title}`); // Debug log
+  typeWriter(`typewriter-${id}`, title);
   
   resetAnimations();
 }
@@ -54,11 +58,8 @@ function scrollToTop() {
 document.addEventListener('mousemove', (e) => {
   const sections = document.querySelectorAll('.section.active');
   sections.forEach(section => {
-    const before = section.querySelector('::before');
-    const after = section.querySelector('::after');
     const mouseX = e.clientX / window.innerWidth - 0.5;
     const mouseY = e.clientY / window.innerHeight - 0.5;
-
     section.style.setProperty('--mouse-x', `${mouseX * 20}px`);
     section.style.setProperty('--mouse-y', `${mouseY * 20}px`);
   });
@@ -75,17 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault(); // Prevent default only for navbar links
       const sectionId = link.getAttribute('onclick').match(/'([^']+)'/)[1];
       loadSection(sectionId);
-    });
-  });
-
-  // Ensure social media links work
-  document.querySelectorAll('.social-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent any parent event listeners from interfering
-      const href = link.getAttribute('href');
-      if (href) {
-        window.open(href, '_blank');
-      }
     });
   });
 
