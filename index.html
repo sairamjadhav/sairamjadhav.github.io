@@ -3,180 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sairam Jadhav | AI Odyssey</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Sairam Jadhav | ML Engineer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="preloader"></div>
 
-  <!-- NAVIGATION -->
+  <!-- Navigation -->
   <nav class="navbar">
+    <div class="logo">Sairam Jadhav</div>
     <ul>
-      <li><a href="#" data-section="home">Home</a></li>
-      <li><a href="#" data-section="projects">Projects</a></li>
-      <li><a href="#" data-section="skills">Skills</a></li>
-      <li><a href="#" data-section="academics">Academics</a></li>
-      <li><a href="#" data-section="certifications">Certifications</a></li>
+      <li><a href="#home" data-section="home">Home</a></li>
+      <li><a href="#projects" data-section="projects">Projects</a></li>
+      <li><a href="#skills" data-section="skills">Skills</a></li>
+      <li><a href="#academics" data-section="academics">Academics</a></li>
+      <li><a href="#certifications" data-section="certifications">Certifications</a></li>
     </ul>
   </nav>
 
   <main>
-    <!-- HOME -->
+    <!-- Home -->
     <section id="home" class="section active">
-      <h2><span id="typewriter-home"></span></h2>
-      <ul class="intro-list">
-        <li>
-          <img src="profile.jpg" alt="Profile" class="profile-pic">
-          <div>
-            <h3>About Me</h3>
-            <p class="scroll-reveal">
-              As a final-year engineering student, I’m fueled by an insatiable passion for Artificial Intelligence & Machine Learning. To me, AI isn’t just code or algorithms—it’s the art of teaching machines to see, think, and create, unlocking infinite possibilities for a smarter, more connected world. My journey is one of curiosity and innovation, where every dataset is a puzzle, every model a story, and every breakthrough a step toward transforming industries.
-            </p>
-            <p class="scroll-reveal">
-              From building neural networks that decipher images to crafting NLP models that understand human emotions, I thrive at the intersection of mathematics, creativity, and technology. My portfolio showcases projects that blend cutting-edge techniques with real-world impact, reflecting my dedication to pushing boundaries and solving complex challenges. Whether it’s predicting trends, generating art, or optimizing systems, I’m driven to explore the endless horizons of AI.
-            </p>
-            <p class="scroll-reveal">
-              Join me as I navigate this exciting frontier, turning data into insights and ideas into reality. Let’s shape the future, one model at a time!
-            </p>
-          </div>
-        </li>
-      </ul>
-
-      <ul class="feedback-list">
-        <li>
-          <i class="fas fa-comment"></i>
-          <div>
-            <h3>Feedback</h3>
-            <div class="feedback-form">
-              <form action="https://formspree.io/f/mrbzkqdj" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="_replyto" placeholder="Your Email" required>
-                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Feedback</button>
-              </form>
-            </div>
-          </div>
-        </li>
-      </ul>
-
-      <ul class="connect-list">
-        <li>
-          <i class="fas fa-users"></i>
-          <div>
-            <h3>Connect with Me</h3>
-            <ul class="socials">
-              <li><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></li>
-              <li><a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
+      <div class="hero">
+        <h1>ML Engineer Portfolio</h1>
+        <p>Final-Year Engineering Student Specializing in AI & Machine Learning</p>
+        <a href="#projects" class="cta-button">View My Projects</a>
+      </div>
+      <div class="intro">
+        <img src="profile.jpg" alt="Sairam Jadhav Profile Picture" class="profile-pic">
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I’m a final-year B.Tech student at MIT Academy of Engineering, specializing in Artificial Intelligence and Machine Learning. My passion lies in leveraging data-driven solutions to solve real-world problems, from predictive modeling to computer vision.
+          </p>
+          <p>
+            My projects focus on applying deep learning, NLP, and generative AI to create impactful solutions. I’m driven to contribute to advancements in technology, aiming to build a career as a Machine Learning Engineer.
+          </p>
+          <a href="resume.pdf" class="resume-link" target="_blank">Download Resume</a>
+        </div>
+      </div>
+      <div class="connect">
+        <h2>Connect with Me</h2>
+        <ul class="socials">
+          <li><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- Projects -->
     <section id="projects" class="section">
-      <h2><span id="typewriter-projects"></span></h2>
+      <h2>Projects</h2>
       <ul class="project-list">
         <li>
-          <svg class="project-icon" viewBox="0 0 24 24"><path d="M20 10h-3V8h-2v2h-3l-2-2H8l-2 2H3v2h3l2 2h2l2-2h3v2h2v-2h3v-2zM8 14v2H6v-2H4v2H2v2h2v2h2v-2h2v2h2v-2H8v-2H6v2H4v-2h2v-2H8zm8 0v2h-2v-2h-2v2h-2v2h2v2h2v-2h2v2h2v-2h-2v-2h2v-2h-2z"/></svg>
+          <i class="fas fa-car-side"></i>
           <div>
             <h3>Drowsiness Detection within the ADAS Framework for Accident Prevention Using Deep Learning</h3>
-            <p class="scroll-reveal">
-              Implemented a real-time Driver Drowsiness Detection System using CNN-based deep learning models, designed to monitor facial cues and alert drivers to prevent accidents caused by fatigue.
-            </p>
+            <p>Implemented a real-time Driver Drowsiness Detection System using CNN-based deep learning models, designed to monitor facial cues and alert drivers to prevent accidents caused by fatigue.</p>
           </div>
         </li>
         <li>
-          <svg class="project-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10c0 5.5 4.5 10 10 10s10-4.5 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+          <i class="fas fa-heartbeat"></i>
           <div>
             <h3>Two Stage Healthcare System For Diabetes Detection Using Ensemble Models</h3>
-            <p class="scroll-reveal">
-              Designed a two-stage healthcare system for early diabetes prediction, integrating ensemble learning techniques to improve diagnostic accuracy.
-            </p>
+            <p>Designed a two-stage healthcare system for early diabetes prediction, integrating ensemble learning techniques to improve diagnostic accuracy.</p>
           </div>
         </li>
         <li>
-          <svg class="project-icon" viewBox="0 0 24 24"><path d="M21 3H3v18h18V3zm-2 16H5V5h14v14zM10 7H8v2h2V7zm0 4H8v2h2v-2zm0 4H8v2h2v-2zm4-8h-2v2h2V7zm0 4h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+          <i class="fas fa-x-ray"></i>
           <div>
             <h3>Denoising in Medical Imaging Using Deep Learning</h3>
-            <p class="scroll-reveal">
-              Developed a deep learning model for denoising medical images, enhancing image quality and accuracy for improved diagnostics.
-            </p>
+            <p>Developed a deep learning model for denoising medical images, enhancing image quality and accuracy for improved diagnostics.</p>
           </div>
         </li>
         <li>
-          <svg class="project-icon" viewBox="0 0 24 24"><path d="M21 3H3v18h18V3zm-2 16H5V5h14v14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/></svg>
+          <i class="fas fa-comments"></i>
           <div>
             <h3>Sentiment Analysis on Twitter and Reddit Comments Using NLP</h3>
-            <p class="scroll-reveal">
-              Conducted sentiment analysis on Twitter and Reddit comments using NLP techniques to understand public sentiment and trends.
-            </p>
+            <p>Conducted sentiment analysis on Twitter and Reddit comments using NLP techniques to understand public sentiment and trends.</p>
           </div>
         </li>
         <li>
-          <svg class="project-icon" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 5l6 10H6l6-10z"/></svg>
+          <i class="fas fa-chart-line"></i>
           <div>
             <h3>Predicting Market Trends with LSTM</h3>
-            <p class="scroll-reveal">
-              Developed a stock price prediction model using LSTM to capture sequential dependencies and predict future stock prices.
-            </p>
+            <p>Developed a stock price prediction model using LSTM to capture sequential dependencies and predict future stock prices.</p>
           </div>
         </li>
       </ul>
     </section>
 
-    <!-- SKILLS -->
+    <!-- Skills -->
     <section id="skills" class="section">
-      <h2><span id="typewriter-skills"></span></h2>
-      <h3><i class="fas fa-code"></i> Programming & Tools</h3>
-      <ul class="skill-list">
-        <li class="scroll-reveal">Python (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch), SQL</li>
-        <li class="scroll-reveal">Git, GitHub, Jupyter Notebook</li>
-      </ul>
-      <h3><i class="fas fa-brain"></i> Machine Learning</h3>
-      <ul class="skill-list">
-        <li class="scroll-reveal">Supervised Learning (Regression, Classification), Unsupervised Learning (Clustering, PCA)</li>
-        <li class="scroll-reveal">Feature Engineering, Model Evaluation, Hyperparameter Tuning (Grid/Random Search)</li>
-      </ul>
-      <h3><i class="fas fa-network-wired"></i> Deep Learning</h3>
-      <ul class="skill-list">
-        <li class="scroll-reveal">Neural Networks, CNNs</li>
-        <li class="scroll-reveal">Transfer Learning (VGG, ResNet), Basic NLP (Word2Vec, BERT)</li>
-      </ul>
-      <h3><i class="fas fa-chart-bar"></i> Data Science</h3>
-      <ul class="skill-list">
-        <li class="scroll-reveal">Exploratory Data Analysis, Data Wrangling</li>
-        <li class="scroll-reveal">Visualization (Matplotlib, Seaborn)</li>
-      </ul>
-      <h3><i class="fas fa-cloud"></i> Cloud & Deployment</h3>
-      <ul class="skill-list">
-        <li class="scroll-reveal">Flask, Streamlit</li>
-        <li class="scroll-reveal">AWS, GCP, Azure</li>
-      </ul>
-      <h3><i class="fas fa-robot"></i> Specialized AI</h3>
-      <ul class="skill-list">
-        <li class="scroll-reveal">Computer Vision (YOLOv5, OpenCV)</li>
-        <li class="scroll-reveal">NLP (Hugging Face Transformers)</li>
-        <li class="scroll-reveal">Generative AI (GANs, Stable Diffusion)</li>
-      </ul>
-      <h3><i class="fas fa-toolbox"></i> Key Libraries & Frameworks</h3>
-      <ul class="skill-list">
-        <li class="scroll-reveal">Scikit-learn, TensorFlow, PyTorch, Hugging Face, OpenCV</li>
-      </ul>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <h3><i class="fas fa-code"></i> Programming & Tools</h3>
+          <ul class="skill-list">
+            <li>Python (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch), SQL</li>
+            <li>Git, GitHub, Jupyter Notebook</li>
+          </ul>
+        </div>
+        <div>
+          <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+          <ul class="skill-list">
+            <li>Supervised Learning (Regression, Classification), Unsupervised Learning (Clustering, PCA)</li>
+            <li>Feature Engineering, Model Evaluation, Hyperparameter Tuning</li>
+          </ul>
+        </div>
+        <div>
+          <h3><i class="fas fa-network-wired"></i> Deep Learning</h3>
+          <ul class="skill-list">
+            <li>Neural Networks, CNNs</li>
+            <li>Transfer Learning (VGG, ResNet), Basic NLP (Word2Vec, BERT)</li>
+          </ul>
+        </div>
+        <div>
+          <h3><i class="fas fa-chart-bar"></i> Data Science</h3>
+          <ul class="skill-list">
+            <li>Exploratory Data Analysis, Data Wrangling</li>
+            <li>Visualization (Matplotlib, Seaborn)</li>
+          </ul>
+        </div>
+        <div>
+          <h3><i class="fas fa-cloud"></i> Cloud & Deployment</h3>
+          <ul class="skill-list">
+            <li>Flask, Streamlit</li>
+            <li>AWS, GCP, Azure</li>
+          </ul>
+        </div>
+        <div>
+          <h3><i class="fas fa-robot"></i> Specialized AI</h3>
+          <ul class="skill-list">
+            <li>Computer Vision (YOLOv5, OpenCV)</li>
+            <li>NLP (Hugging Face Transformers)</li>
+            <li>Generative AI (GANs, Stable Diffusion)</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- ACADEMICS -->
+    <!-- Academics -->
     <section id="academics" class="section">
-      <h2><span id="typewriter-academics"></span></h2>
+      <h2>Academics</h2>
       <ul class="academics-list">
         <li>
           <i class="fas fa-university"></i>
           <div>
             <h3>MIT Academy of Engineering (2021–2025)</h3>
-            <p>CGPA: 8.41/10</p>
+            <p>B.Tech in Computer Science | CGPA: 8.41/10</p>
           </div>
         </li>
         <li>
@@ -196,47 +174,47 @@
       </ul>
     </section>
 
-    <!-- CERTIFICATIONS -->
+    <!-- Certifications -->
     <section id="certifications" class="section">
-      <h2><span id="typewriter-certifications"></span></h2>
+      <h2>Certifications</h2>
       <div class="certifications-grid">
         <div class="certification-item">
-          <i class="fab fa-google cert-icon"></i>
+          <i class="fab fa-google"></i>
           <div>
             <h3><a href="C1.pdf" target="_blank">Google AI - ML</a></h3>
             <p>Completed certification in AI and Machine Learning from Google.</p>
           </div>
         </div>
         <div class="certification-item">
-          <i class="fab fa-microsoft cert-icon"></i>
+          <i class="fab fa-microsoft"></i>
           <div>
             <h3><a href="C2.pdf" target="_blank">Microsoft AI Skills Challenge</a></h3>
             <p>Earned certification through Microsoft's AI Skills Challenge.</p>
           </div>
         </div>
         <div class="certification-item">
-          <i class="fas fa-shield-alt cert-icon"></i>
+          <i class="fas fa-shield-alt"></i>
           <div>
             <h3><a href="C3.pdf" target="_blank">Cisco Cloud Security</a></h3>
             <p>Certified in Cloud Security by Cisco.</p>
           </div>
         </div>
         <div class="certification-item">
-          <i class="fas fa-wifi cert-icon"></i>
+          <i class="fas fa-wifi"></i>
           <div>
             <h3><a href="C4.pdf" target="_blank">NPTEL Introduction to Internet of Things</a></h3>
             <p>Completed NPTEL course on IoT fundamentals.</p>
           </div>
         </div>
         <div class="certification-item">
-          <i class="fas fa-lock cert-icon"></i>
+          <i class="fas fa-lock"></i>
           <div>
             <h3><a href="C5.pdf" target="_blank">Cisco Cyber Security</a></h3>
             <p>Certified in Cyber Security by Cisco.</p>
           </div>
         </div>
         <div class="certification-item">
-          <i class="fas fa-chart-bar cert-icon"></i>
+          <i class="fas fa-chart-bar"></i>
           <div>
             <h3><a href="C6.pdf" target="_blank">Power BI for Data Analysis</a></h3>
             <p>Certified in using Power BI for data analysis and visualization.</p>
@@ -245,6 +223,10 @@
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Sairam Jadhav. All rights reserved.</p>
+  </footer>
 
   <button id="back-to-top" onclick="scrollToTop()">Top</button>
   <script src="script.js"></script>
