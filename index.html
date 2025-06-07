@@ -1,173 +1,123 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sairam Jadhav | ML Engineer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="preloader"></div>
-
-  <!-- Navigation -->
+  <!-- NAVIGATION -->
   <nav class="navbar">
-    <div class="logo">Sairam Jadhav</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="container">
+      <div class="logo">Sairam Jadhav</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <!-- Home -->
-    <section id="home" class="section">
-      <div class="hero">
-        <h1>ML Engineer Portfolio</h1>
-        <p>Final-Year Engineering Student Specializing in AI & Machine Learning</p>
-        <a href="#projects" class="cta-button">View My Projects</a>
-      </div>
-      <div class="intro scroll-reveal">
-        <img src="profile.jpg" alt="Sairam Jadhav Profile Picture" class="profile-pic">
-        <div>
-          <h2>About Me</h2>
-          <p>
-            I’m a final-year B.Tech student at MIT Academy of Engineering, specializing in Artificial Intelligence and Machine Learning. My passion lies in leveraging data-driven solutions to solve real-world problems, from predictive modeling to computer vision.
-          </p>
-          <p>
-            My projects focus on applying deep learning, NLP, and generative AI to create impactful solutions. I’m driven to contribute to advancements in technology, aiming to build a career as a Machine Learning Engineer.
-          </p>
-          <a href="resume.pdf" class="resume-link" target="_blank">Download Resume</a>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Hi, I’m <span>Sairam Jadhav</span></h1>
+      <p>Final-Year Engineering Student | ML Engineer</p>
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="resume.pdf" class="btn btn-outline">Download Resume</a>
+    </div>
+    <div class="scroll-down">
+      <a href="#projects"><img src="arrow-down.svg" alt="Scroll Down"></a>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Drowsiness Detection</h3>
+          <p>Real-time detection using CNN, 92% accuracy.</p>
+        </div>
+        <div class="card">
+          <h3>Diabetes Prediction</h3>
+          <p>Two-stage ensemble, +18% accuracy.</p>
+        </div>
+        <div class="card">
+          <h3>Medical Image Denoising</h3>
+          <p>Deep learning model improves quality.</p>
+        </div>
+        <div class="card">
+          <h3>Sentiment Analysis</h3>
+          <p>Twitter/Reddit sentiment trends.</p>
+        </div>
+        <div class="card">
+          <h3>Stock Prediction</h3>
+          <p>LSTM model, +15% vs baseline.</p>
         </div>
       </div>
-      <div class="connect scroll-reveal">
-        <h2>Connect with Me</h2>
-        <ul class="socials">
-          <li><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-          <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-        </ul>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <h2 class="scroll-reveal">Projects</h2>
-      <div class="project-filters scroll-reveal">
-        <button data-filter="all" class="active">All</button>
-        <button data-filter="computer-vision">Computer Vision</button>
-        <button data-filter="nlp">NLP</button>
-        <button data-filter="predictive-modeling">Predictive Modeling</button>
-      </div>
-      <ul class="project-list">
-        <li data-category="computer-vision" class="scroll-reveal">
-          <i class="fas fa-car-side"></i>
-          <div>
-            <h3>Drowsiness Detection within the ADAS Framework</h3>
-            <p>Implemented a real-time Driver Drowsiness Detection System using CNN-based deep learning models, achieving 92% accuracy on a test dataset of 10,000 samples.</p>
-          </div>
-        </li>
-        <li data-category="predictive-modeling" class="scroll-reveal">
-          <i class="fas fa-heartbeat"></i>
-          <div>
-            <h3>Two Stage Healthcare System For Diabetes Detection</h3>
-            <p>Designed a two-stage healthcare system for early diabetes prediction, improving diagnostic accuracy by 18% using ensemble models.</p>
-          </div>
-        </li>
-        <li data-category="computer-vision" class="scroll-reveal">
-          <i class="fas fa-x-ray"></i>
-          <div>
-            <h3>Denoising in Medical Imaging Using Deep Learning</h3>
-            <p>Developed a deep learning model for denoising medical images, enhancing diagnostic accuracy by improving image quality.</p>
-          </div>
-        </li>
-        <li data-category="nlp" class="scroll-reveal">
-          <i class="fas fa-comments"></i>
-          <div>
-            <h3>Sentiment Analysis on Twitter and Reddit Comments</h3>
-            <p>Conducted sentiment analysis using NLP techniques to understand public sentiment and trends across social media platforms.</p>
-          </div>
-        </li>
-        <li data-category="predictive-modeling" class="scroll-reveal">
-          <i class="fas fa-chart-line"></i>
-          <div>
-            <h3>Predicting Market Trends with LSTM</h3>
-            <p>Developed a stock price prediction model using LSTM, improving prediction accuracy by 15% compared to baseline models.</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <h2 class="scroll-reveal">Skills</h2>
+  <!-- SKILLS -->
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="scroll-reveal">
-          <h3><i class="fas fa-code"></i> Programming & Tools</h3>
-          <ul class="skill-list">
-            <li>Python (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch), SQL</li>
-            <li>Git, GitHub, Jupyter Notebook</li>
-          </ul>
+        <div>
+          <h3>Programming</h3>
+          <p>Python, SQL, Git, GitHub</p>
         </div>
-        <div class="scroll-reveal">
-          <h3><i class="fas fa-brain"></i> Machine Learning</h3>
-          <ul class="skill-list">
-            <li>Supervised Learning (Regression, Classification), Unsupervised Learning (Clustering, PCA)</li>
-            <li>Feature Engineering, Model Evaluation, Hyperparameter Tuning</li>
-          </ul>
+        <div>
+          <h3>Machine Learning</h3>
+          <p>Regression, Classification, Clustering</p>
         </div>
-        <div class="scroll-reveal">
-          <h3><i class="fas fa-network-wired"></i> Deep Learning</h3>
-          <ul class="skill-list">
-            <li>Neural Networks, CNNs</li>
-            <li>Transfer Learning (VGG, ResNet), Basic NLP (Word2Vec, BERT)</li>
-          </ul>
+        <div>
+          <h3>Deep Learning</h3>
+          <p>CNN, RNN, Transformers</p>
         </div>
-        <div class="scroll-reveal">
-          <h3><i class="fas fa-chart-bar"></i> Data Science</h3>
-          <ul class="skill-list">
-            <li>Exploratory Data Analysis, Data Wrangling</li>
-            <li>Visualization (Matplotlib, Seaborn)</li>
-          </ul>
-        </div>
-        <div class="scroll-reveal">
-          <h3><i class="fas fa-cloud"></i> Cloud & Deployment</h3>
-          <ul class="skill-list">
-            <li>Flask, Streamlit</li>
-            <li>AWS, GCP, Azure</li>
-          </ul>
-        </div>
-        <div class="scroll-reveal">
-          <h3><i class="fas fa-robot"></i> Specialized AI</h3>
-          <ul class="skill-list">
-            <li>Computer Vision (YOLOv5, OpenCV)</li>
-            <li>NLP (Hugging Face Transformers)</li>
-            <li>Generative AI (GANs, Stable Diffusion)</li>
-          </ul>
+        <div>
+          <h3>Deployment</h3>
+          <p>Flask, Streamlit, AWS, GCP</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <h2 class="scroll-reveal">Contact Me</h2>
-      <form action="https://formspree.io/f/mrbzkqdj" method="POST" class="contact-form scroll-reveal">
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/mrbzkqdj" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="_replyto" placeholder="Your Email" required>
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit" class="btn">Send</button>
       </form>
-    </section>
-  </main>
+      <div class="socials">
+        <a href="https://linkedin.com/in/..." target="_blank">LinkedIn</a>
+        <a href="https://github.com/..." target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>© 2025 Sairam Jadhav. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 Sairam Jadhav. All rights reserved.</p>
+    </div>
   </footer>
 
-  <button id="back-to-top" onclick="scrollToTop()">Top</button>
   <script src="script.js"></script>
 </body>
 </html>
