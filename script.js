@@ -1,21 +1,37 @@
-// Show only one section at a time
-function loadSection(id) {
-  document.querySelectorAll('.section').forEach(sec => {
-    sec.classList.toggle('active', sec.id === id);
-  });
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', () => {
-  loadSection('home');
-
   document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      const sectionId = link.getAttribute('data-section');
-      loadSection(sectionId);
+      const sectionId = link.getAttribute('href');
+      document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
     });
+  });
+
+  // Project filters
+  document.querySelectorAll('.project-filters button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.project-filters button').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      const filter = button.getAttribute('data-filter');
+      document.querySelectorAll('.project-list li').forEach(item => {
+        item.classList.toggle('visible', filter === 'all' || item.getAttribute('data-category') === filter);
+      });
+    });
+  });
+  document.querySelector('.project-filters button[data-filter="all"]').click();
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => {
+    observer.observe(el);
   });
 
   // Hide preloader after 0.5s
