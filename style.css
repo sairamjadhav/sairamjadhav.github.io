@@ -1,11 +1,11 @@
 /* ====== Variables & Reset ====== */
 :root {
-  --bg: #1A1A1A; /* Dark background for minimalist theme */
-  --fg: #E0E0E0; /* Lighter gray text for better contrast */
-  --heading: #FFFFFF; /* White for headings */
-  --accent: #40C4FF; /* Brighter teal-blue accent */
-  --border: #444444; /* Subtle dark border */
-  --card-bg: #2D2D2D; /* Darker card background */
+  --bg: #1A1A1A;
+  --fg: #E0E0E0;
+  --heading: #FFFFFF;
+  --accent: #40C4FF;
+  --border: #444444;
+  --card-bg: #2D2D2D;
   --shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -164,25 +164,37 @@ body {
 }
 
 /* ====== Skills ====== */
+/* === FIXED version === */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  justify-content: space-between;
   margin-top: 2rem;
 }
 
-.skills-grid .skill-card:nth-child(-n+4) {
-  flex: 0 0 23%; /* Adjusted for better fit */
-}
-
-.skills-grid .skill-card:nth-child(n+5) {
-  flex: 0 0 31%; /* Adjusted for better alignment */
-}
-
 .skill-card {
+  flex: 0 0 calc(25% - 2rem);
   perspective: 1000px;
   height: 200px;
+}
+
+@media (max-width: 1024px) {
+  .skill-card {
+    flex: 0 0 calc(33.333% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-card {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-card {
+    flex: 0 0 100%;
+  }
 }
 
 .skill-card-inner {
