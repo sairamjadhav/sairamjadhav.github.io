@@ -30,8 +30,8 @@ document.querySelectorAll('.project-card').forEach(card => {
   });
 });
 
-// Initialize EmailJS
-emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+// Initialize EmailJS with your Public Key
+emailjs.init("LYOs7Oj5G8m6x86WS"); // Replace with your EmailJS Public Key from Account section
 
 // Contact form submission with EmailJS
 const contactForm = document.querySelector('#contact-form');
@@ -52,7 +52,7 @@ contactForm.addEventListener('submit', (e) => {
       to_email: "sairamjadhav12@gmail.com"
     };
 
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+    emailjs.send("service_4ahz1d5", "template_f0w5wip", templateParams)
       .then(() => {
         alert('Message sent successfully!');
         contactForm.reset();
