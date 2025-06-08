@@ -18,8 +18,8 @@
     <ul class="nav__links">
       <li><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i></a></li>
       <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-twitter"></i></a></li>
-      <li><a href="https://github.com/sairamjadhav" target="_blank"><i class="fab fa-github"></i></a></li>
       <li><a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://github.com/sairamjadhav" target="_blank"><i class="fab fa-github"></i></a></li>
     </ul>
     <a href="#contact" class="nav__cta">
       <span>Get in Touch</span>
@@ -34,8 +34,7 @@
       <div class="hero__circle">
         <img src="profile.jpg" alt="Sairam Jadhav" class="hero__img"/>
       </div>
-      <h1 class="hero__title">Hi, The name's Sairam</h1>
-      <p class="hero__subtitle">I_LIKE_TO_CODE.py</p>
+      <h1 class="hero__title"><span class="typewriter-text"></span></h1>
       <p class="hero__hobby">Crafting poetic code & smashing cricket shots 🏏✍️</p>
     </div>
     <div class="nav__circle">
@@ -62,31 +61,71 @@
 
     <!-- Skills -->
     <section id="skills" class="section" data-aos="fade-up">
-      <p class="section__subtitle">My Technical Expertise</p>
-      <div class="skills-list">
-        <h3>Programming Languages</h3>
-        <p>Python, Java, SQL, HTML, CSS, JavaScript</p>
-        
-        <h3>AI/ML Techniques</h3>
-        <p>Supervised/Unsupervised Learning, CNN, RNN, LSTM, GANs, Diffusion Models, Transformers, Model Optimization</p>
-        
-        <h3>Libraries</h3>
-        <p>Data Preprocessing, Feature Engineering, Data Cleaning, Pipelines</p>
-        
-        <h3>MLOps & Deployment</h3>
-        <p>Flask, Streamlit, Gradio, Google Cloud Platform (GCP), Hugging Face Spaces, AWS (basic), Git, REST API Integration</p>
-        
-        <h3>Web Development</h3>
-        <p>Basic frontend (HTML, CSS, JavaScript)</p>
-        
-        <h3>Databases</h3>
-        <p>MySQL, NoSQL (basic)</p>
-        
-        <h3>Visualization & Reporting</h3>
-        <p>Power BI, Tableau, Matplotlib, Seaborn</p>
-        
-        <h3>Soft Skills</h3>
-        <p>Problem Solving, Team Collaboration, Agile Practices, Communication</p>
+      <p class="section__subtitle">Click on a category to explore my skills</p>
+      <div class="skills-grid">
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="100" onclick="toggleSubsection('programming-languages')">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Programming Languages"/>
+          <p>Programming Languages</p>
+        </div>
+        <div class="skill-subsection" id="programming-languages">
+          <p>Python, Java, SQL, HTML, CSS, JavaScript</p>
+        </div>
+
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="150" onclick="toggleSubsection('ai-ml-techniques')">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tensorflow.svg" alt="AI/ML Techniques"/>
+          <p>AI/ML Techniques</p>
+        </div>
+        <div class="skill-subsection" id="ai-ml-techniques">
+          <p>Supervised/Unsupervised Learning, CNN, RNN, LSTM, GANs, Diffusion Models, Transformers, Model Optimization</p>
+        </div>
+
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="200" onclick="toggleSubsection('libraries')">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pandas.svg" alt="Libraries"/>
+          <p>Libraries</p>
+        </div>
+        <div class="skill-subsection" id="libraries">
+          <p>Data Preprocessing, Feature Engineering, Data Cleaning, Pipelines</p>
+        </div>
+
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="250" onclick="toggleSubsection('mlops-deployment')">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/flask.svg" alt="MLOps & Deployment"/>
+          <p>MLOps & Deployment</p>
+        </div>
+        <div class="skill-subsection" id="mlops-deployment">
+          <p>Flask, Streamlit, Gradio, Google Cloud Platform (GCP), Hugging Face Spaces, AWS (basic), Git, REST API Integration</p>
+        </div>
+
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="300" onclick="toggleSubsection('web-development')">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" alt="Web Development"/>
+          <p>Web Development</p>
+        </div>
+        <div class="skill-subsection" id="web-development">
+          <p>Basic frontend (HTML, CSS, JavaScript)</p>
+        </div>
+
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="350" onclick="toggleSubsection('databases')">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" alt="Databases"/>
+          <p>Databases</p>
+        </div>
+        <div class="skill-subsection" id="databases">
+          <p>MySQL, NoSQL (basic)</p>
+        </div>
+
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="400" onclick="toggleSubsection('visualization-reporting')">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/powerbi.svg" alt="Visualization & Reporting"/>
+          <p>Visualization & Reporting</p>
+        </div>
+        <div class="skill-subsection" id="visualization-reporting">
+          <p>Power BI, Tableau, Matplotlib, Seaborn</p>
+        </div>
+
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="450" onclick="toggleSubsection('soft-skills')">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jira.svg" alt="Soft Skills"/>
+          <p>Soft Skills</p>
+        </div>
+        <div class="skill-subsection" id="soft-skills">
+          <p>Problem Solving, Team Collaboration, Agile Practices, Communication</p>
+        </div>
       </div>
     </section>
 
@@ -94,7 +133,7 @@
     <section id="projects" class="section" data-aos="fade-up">
       <h2 class="section__title">Project 1: Drowsiness Detection System</h2>
       <div class="project__content">
-        <img src="project1.jpg" alt="Drowsiness Detection System" class="project__img"/>
+        <img src="https://images.unsplash.com/photo-1508672019048-805c876b663e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Drowsiness Detection System" class="project__img"/>
         <p class="section__text">
           Real-time detection using CNN (ResNet/VGG) and OpenCV.
         </p>
@@ -102,7 +141,7 @@
 
       <h2 class="section__title">Project 2: Two-Stage Diabetes Prediction</h2>
       <div class="project__content">
-        <img src="project2.jpg" alt="Two-Stage Diabetes Prediction" class="project__img"/>
+        <img src="https://images.unsplash.com/photo-1576091160550-2173fdabea77?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Two-Stage Diabetes Prediction" class="project__img"/>
         <p class="section__text">
           Ensemble learning (CatBoost, LightGBM) for early diagnosis.
         </p>
@@ -110,7 +149,7 @@
 
       <h2 class="section__title">Project 3: Medical Image Denoising</h2>
       <div class="project__content">
-        <img src="project3.jpg" alt="Medical Image Denoising" class="project__img"/>
+        <img src="https://images.unsplash.com/photo-1579154204601-89788f2217a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Medical Image Denoising" class="project__img"/>
         <p class="section__text">
           Developed separate GAN and diffusion models for medical image denoising.
         </p>
@@ -118,7 +157,7 @@
 
       <h2 class="section__title">Project 4: Sentiment Analysis</h2>
       <div class="project__content">
-        <img src="project4.jpg" alt="Sentiment Analysis" class="project__img"/>
+        <img src="https://images.unsplash.com/photo-1611162617210-7b7e325f1116?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Sentiment Analysis" class="project__img"/>
         <p class="section__text">
           Twitter sentiment classification using NLP.
         </p>
@@ -126,7 +165,7 @@
 
       <h2 class="section__title">Project 5: Stock Price Forecasting</h2>
       <div class="project__content">
-        <img src="project5.jpg" alt="Stock Price Forecasting" class="project__img"/>
+        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Stock Price Forecasting" class="project__img"/>
         <p class="section__text">
           Time series prediction using LSTM networks.
         </p>
@@ -141,7 +180,7 @@
         <p><i class="fas fa-envelope"></i> sairamjadhav12@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</p>
       </div>
-      <form id="contact-form" class="contact-form">
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/sairamjadhav12@gmail.com" method="POST">
         <div class="form-row">
           <div class="form-group">
             <input type="text" id="name" name="name" placeholder="Name" required/>
