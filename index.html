@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sairam Jadhav — AI/ML Engineer</title>
-  <!-- Montserrat font to match Sparrow -->
+  <!-- Montserrat font for a classy look -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
   <!-- AOS for animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Typed.js for typewriter effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -34,14 +36,9 @@
       <div class="about__content">
         <img src="profile.jpg" alt="Sairam Jadhav" class="about__img"/>
         <div class="about__text">
-          <p class="about__intro">
-            In circuits deep and data wide, I find my muse, my endless guide.<br>
-            I’m Sairam Jadhav, an AI/ML dreamer, weaving intelligence with a coder’s fervor.<br>
-            From neural nets to web’s design, my passion crafts a world divine.<br>
-            Based in Pune, I chase the stars, building solutions near and far.
-          </p>
+          <h3 class="typewriter-text" id="typewriter"></h3>
           <p class="section__text">
-            I’m a final-year student at MIT Academy of Engineering, pursuing a Bachelor of Technology in Electronics & Telecommunication with a CGPA of 8.41/10. I specialize in machine learning, deep learning, and generative AI, with a passion for building scalable, data-driven solutions. My projects span computer vision, NLP, and time-series prediction, while my growing love for web development lets me craft seamless digital experiences. I’m always excited to tackle real-world challenges with AI and bring ideas to life through code.
+            I am passionate about AI/ML with a strong foundation in web development, driven by a passion for building intelligent, user-centric solutions. From crafting dynamic web experiences to designing data-driven AI models, I thrive at the intersection of innovation and technology. My journey blends deep learning, data analytics, and full-stack development, empowering me to create seamless digital products that not only work—but think.
           </p>
         </div>
       </div>
@@ -192,15 +189,11 @@
             </div>
             <div class="project-card-back">
               <p>
-                The Drowsiness Detection System was designed to enhance road safety by identifying driver fatigue in real-time. Using advanced computer vision techniques, the system monitors eye and facial movements to detect signs of drowsiness. It leverages convolutional neural networks (CNNs) like ResNet and VGG for feature extraction, combined with OpenCV for video processing. The system alerts the driver through audio cues when drowsiness is detected, aiming to prevent accidents caused by fatigue.
+                A system to enhance road safety by detecting driver fatigue in real-time. Using computer vision, it monitors eye and facial movements to identify drowsiness. It leverages CNNs like ResNet and VGG for feature extraction, paired with OpenCV for video processing. An audio alert warns the driver when fatigue is detected, aiming to prevent accidents.
               </p>
               <div class="project-tech-stack">
                 <p>Key Tech Stack:</p>
-                <div class="tech-logos">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/opencv.svg" alt="OpenCV"/>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tensorflow.svg" alt="TensorFlow"/>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python"/>
-                </div>
+                <p class="tech-text">Deep Learning, OpenCV, ResNet, VGG, Transfer Learning</p>
               </div>
             </div>
           </div>
@@ -209,20 +202,16 @@
         <div class="project-card" data-aos="zoom-in" data-aos-delay="150">
           <div class="project-card-inner">
             <div class="project-card-front">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/catboost.svg" alt="Two-Stage Diabetes Prediction"/>
+              <i class="fas fa-stethoscope project-icon"></i>
               <p>Two-Stage Diabetes Prediction</p>
             </div>
             <div class="project-card-back">
               <p>
-                The Two-Stage Diabetes Prediction project aimed to improve early diagnosis of diabetes using a novel approach. In the first stage, I used ensemble learning techniques with models like CatBoost and LightGBM to classify patients based on clinical data. The second stage refined predictions by incorporating additional features like lifestyle factors, achieving higher accuracy. This project demonstrated the power of machine learning in healthcare, helping doctors identify at-risk patients earlier and enabling timely interventions.
+                A project to improve early diabetes diagnosis using a two-stage approach. Ensemble learning with CatBoost and LightGBM classifies patients based on clinical data. The second stage refines predictions with lifestyle factors for higher accuracy. It empowers doctors to identify at-risk patients early for timely interventions.
               </p>
               <div class="project-tech-stack">
                 <p>Key Tech Stack:</p>
-                <div class="tech-logos">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/catboost.svg" alt="CatBoost"/>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python"/>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pandas.svg" alt="Pandas"/>
-                </div>
+                <p class="tech-text">Machine Learning, CatBoost, LightGBM</p>
               </div>
             </div>
           </div>
@@ -236,15 +225,11 @@
             </div>
             <div class="project-card-back">
               <p>
-                The Medical Image Denoising project focused on improving the quality of medical imaging data, such as MRI and CT scans, by removing noise while preserving critical details. I developed two separate models: a Generative Adversarial Network (GAN) to learn noise patterns and a diffusion model to enhance image clarity. The result was clearer images that aided radiologists in accurate diagnosis. This project showcased the potential of generative AI in advancing medical imaging technology.
+                A project to enhance medical imaging like MRI and CT scans by removing noise. I developed a GAN to learn noise patterns and a diffusion model to improve clarity. The result: clearer images for accurate diagnosis. It showcases generative AI’s potential in medical imaging.
               </p>
               <div class="project-tech-stack">
                 <p>Key Tech Stack:</p>
-                <div class="tech-logos">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tensorflow.svg" alt="TensorFlow"/>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python"/>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/numpy.svg" alt="NumPy"/>
-                </div>
+                <p class="tech-text">Deep Learning, Diffusion Model, GAN</p>
               </div>
             </div>
           </div>
@@ -258,15 +243,11 @@
             </div>
             <div class="project-card-back">
               <p>
-                The Sentiment Analysis project analyzed Twitter data to classify user sentiments as positive, negative, or neutral. Using natural language processing (NLP) techniques, I preprocessed tweets with tokenization and stemming, then applied a transformer-based model for classification. The system provided insights into public opinion on trending topics, useful for businesses and researchers. This project highlighted my ability to extract meaningful insights from unstructured text data.
+                A project to classify Twitter sentiments as positive, negative, or neutral. Using NLP, I preprocessed tweets with tokenization and stemming, then applied a transformer model. It provides insights into public opinion on trending topics, useful for businesses and researchers.
               </p>
               <div class="project-tech-stack">
                 <p>Key Tech Stack:</p>
-                <div class="tech-logos">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"/>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python"/>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/huggingface.svg" alt="Hugging Face"/>
-                </div>
+                <p class="tech-text">Machine Learning, NLP</p>
               </div>
             </div>
           </div>
@@ -275,20 +256,16 @@
         <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
           <div class="project-card-inner">
             <div class="project-card-front">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/chart-dot-js.svg" alt="Stock Price Forecasting"/>
+              <i class="fas fa-money-bill-wave project-icon"></i>
               <p>Stock Price Forecasting</p>
             </div>
             <div class="project-card-back">
               <p>
-                The Stock Price Forecasting project aimed to predict future stock prices using historical data. I employed Long Short-Term Memory (LSTM) networks to capture temporal patterns in time-series data, achieving accurate predictions over short horizons. The system was integrated with a web interface using Flask, allowing users to input stock symbols and view forecasts. This project bridged my AI expertise with practical applications in finance, demonstrating the power of deep learning in predictive analytics.
+                A project to predict stock prices using historical data. I used LSTM networks to capture temporal patterns, achieving accurate short-term forecasts. Integrated with a Flask web interface, users can input stock symbols to view predictions, bridging AI with finance.
               </p>
               <div class="project-tech-stack">
                 <p>Key Tech Stack:</p>
-                <div class="tech-logos">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tensorflow.svg" alt="TensorFlow"/>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python"/>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/flask.svg" alt="Flask"/>
-                </div>
+                <p class="tech-text">Time Series Analysis, LSTM</p>
               </div>
             </div>
           </div>
@@ -298,7 +275,7 @@
 
     <!-- Contact -->
     <section id="contact" class="section" data-aos="fade-up">
-      <h2 class="section__title">I have got just what you need. Let’s talk.</h2>
+      <h2 class="section__title">I reply faster than your favorite API. Let’s connect!</h2>
       <div class="contact__info">
         <p><i class="fas fa-phone"></i> +91-7841996607</p>
         <p><i class="fas fa-envelope"></i> sairamjadhav12@gmail.com</p>
