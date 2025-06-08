@@ -10,7 +10,7 @@ const typewriter = new Typed('#typewriter', {
   ],
   typeSpeed: 50,
   backSpeed: 30,
-  backDelay: 1500,
+  backDelay: 2000, // Increased for a more noticeable transition
   loop: true,
   showCursor: true,
   cursorChar: "|"
