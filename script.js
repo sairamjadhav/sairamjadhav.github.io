@@ -30,8 +30,10 @@ const typewriter = new Typed('#typewriter', {
         icon.classList.add('bat-ball-icon');
       }
       
-      // Trigger the animation
-      icon.classList.add('visible');
+      // Trigger the animation with a slight delay to ensure DOM update
+      setTimeout(() => {
+        icon.classList.add('visible');
+      }, 50);
     }
   }
 });
