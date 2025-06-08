@@ -132,6 +132,13 @@ body {
   vertical-align: middle;
 }
 
+.hero__hobby {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
 /* ====== Circle Navigation ====== */
 .nav__circle {
   position: absolute;
@@ -355,6 +362,10 @@ body {
 
   .hero__subtitle {
     font-size: 1.2rem;
+  }
+
+  .hero__hobby {
+    font-size: 1rem;
   }
 
   .about__content {
