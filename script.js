@@ -1,7 +1,7 @@
 // Initialize AOS
 AOS.init({ duration: 1000, once: true });
 
-// Typewriter effect for About section with icons
+// Typewriter effect for About section with logos
 const typewriter = new Typed('#typewriter', {
   strings: [
     "I like to code.py",
@@ -15,15 +15,15 @@ const typewriter = new Typed('#typewriter', {
   showCursor: true,
   cursorChar: "|",
   onStringTyped: (arrayPos, self) => {
-    // Show the corresponding icon when the string is fully typed
-    const icons = document.querySelectorAll('.typewriter-text i');
-    icons.forEach(icon => {
-      icon.style.display = 'none';
-      icon.classList.remove('animate');
-    }); // Hide all icons and remove animation
-    const currentIcon = icons[arrayPos];
-    currentIcon.style.display = 'inline-block';
-    currentIcon.classList.add('animate');
+    // Show the corresponding logo when the string is fully typed
+    const logos = document.querySelectorAll('.typewriter-logo');
+    logos.forEach(logo => {
+      logo.style.display = 'none';
+      logo.classList.remove('visible');
+    }); // Hide all logos and remove animation
+    const currentLogo = logos[arrayPos];
+    currentLogo.style.display = 'inline-block';
+    currentLogo.classList.add('visible');
   }
 });
 
