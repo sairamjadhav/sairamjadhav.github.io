@@ -1,30 +1,19 @@
 // Initialize AOS
 AOS.init({ duration: 1000, once: true });
 
-// Typewriter effect for About section with logos
+// Typewriter effect for About section
 const typewriter = new Typed('#typewriter', {
   strings: [
-    "I like to code.py",
-    "I compile emotions.poetry",
-    "I run innings.cricket"
+    "I like to code.py!",
+    "I compile emotions.poetry!",
+    "I run innings.cricket!"
   ],
   typeSpeed: 50,
   backSpeed: 30,
   backDelay: 1500,
   loop: true,
   showCursor: true,
-  cursorChar: "|",
-  onStringTyped: (arrayPos, self) => {
-    // Show the corresponding logo when the string is fully typed
-    const logos = document.querySelectorAll('.typewriter-logo');
-    logos.forEach(logo => {
-      logo.style.display = 'none';
-      logo.classList.remove('visible');
-    }); // Hide all logos and remove animation
-    const currentLogo = logos[arrayPos];
-    currentLogo.style.display = 'inline-block';
-    currentLogo.classList.add('visible');
-  }
+  cursorChar: "|"
 });
 
 // Flip skill cards on click
