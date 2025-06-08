@@ -13,7 +13,16 @@ const typewriter = new Typed('#typewriter', {
   backDelay: 1500,
   loop: true,
   showCursor: true,
-  cursorChar: "|"
+  cursorChar: "|",
+  onStringTyped: (arrayPos, self) => {
+    // Show the emoji/icon when the string is fully typed
+    const icon = document.querySelector('.typewriter-text i');
+    if (icon) {
+      icon.classList.remove('visible'); // Reset animation
+      void icon.offsetWidth; // Trigger reflow to restart animation
+      icon.classList.add('visible');
+    }
+  }
 });
 
 // Flip skill cards on click
