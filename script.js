@@ -1,23 +1,15 @@
 // Initialize AOS
 AOS.init({ duration: 1000, once: true });
 
-// Active nav link on scroll
-const sections = document.querySelectorAll('section, header');
-const navLinks = document.querySelectorAll('.nav__circle-item');
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(a => a.classList.remove('active'));
-      const selector = `.nav__circle-item[href="#${entry.target.id}"]`;
-      document.querySelector(selector)?.classList.add('active');
-    }
-  });
-}, { threshold: 0.5 });
-
-sections.forEach(section => navObserver.observe(section));
-
 // Flip skill cards on click
 document.querySelectorAll('.skill-card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+  });
+});
+
+// Flip project cards on click
+document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', () => {
     card.classList.toggle('flipped');
   });
