@@ -131,21 +131,23 @@ body {
 .about__text {
   max-width: 600px;
   text-align: left;
-  display: flex; /* Added for better alignment of typewriter text */
-  flex-direction: column; /* Added for better alignment of typewriter text */
-  justify-content: center; /* Added for better alignment of typewriter text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .typewriter-text {
-  font-size: 2.6rem;
+  font-size: 2.3rem; /* Adjusted font size */
   font-weight: 700;
   color: var(--heading);
   margin-bottom: 1.5rem;
   min-height: 3rem;
-  display: flex; /* Ensures emoji and text are on the same line */
+  display: flex;
   align-items: center;
   gap: 10px;
-  justify-content: flex-start; /* Aligns content to the start for left-aligned text */
+  justify-content: flex-start;
+  white-space: nowrap; /* Prevent wrapping for the Typed.js line */
+  overflow: hidden; /* Hide overflow if content is too wide */
 }
 
 .typewriter-text .typed-text {
@@ -173,7 +175,7 @@ body {
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* Aligns items to the center */
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -182,9 +184,9 @@ body {
   flex: 0 0 calc(25% - 2rem);
   perspective: 1000px;
   height: 200px;
-  display: flex; /* Added for alignment */
-  justify-content: center; /* Added for alignment */
-  align-items: center; /* Added for alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1024px) {
@@ -257,10 +259,10 @@ body {
 
 .skill-card-back ul {
   list-style-type: none;
-  text-align: left; /* Keep text aligned left within the card for readability */
+  text-align: left;
   font-size: 1.1rem;
   color: var(--fg);
-  width: 100%; /* Ensure ul takes full width to respect padding */
+  width: 100%;
 }
 
 .skill-card-back li {
@@ -273,24 +275,24 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center; /* Changed from space-between to center for better alignment when fewer cards */
+  justify-content: center; /* Aligns items to the center */
   margin-top: 2rem;
 }
 
 .projects-grid .project-card:nth-child(-n+3) {
-  flex: 0 0 calc(33.333% - 2rem); /* Adjusted for better responsiveness and consistency */
+  flex: 0 0 calc(33.333% - 2rem);
 }
 
 .projects-grid .project-card:nth-child(n+4) {
-  flex: 0 0 calc(50% - 2rem); /* Adjusted for better responsiveness and consistency */
+  flex: 0 0 calc(50% - 2rem);
 }
 
 .project-card {
   perspective: 1000px;
   height: 250px;
-  display: flex; /* Added for alignment */
-  justify-content: center; /* Added for alignment */
-  align-items: center; /* Added for alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-card-inner {
@@ -373,9 +375,9 @@ body {
   font-size: 1.3rem;
   color: var(--fg);
   margin: 0.5rem 0;
-  display: flex; /* Ensures icon and text align */
-  align-items: center; /* Aligns vertically */
-  justify-content: center; /* Centers content horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact__info i {
@@ -392,7 +394,7 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center; /* Center the form inputs */
+  justify-content: center;
 }
 
 .form-group {
@@ -469,9 +471,9 @@ body {
 .footer {
   padding: 2rem;
   position: relative;
-  display: flex; /* Added to center the circle item */
-  justify-content: center; /* Centers the circle item */
-  align-items: center; /* Centers the circle item */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav__circle-item {
@@ -516,13 +518,14 @@ body {
   }
 
   .about__text {
-    text-align: center; /* Centered for small screens */
-    align-items: center; /* Center items within the flex container */
+    text-align: center;
+    align-items: center;
   }
 
   .typewriter-text {
-    font-size: 2rem;
-    justify-content: center; /* Center typewriter text on small screens */
+    font-size: 1.8rem; /* Further adjusted for very small screens */
+    justify-content: center;
+    white-space: normal; /* Allow wrapping on very small screens if necessary */
   }
 
   .about__img {
@@ -533,11 +536,13 @@ body {
   .skills-grid,
   .projects-grid {
     flex-direction: column;
+    align-items: center; /* Center cards in column layout */
   }
 
   .skills-grid .skill-card,
   .projects-grid .project-card {
     flex: 0 0 100%;
+    max-width: 300px; /* Optional: Limit width on mobile for consistent card size */
   }
 
   .form-row {
@@ -545,8 +550,22 @@ body {
   }
 
   .contact__info p {
-    flex-direction: column; /* Stack icon and text */
-    gap: 5px; /* Add some space */
-    text-align: center; /* Center text */
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section__title {
+    font-size: 2.5rem;
+  }
+
+  .section__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .typewriter-text {
+    font-size: 1.5rem; /* Smallest size for very cramped screens */
   }
 }
