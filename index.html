@@ -14,14 +14,19 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" data-aos="fade-in">
     <ul class="nav__links">
       <li><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i></a></li>
       <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-twitter"></i></a></li>
       <li><a href="https://github.com/sairamjadhav" target="_blank"><i class="fab fa-github"></i></a></li>
       <li><a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a></li>
     </ul>
-    <a href="#contact" class="nav__cta"><i class="fas fa-envelope"></i> Get in Touch</a>
+    <a href="#contact" class="nav__cta">
+      <span>Get in Touch</span>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </a>
   </nav>
 
   <header id="home" class="hero" data-aos="fade-in">
@@ -34,11 +39,11 @@
       <p class="hero__hobby">Crafting poetic code & smashing cricket shots 🏏✍️</p>
     </div>
     <div class="nav__circle">
-      <a href="#home" class="nav__circle-item active"><i class="fas fa-home"></i></a>
-      <a href="#about" class="nav__circle-item"><span>ABOUT</span></a>
-      <a href="#skills" class="nav__circle-item"><span>SKILLS</span></a>
-      <a href="#projects" class="nav__circle-item"><span>PROJECTS</span></a>
-      <a href="#contact" class="nav__circle-item"><span>CONTACT</span></a>
+      <a href="#home" class="nav__circle-item active" data-aos="fade-in" data-aos-delay="100"><i class="fas fa-home"></i></a>
+      <a href="#about" class="nav__circle-item" data-aos="fade-in" data-aos-delay="200"><span>ABOUT</span></a>
+      <a href="#skills" class="nav__circle-item" data-aos="fade-in" data-aos-delay="300"><span>SKILLS</span></a>
+      <a href="#projects" class="nav__circle-item" data-aos="fade-in" data-aos-delay="400"><span>PROJECTS</span></a>
+      <a href="#contact" class="nav__circle-item" data-aos="fade-in" data-aos-delay="500"><span>CONTACT</span></a>
     </div>
   </header>
 
@@ -57,62 +62,31 @@
 
     <!-- Skills -->
     <section id="skills" class="section" data-aos="fade-up">
-      <p class="section__subtitle">Hover over a skill for current proficiency</p>
-      <div class="skills-grid">
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/SASS.png" alt="Sass"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="150">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/MySQL.png" alt="MySQL"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/html.png" alt="HTML"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="250">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/Matlab.png" alt="Matlab"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/django.png" alt="Django"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="350">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/react.png" alt="React"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/nextjs.png" alt="Next.js"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/CSS.png" alt="CSS"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/python.png" alt="Python"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="550">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/typescript.png" alt="TypeScript"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/CSS.png" alt="CSS"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="650">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/flutter.png" alt="Flutter"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/figma.png" alt="Figma"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="750">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/tensorflow.png" alt="TensorFlow"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/opencv.png" alt="OpenCV"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="850">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/node.png" alt="Node.js"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="900">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/AWS.png" alt="AWS"/>
-        </div>
-        <div class="skill-item" data-aos="zoom-in" data-aos-delay="950">
-          <img src="https://i-like-to-code.s3.us-east-2.amazonaws.com/icons/GCP.png" alt="GCP"/>
-        </div>
+      <p class="section__subtitle">My Technical Expertise</p>
+      <div class="skills-list">
+        <h3>Programming Languages</h3>
+        <p>Python, Java, SQL, HTML, CSS, JavaScript</p>
+        
+        <h3>AI/ML Techniques</h3>
+        <p>Supervised/Unsupervised Learning, CNN, RNN, LSTM, GANs, Diffusion Models, Transformers, Model Optimization</p>
+        
+        <h3>Libraries</h3>
+        <p>Data Preprocessing, Feature Engineering, Data Cleaning, Pipelines</p>
+        
+        <h3>MLOps & Deployment</h3>
+        <p>Flask, Streamlit, Gradio, Google Cloud Platform (GCP), Hugging Face Spaces, AWS (basic), Git, REST API Integration</p>
+        
+        <h3>Web Development</h3>
+        <p>Basic frontend (HTML, CSS, JavaScript)</p>
+        
+        <h3>Databases</h3>
+        <p>MySQL, NoSQL (basic)</p>
+        
+        <h3>Visualization & Reporting</h3>
+        <p>Power BI, Tableau, Matplotlib, Seaborn</p>
+        
+        <h3>Soft Skills</h3>
+        <p>Problem Solving, Team Collaboration, Agile Practices, Communication</p>
       </div>
     </section>
 
@@ -122,7 +96,7 @@
       <div class="project__content">
         <img src="project1.jpg" alt="Drowsiness Detection System" class="project__img"/>
         <p class="section__text">
-          Real-time detection using CNN (ResNet/VGG) and OpenCV, achieving 95% accuracy in driver safety applications.
+          Real-time detection using CNN (ResNet/VGG) and OpenCV.
         </p>
       </div>
 
@@ -130,7 +104,7 @@
       <div class="project__content">
         <img src="project2.jpg" alt="Two-Stage Diabetes Prediction" class="project__img"/>
         <p class="section__text">
-          Ensemble learning model (CatBoost, LightGBM) for early diabetes diagnosis with 92% accuracy.
+          Ensemble learning (CatBoost, LightGBM) for early diagnosis.
         </p>
       </div>
 
@@ -138,7 +112,7 @@
       <div class="project__content">
         <img src="project3.jpg" alt="Medical Image Denoising" class="project__img"/>
         <p class="section__text">
-          Developed GAN and diffusion models to enhance medical image clarity by 30%.
+          Developed separate GAN and diffusion models for medical image denoising.
         </p>
       </div>
 
@@ -146,7 +120,7 @@
       <div class="project__content">
         <img src="project4.jpg" alt="Sentiment Analysis" class="project__img"/>
         <p class="section__text">
-          Twitter sentiment classification using NLP (BERT), optimized for scalability.
+          Twitter sentiment classification using NLP.
         </p>
       </div>
 
@@ -154,7 +128,7 @@
       <div class="project__content">
         <img src="project5.jpg" alt="Stock Price Forecasting" class="project__img"/>
         <p class="section__text">
-          Time-series prediction using LSTM networks, achieving 85% accuracy.
+          Time series prediction using LSTM networks.
         </p>
       </div>
     </section>
