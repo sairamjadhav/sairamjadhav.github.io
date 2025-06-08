@@ -183,10 +183,10 @@ body {
 .skill-card {
   flex: 0 0 calc(25% - 2rem);
   perspective: 1000px;
-  height: 200px;
-  display: flex; /* Added for alignment */
-  justify-content: center; /* Added for alignment */
-  align-items: center; /* Added for alignment */
+  height: 200px; /* Base height for desktop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1024px) {
@@ -199,6 +199,8 @@ body {
   .skill-card {
     flex: 0 0 calc(70% - 2rem); /* Wider for tablets/smaller desktops */
     max-width: 400px; /* Max width to prevent them from becoming too large */
+    /* Adjust height dynamically for better proportion on tablets */
+    height: clamp(180px, 40vw, 220px); /* Min 180px, up to 40% of viewport width, max 220px */
   }
 }
 
@@ -206,6 +208,8 @@ body {
   .skill-card {
     flex: 0 0 calc(90% - 2rem); /* Significantly wider for mobile phones */
     max-width: 450px; /* Ensure it doesn't get excessively wide on small screens */
+    /* Dynamic height for mobile phones to maintain aspect ratio */
+    height: clamp(160px, 50vw, 200px); /* Min 160px, up to 50% of viewport width, max 200px */
   }
 }
 
@@ -291,7 +295,7 @@ body {
 
 .project-card {
   perspective: 1000px;
-  height: 250px;
+  height: 250px; /* Base height for desktop */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,6 +305,8 @@ body {
   .project-card {
     flex: 0 0 calc(70% - 2rem); /* Wider for tablets/smaller desktops */
     max-width: 400px; /* Max width to prevent them from becoming too large */
+    /* Adjust height dynamically for better proportion on tablets */
+    height: clamp(200px, 50vw, 250px); /* Min 200px, up to 50% of viewport width, max 250px */
   }
 }
 
@@ -308,6 +314,8 @@ body {
   .project-card {
     flex: 0 0 calc(90% - 2rem); /* Significantly wider for mobile phones */
     max-width: 450px; /* Ensure it doesn't get excessively wide on small screens */
+    /* Dynamic height for mobile phones to maintain aspect ratio */
+    height: clamp(180px, 60vw, 230px); /* Min 180px, up to 60% of viewport width, max 230px */
   }
 }
 
@@ -556,7 +564,7 @@ body {
     align-items: center; /* Center cards in column layout */
   }
 
-  /* Skill and Project card width handled by dedicated media queries above */
+  /* Skill and Project card width and height handled by dedicated media queries above */
 
   .form-row {
     flex-direction: column;
