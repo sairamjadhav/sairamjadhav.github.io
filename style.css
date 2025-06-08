@@ -120,11 +120,22 @@ body {
   box-shadow: var(--shadow);
 }
 
+.about__text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about__intro {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
 .section__text {
   font-size: 1rem;
   color: #666;
-  max-width: 600px;
-  text-align: left;
 }
 
 /* ====== Skills ====== */
@@ -246,7 +257,7 @@ body {
 
 .project-card {
   perspective: 1000px;
-  height: 200px;
+  height: 250px; /* Increased height to accommodate longer descriptions */
 }
 
 .project-card-inner {
@@ -302,12 +313,39 @@ body {
   transform: rotateY(180deg);
   padding: 1.5rem;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-card-back p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #666;
   text-align: center;
+  flex-grow: 1;
+}
+
+.project-tech-stack {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.project-tech-stack p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.tech-logos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tech-logos img {
+  width: 30px;
+  height: 30px;
 }
 
 /* ====== Contact ====== */
@@ -435,8 +473,12 @@ body {
     text-align: center;
   }
 
-  .section__text {
+  .about__text {
     text-align: center;
+  }
+
+  .about__intro {
+    font-size: 1.2rem;
   }
 
   .skills-grid,
