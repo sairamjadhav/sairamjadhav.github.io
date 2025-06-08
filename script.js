@@ -22,21 +22,24 @@ new Typed('#typed', {
   loop: true
 });
 
-// Scroll-reveal for skill progress rings
-const skillObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const circle = entry.target.querySelector('.progress-ring__circle');
-      const level = entry.target.dataset.level;
-      const circumference = 326.56; // 2 * π * 52
-      circle.style.strokeDashoffset = circumference - (level / 100) * circumference;
-      skillObserver.unobserve(entry.target);
+// Skill category toggle
+const skillIcons = document.querySelectorAll('.skill-icon');
+skillIcons.forEach(icon => {
+  icon.addEventListener('click', () => {
+    const category = icon.dataset.category;
+    const details = document.querySelector(`#${category}-details`);
+    const isActive = details.classList.contains('active');
+
+    // Hide all details
+    document.querySelectorAll('.skill-details').forEach(detail => {
+      detail.classList.remove('active');
+    });
+
+    // Show clicked category if not already active
+    if (!isActive) {
+      details.classList.add('active');
     }
   });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.skill-progress').forEach(el => {
-  skillObserver.observe(el);
 });
 
 // Filterable projects
