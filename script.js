@@ -1,5 +1,5 @@
 // Initialize AOS
-AOS.init({ duration: 800, once: true });
+AOS.init({ duration: 1000, once: true });
 
 // Mobile nav toggle
 const toggle = document.querySelector('.nav__toggle');
@@ -20,40 +20,6 @@ new Typed('#typed', {
   backSpeed: 25,
   backDelay: 2000,
   loop: true
-});
-
-// Skill category toggle
-const skillIcons = document.querySelectorAll('.skill-icon');
-skillIcons.forEach(icon => {
-  icon.addEventListener('click', () => {
-    const category = icon.dataset.category;
-    const details = document.querySelector(`#${category}-details`);
-    const isActive = details.classList.contains('active');
-
-    // Hide all details
-    document.querySelectorAll('.skill-details').forEach(detail => {
-      detail.classList.remove('active');
-    });
-
-    // Show clicked category if not already active
-    if (!isActive) {
-      details.classList.add('active');
-    }
-  });
-});
-
-// Filterable projects
-const filterBtns = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.card');
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const category = btn.dataset.filter;
-    cards.forEach(c => {
-      c.style.display = (category === 'all' || c.dataset.category === category) ? 'block' : 'none';
-    });
-  });
 });
 
 // Active nav link on scroll
