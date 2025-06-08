@@ -118,8 +118,8 @@ body {
 }
 
 .about__img {
-  width: 300px; /* Increased from 250px */
-  height: 360px; /* Increased from 300px, maintaining 5:6 ratio */
+  width: 300px;
+  height: 360px;
   max-width: 100%;
   border-radius: 10px;
   object-fit: cover;
@@ -168,16 +168,16 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: space-between; /* Match projects section */
+  justify-content: space-between;
   margin-top: 2rem;
 }
 
 .skills-grid .skill-card:nth-child(-n+4) {
-  flex: 0 0 22.5%; /* 4 cards in first row */
+  flex: 0 0 23%; /* Adjusted for better fit */
 }
 
 .skills-grid .skill-card:nth-child(n+5) {
-  flex: 0 0 30%; /* 3 cards in second row */
+  flex: 0 0 31%; /* Adjusted for better alignment */
 }
 
 .skill-card {
@@ -489,8 +489,8 @@ body {
   }
 
   .about__img {
-    width: 240px; /* Increased from 200px */
-    height: 288px; /* Increased from 240px, maintaining 5:6 ratio */
+    width: 240px;
+    height: 288px;
   }
 
   .typewriter-text {
