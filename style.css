@@ -113,8 +113,8 @@ body {
 }
 
 .hero__img {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -124,16 +124,10 @@ body {
   font-weight: 700;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  display: inline-block;
 }
 
-.hero__subtitle {
-  font-size: 1.5rem;
-  color: #888;
-  font-weight: 300;
-  letter-spacing: 2px;
-}
-
-.hero__subtitle::after {
+.hero__title::after {
   content: '';
   display: inline-block;
   width: 8px;
@@ -232,23 +226,56 @@ body {
 }
 
 /* ====== Skills ====== */
-.skills-list {
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-.skills-list h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 1rem 0 0.5rem;
-  color: var(--fg);
+.skill-item {
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.skills-list p {
+.skill-item:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.skill-item p {
+  margin-top: 0.5rem;
   font-size: 1rem;
   color: #666;
-  margin-bottom: 1rem;
+}
+
+.skill-subsection {
+  display: none;
+  text-align: center;
+  padding: 1rem;
+  background: #FFF;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.skill-subsection.active {
+  display: block;
+}
+
+.skill-subsection p {
+  font-size: 0.9rem;
+  color: #666;
 }
 
 /* ====== Projects ====== */
@@ -368,10 +395,6 @@ body {
     font-size: 2rem;
   }
 
-  .hero__subtitle {
-    font-size: 1.2rem;
-  }
-
   .hero__hobby {
     font-size: 1rem;
   }
@@ -391,9 +414,5 @@ body {
 
   .form-row {
     flex-direction: column;
-  }
-
-  .skills-list {
-    text-align: center;
   }
 }
