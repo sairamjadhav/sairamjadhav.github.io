@@ -34,6 +34,8 @@ body {
   align-items: center;
   z-index: 1000;
   background: rgba(26, 26, 26, 0.9);
+  padding: 10px 20px; /* Added padding for better visual spacing */
+  border-radius: 10px; /* Slightly rounded corners for the nav bar */
 }
 
 .nav__links {
@@ -129,6 +131,9 @@ body {
 .about__text {
   max-width: 600px;
   text-align: left;
+  display: flex; /* Added for better alignment of typewriter text */
+  flex-direction: column; /* Added for better alignment of typewriter text */
+  justify-content: center; /* Added for better alignment of typewriter text */
 }
 
 .typewriter-text {
@@ -137,9 +142,10 @@ body {
   color: var(--heading);
   margin-bottom: 1.5rem;
   min-height: 3rem;
-  display: flex;
+  display: flex; /* Ensures emoji and text are on the same line */
   align-items: center;
   gap: 10px;
+  justify-content: flex-start; /* Aligns content to the start for left-aligned text */
 }
 
 .typewriter-text .typed-text {
@@ -164,7 +170,6 @@ body {
 }
 
 /* ====== Skills ====== */
-/* === FIXED version === */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -177,6 +182,9 @@ body {
   flex: 0 0 calc(25% - 2rem);
   perspective: 1000px;
   height: 200px;
+  display: flex; /* Added for alignment */
+  justify-content: center; /* Added for alignment */
+  align-items: center; /* Added for alignment */
 }
 
 @media (max-width: 1024px) {
@@ -249,9 +257,10 @@ body {
 
 .skill-card-back ul {
   list-style-type: none;
-  text-align: left;
+  text-align: left; /* Keep text aligned left within the card for readability */
   font-size: 1.1rem;
   color: var(--fg);
+  width: 100%; /* Ensure ul takes full width to respect padding */
 }
 
 .skill-card-back li {
@@ -264,21 +273,24 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: center; /* Changed from space-between to center for better alignment when fewer cards */
   margin-top: 2rem;
 }
 
 .projects-grid .project-card:nth-child(-n+3) {
-  flex: 0 0 30%;
+  flex: 0 0 calc(33.333% - 2rem); /* Adjusted for better responsiveness and consistency */
 }
 
 .projects-grid .project-card:nth-child(n+4) {
-  flex: 0 0 45%;
+  flex: 0 0 calc(50% - 2rem); /* Adjusted for better responsiveness and consistency */
 }
 
 .project-card {
   perspective: 1000px;
   height: 250px;
+  display: flex; /* Added for alignment */
+  justify-content: center; /* Added for alignment */
+  align-items: center; /* Added for alignment */
 }
 
 .project-card-inner {
@@ -361,6 +373,9 @@ body {
   font-size: 1.3rem;
   color: var(--fg);
   margin: 0.5rem 0;
+  display: flex; /* Ensures icon and text align */
+  align-items: center; /* Aligns vertically */
+  justify-content: center; /* Centers content horizontally */
 }
 
 .contact__info i {
@@ -377,6 +392,7 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center; /* Center the form inputs */
 }
 
 .form-group {
@@ -453,6 +469,9 @@ body {
 .footer {
   padding: 2rem;
   position: relative;
+  display: flex; /* Added to center the circle item */
+  justify-content: center; /* Centers the circle item */
+  align-items: center; /* Centers the circle item */
 }
 
 .nav__circle-item {
@@ -497,16 +516,18 @@ body {
   }
 
   .about__text {
-    text-align: center;
+    text-align: center; /* Centered for small screens */
+    align-items: center; /* Center items within the flex container */
+  }
+
+  .typewriter-text {
+    font-size: 2rem;
+    justify-content: center; /* Center typewriter text on small screens */
   }
 
   .about__img {
     width: 240px;
     height: 288px;
-  }
-
-  .typewriter-text {
-    font-size: 2rem;
   }
 
   .skills-grid,
@@ -521,5 +542,11 @@ body {
 
   .form-row {
     flex-direction: column;
+  }
+
+  .contact__info p {
+    flex-direction: column; /* Stack icon and text */
+    gap: 5px; /* Add some space */
+    text-align: center; /* Center text */
   }
 }
