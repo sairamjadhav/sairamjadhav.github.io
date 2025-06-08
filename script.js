@@ -4,9 +4,9 @@ AOS.init({ duration: 1000, once: true });
 // Typewriter effect for About section with icons
 const typewriter = new Typed('#typewriter', {
   strings: [
-    "I like to code.py <i class='fas fa-laptop laptop-icon'></i>",
-    "I compile emotions.poetry <i class='fas fa-pen pen-icon'></i>",
-    "I run innings.cricket <i class='fas fa-baseball-bat-ball bat-ball-icon'></i>"
+    "I like to code.py",
+    "I compile emotions.poetry",
+    "I run innings.cricket"
   ],
   typeSpeed: 50,
   backSpeed: 30,
@@ -15,26 +15,15 @@ const typewriter = new Typed('#typewriter', {
   showCursor: true,
   cursorChar: "|",
   onStringTyped: (arrayPos, self) => {
-    // Show the emoji/icon when the string is fully typed
-    const icon = document.querySelector('.typewriter-text i');
-    if (icon) {
-      // Remove existing animation classes to reset
-      icon.classList.remove('visible', 'laptop-icon', 'pen-icon', 'bat-ball-icon');
-      
-      // Add the appropriate class based on the current string
-      if (arrayPos === 0) {
-        icon.classList.add('laptop-icon');
-      } else if (arrayPos === 1) {
-        icon.classList.add('pen-icon');
-      } else if (arrayPos === 2) {
-        icon.classList.add('bat-ball-icon');
-      }
-      
-      // Trigger the animation with a slight delay to ensure DOM update
-      setTimeout(() => {
-        icon.classList.add('visible');
-      }, 50);
-    }
+    // Show the corresponding icon when the string is fully typed
+    const icons = document.querySelectorAll('.typewriter-text i');
+    icons.forEach(icon => {
+      icon.style.display = 'none';
+      icon.classList.remove('animate');
+    }); // Hide all icons and remove animation
+    const currentIcon = icons[arrayPos];
+    currentIcon.style.display = 'inline-block';
+    currentIcon.classList.add('animate');
   }
 });
 
