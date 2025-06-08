@@ -2,121 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sairam Jadhav - AI/ML Engineer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sairam Jadhav — AI/ML Engineer</title>
+  <link rel="stylesheet" href="style.css"/>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet"/>
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Header with navigation -->
-  <header>
+  <header id="home">
     <nav>
-      <div class="logo">Sairam Jadhav</div>
+      <div class="logo">SJ</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="resume.pdf" target="_blank" class="resume-btn">Resume</a></li>
       </ul>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
     </nav>
+    <div class="hero">
+      <img src="profile.jpg" alt="Sairam Jadhav"/>
+      <h1>Sairam Jadhav</h1>
+      <p>AI/ML Engineer | Deep Learning & Generative AI Specialist</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/sairam_jadhav_" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/sairam_jadhav_" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+      </div>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <img src="profile.jpg" alt="Profile picture of Sairam Jadhav" class="profile-pic reveal">
-      <h1 class="reveal">Sairam Jadhav</h1>
-      <h2 class="reveal">AI/ML Engineer</h2>
-      <p class="tagline reveal">Engineering robust, AI-powered solutions for real-world impact.</p>
-      <a href="resume.pdf" target="_blank" class="btn reveal">Download Resume</a>
-    </div>
-  </section>
+  <main>
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        AI/ML Engineer with expertise in Machine Learning, Deep Learning, and Generative AI, combined with strong software development fundamentals. Skilled in building data-driven applications, optimizing ML models, and integrating them into scalable software solutions. Proficient in Python, Java, cloud platforms, and modern ML toolchains. Passionate about solving real-world problems with AI and engineering robust, production-ready systems.
+      </p>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="about section">
-    <h2 class="section-title reveal">About Me</h2>
-    <p class="reveal">I am an AI/ML Engineer with expertise in machine learning, deep learning, and generative AI. I have strong software development fundamentals and am passionate about leveraging data-driven approaches to build scalable solutions.</p>
-    <p class="reveal">Proficient in Python, Java, and modern cloud platforms, I excel at optimizing machine learning models and integrating them into production-ready applications. I am driven by solving real-world problems through innovative AI technology.</p>
-  </section>
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Drowsiness Detection System</h3>
+          <p>Real-time detection using CNN (ResNet/VGG) and OpenCV.</p>
+        </div>
+        <div class="card">
+          <h3>Two-Stage Diabetes Prediction</h3>
+          <p>Ensemble learning (CatBoost, LightGBM) for early diagnosis.</p>
+        </div>
+        <div class="card">
+          <h3>Medical Image Denoising</h3>
+          <p>GAN and diffusion models for medical image denoising.</p>
+        </div>
+        <div class="card">
+          <h3>Sentiment Analysis</h3>
+          <p>Twitter sentiment classification using NLP.</p>
+        </div>
+        <div class="card">
+          <h3>Stock Price Forecasting</h3>
+          <p>Time series prediction using LSTM networks.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills section">
-    <h2 class="section-title reveal">Skills</h2>
-    <div class="skills-container">
-      <div class="skill-category reveal">
-        <h3>Programming</h3>
-        <p>Python, Java, SQL, HTML, CSS, JavaScript</p>
-      </div>
-      <div class="skill-category reveal">
-        <h3>Machine Learning</h3>
-        <p>CNN, RNN (LSTM), GANs, Diffusion Models, Transformers</p>
-      </div>
-      <div class="skill-category reveal">
-        <h3>Frameworks</h3>
-        <p>NumPy, pandas, scikit-learn, TensorFlow, PyTorch, OpenCV</p>
-      </div>
-      <div class="skill-category reveal">
-        <h3>Tools & Platforms</h3>
-        <p>Flask, Streamlit, Gradio, AWS, GCP, Hugging Face Spaces</p>
-      </div>
-    </div>
-  </section>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Languages:</strong> Python, Java, SQL, HTML, CSS, JavaScript</li>
+        <li><strong>AI/ML:</strong> CNN, RNN, LSTM, GANs, Diffusion Models, Transformers</li>
+        <li><strong>Frameworks:</strong> TensorFlow, PyTorch, Keras, HuggingFace</li>
+        <li><strong>Deployment:</strong> Flask, Streamlit, Gradio, GCP, AWS, Git</li>
+        <li><strong>Data:</strong> NumPy, pandas, scikit-learn, OpenCV, MySQL, NoSQL</li>
+        <li><strong>Visualization:</strong> Matplotlib, Power BI, Tableau</li>
+      </ul>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects section">
-    <h2 class="section-title reveal">Projects</h2>
-    <div class="projects-container">
-      <div class="project-card reveal">
-        <h3>Drowsiness Detection System</h3>
-        <p>Developed a real-time system to detect driver drowsiness using CNN models (ResNet/VGG) and OpenCV. The system processes video input to identify signs of fatigue and provides alerts.</p>
-        <p class="tech">Technologies: Python, OpenCV, PyTorch, ResNet</p>
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <h3>MIT Academy of Engineering</h3>
+        <span>2021 – 2025 | B.Tech in Electronics & Telecommunication (CGPA: 8.41)</span>
       </div>
-      <div class="project-card reveal">
-        <h3>Two-Stage Diabetes Prediction</h3>
-        <p>Built an ensemble learning model combining CatBoost and LightGBM to predict diabetes risk. The two-stage approach improves early diagnosis by leveraging complementary algorithms.</p>
-        <p class="tech">Technologies: Python, pandas, scikit-learn, CatBoost, LightGBM</p>
+      <div class="edu-item">
+        <h3>Nutan Vidya Mandir</h3>
+        <span>2021 | HSC – 91.33%</span>
       </div>
-      <div class="project-card reveal">
-        <h3>Medical Image Denoising</h3>
-        <p>Implemented GAN and diffusion models to denoise medical images (e.g., MRI scans), improving clarity while preserving critical details. This enhances image quality for better diagnostic support.</p>
-        <p class="tech">Technologies: Python, PyTorch, GAN, Diffusion Models</p>
+      <div class="edu-item">
+        <h3>Strawberry English Medium School</h3>
+        <span>2019 | SSC – 91%</span>
       </div>
-      <div class="project-card reveal">
-        <h3>Sentiment Analysis</h3>
-        <p>Created a Twitter sentiment analysis tool using NLP techniques to classify tweets as positive or negative. The model uses pre-trained embeddings and text preprocessing for accurate sentiment detection.</p>
-        <p class="tech">Technologies: Python, scikit-learn, NLTK, Text Processing</p>
-      </div>
-      <div class="project-card reveal">
-        <h3>Stock Price Forecasting</h3>
-        <p>Developed an LSTM-based time series model to forecast stock prices. The model analyzes historical price data and captures temporal patterns to predict future market trends.</p>
-        <p class="tech">Technologies: Python, Keras, TensorFlow, LSTM</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact section">
-    <h2 class="section-title reveal">Contact</h2>
-    <p class="reveal">I'm always open to discussing new projects or opportunities. Feel free to connect with me:</p>
-    <div class="contact-info">
-      <p class="reveal"><i class="fas fa-envelope"></i> <a href="mailto:sairamjadhav12@gmail.com">sairamjadhav12@gmail.com</a></p>
-      <p class="reveal"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/sairam-jadhav" target="_blank">LinkedIn</a></p>
-      <p class="reveal"><i class="fab fa-instagram"></i> <a href="https://instagram.com/sairamjadhav" target="_blank">Instagram</a></p>
-      <p class="reveal"><i class="fab fa-twitter"></i> <a href="https://twitter.com/sairam_jadhav" target="_blank">Twitter</a></p>
-    </div>
-  </section>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Get in Touch</h2>
+      <p>Email: <a href="mailto:sairamjadhav12@gmail.com">sairamjadhav12@gmail.com</a></p>
+      <p>Phone: +91-7841996607</p>
+      <p>Location: Pune, Maharashtra, India</p>
+    </section>
+  </main>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Sairam Jadhav. All rights reserved.</p>
+    <p>© 2025 Sairam Jadhav. Built with ❤ for AI/ML.</p>
   </footer>
 
-  <!-- JavaScript for scroll reveal -->
   <script src="script.js"></script>
 </body>
 </html>
