@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sairam Jadhav — AI/ML Engineer @ IBM</title>
-  <!-- IBM Plex Sans for corporate typography -->
+  <!-- IBM Plex Sans for professional typography -->
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
@@ -28,21 +28,15 @@
     <div class="nav__toggle"><i class="fas fa-bars"></i></div>
   </nav>
 
-  <header id="home" class="hero" data-aos="fade-up">
+  <header id="home" class="hero" data-aos="fade-in">
     <div class="hero__content">
-      <img src="profile.jpg" alt="Sairam Jadhav" class="hero__img"/>
-      <h1 class="hero__title">Sairam Jadhav</h1>
+      <h1 class="hero__title">Hi, I’m Sairam Jadhav</h1>
       <div class="hero__subtitle">
         <span id="typed"></span>
       </div>
       <div class="hero__cta">
-        <a href="resume.pdf" class="btn"><i class="fas fa-file-alt"></i> Resume</a>
-        <a href="#contact" class="btn btn--outline">Contact Me</a>
-      </div>
-      <div class="hero__socials">
-        <a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank">LinkedIn</a>
-        <a href="https://www.instagram.com/sairam_jadhav_" target="_blank">Instagram</a>
-        <a href="https://x.com/sairam_jadhav_" target="_blank">X</a>
+        <a href="resume.pdf" class="btn">Download Resume</a>
+        <a href="#contact" class="btn btn--outline">Get in Touch</a>
       </div>
     </div>
   </header>
@@ -51,14 +45,17 @@
     <!-- About -->
     <section id="about" class="section" data-aos="fade-up">
       <h2 class="section__title">About Me</h2>
-      <p class="section__text">
-        As an AI/ML Engineer at IBM, I design and deploy intelligent systems that drive innovation. Specializing in deep learning, computer vision, and NLP, I transform data into actionable solutions for enterprise challenges. Let’s build the future of AI together.
-      </p>
+      <div class="about__content">
+        <img src="profile.jpg" alt="Sairam Jadhav" class="about__img"/>
+        <p class="section__text">
+          I’m an AI/ML Engineer at IBM, passionate about building intelligent systems that solve real-world problems. With expertise in deep learning, computer vision, and NLP, I craft scalable, data-driven solutions for enterprise challenges. Let’s innovate the future of AI together.
+        </p>
+      </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="section" data-aos="fade-up">
-      <h2 class="section__title">Key Projects</h2>
+      <h2 class="section__title">Projects</h2>
       <div class="filter-buttons">
         <button data-filter="all" class="filter-btn active">All</button>
         <button data-filter="cv" class="filter-btn">Computer Vision</button>
@@ -66,29 +63,29 @@
         <button data-filter="dl" class="filter-btn">Deep Learning</button>
       </div>
       <div class="cards">
-        <div class="card" data-category="cv" data-aos="zoom-in">
+        <div class="card" data-category="cv" data-aos="fade-up" data-aos-delay="100">
           <h3>Drowsiness Detection System</h3>
-          <p>Real-time detection using CNN (ResNet/VGG) and OpenCV for driver safety, achieving 95% accuracy.</p>
+          <p>Real-time driver safety system using CNN (ResNet/VGG) and OpenCV, achieving 95% accuracy.</p>
           <a href="#" class="card__link">View Details</a>
         </div>
-        <div class="card" data-category="dl" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card" data-category="dl" data-aos="fade-up" data-aos-delay="200">
           <h3>Two-Stage Diabetes Prediction</h3>
-          <p>Ensemble learning model using CatBoost and LightGBM for early diabetes diagnosis with 92% accuracy.</p>
+          <p>Ensemble learning model with CatBoost and LightGBM for early diabetes diagnosis, 92% accuracy.</p>
           <a href="#" class="card__link">View Details</a>
         </div>
-        <div class="card" data-category="dl" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card" data-category="dl" data-aos="fade-up" data-aos-delay="300">
           <h3>Medical Image Denoising</h3>
-          <p>Developed separate GAN and diffusion models to enhance medical image clarity by 30%.</p>
+          <p>GAN and diffusion models to enhance medical image clarity by 30%.</p>
           <a href="#" class="card__link">View Details</a>
         </div>
-        <div class="card" data-category="nlp" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card" data-category="nlp" data-aos="fade-up" data-aos-delay="400">
           <h3>Sentiment Analysis</h3>
-          <p>Twitter sentiment classification using BERT-based NLP models, optimized for scalability.</p>
+          <p>BERT-based Twitter sentiment classification, optimized for scalability.</p>
           <a href="#" class="card__link">View Details</a>
         </div>
-        <div class="card" data-category="dl" data-aos="zoom-in" data-aos-delay="400">
+        <div class="card" data-category="dl" data-aos="fade-up" data-aos-delay="500">
           <h3>Stock Price Forecasting</h3>
-          <p>Time-series prediction using LSTM networks, achieving 85% predictive accuracy.</p>
+          <p>LSTM-based time-series prediction model with 85% accuracy.</p>
           <a href="#" class="card__link">View Details</a>
         </div>
       </div>
@@ -227,26 +224,21 @@
       <h2 class="section__title">Contact</h2>
       <form id="contact-form" class="contact-form">
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required/>
+          <input type="text" id="name" name="name" placeholder="Your Name" required/>
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required/>
+          <input type="email" id="email" name="email" placeholder="Your Email" required/>
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
         </div>
         <button type="submit" class="btn">Send Message</button>
       </form>
       <div class="contact-links">
-        <p>📫 <a href="mailto:sairamjadhav12@gmail.com">sairamjadhav12@gmail.com</a></p>
-        <div class="hero__socials">
-          <a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank">LinkedIn</a>
-          <a href="https://www.instagram.com/sairam_jadhav_" target="_blank">Instagram</a>
-          <a href="https://x.com/sairam_jadhav_" target="_blank">X</a>
-        </div>
+        <a href="mailto:sairamjadhav12@gmail.com"><i class="fas fa-envelope"></i> sairamjadhav12@gmail.com</a>
+        <a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.instagram.com/sairam_jadhav_" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://x.com/sairam_jadhav_" target="_blank"><i class="fab fa-twitter"></i> X</a>
       </div>
     </section>
   </main>
