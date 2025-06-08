@@ -141,26 +141,6 @@ body {
   gap: 10px;
 }
 
-.typewriter-logo {
-  width: 30px;
-  height: 30px;
-}
-
-.typewriter-logo.visible {
-  animation: fadeIn 0.5s ease forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 .section__text {
   font-size: 1.2rem;
   color: var(--fg);
@@ -491,11 +471,6 @@ body {
 
   .typewriter-text {
     font-size: 2rem;
-  }
-
-  .typewriter-logo {
-    width: 24px;
-    height: 24px;
   }
 
   .skills-grid,
