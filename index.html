@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sairam Jadhav — AI/ML Engineer @ IBM</title>
-  <!-- IBM Plex Sans for professional typography -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <!-- Poppins font to match Mitchell Sparrow -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
-  <!-- AOS for subtle animations -->
+  <!-- AOS for animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Typed.js for dynamic text -->
@@ -21,8 +21,7 @@
     <ul class="nav__links">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Work</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav__toggle"><i class="fas fa-bars"></i></div>
@@ -53,168 +52,89 @@
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section" data-aos="fade-up">
-      <h2 class="section__title">Projects</h2>
-      <div class="filter-buttons">
-        <button data-filter="all" class="filter-btn active">All</button>
-        <button data-filter="cv" class="filter-btn">Computer Vision</button>
-        <button data-filter="nlp" class="filter-btn">NLP</button>
-        <button data-filter="dl" class="filter-btn">Deep Learning</button>
-      </div>
-      <div class="cards">
-        <div class="card" data-category="cv" data-aos="fade-up" data-aos-delay="100">
-          <h3>Drowsiness Detection System</h3>
-          <p>Real-time driver safety system using CNN (ResNet/VGG) and OpenCV, achieving 95% accuracy.</p>
-          <a href="#" class="card__link">View Details</a>
-        </div>
-        <div class="card" data-category="dl" data-aos="fade-up" data-aos-delay="200">
-          <h3>Two-Stage Diabetes Prediction</h3>
-          <p>Ensemble learning model with CatBoost and LightGBM for early diabetes diagnosis, 92% accuracy.</p>
-          <a href="#" class="card__link">View Details</a>
-        </div>
-        <div class="card" data-category="dl" data-aos="fade-up" data-aos-delay="300">
-          <h3>Medical Image Denoising</h3>
-          <p>GAN and diffusion models to enhance medical image clarity by 30%.</p>
-          <a href="#" class="card__link">View Details</a>
-        </div>
-        <div class="card" data-category="nlp" data-aos="fade-up" data-aos-delay="400">
-          <h3>Sentiment Analysis</h3>
-          <p>BERT-based Twitter sentiment classification, optimized for scalability.</p>
-          <a href="#" class="card__link">View Details</a>
-        </div>
-        <div class="card" data-category="dl" data-aos="fade-up" data-aos-delay="500">
-          <h3>Stock Price Forecasting</h3>
-          <p>LSTM-based time-series prediction model with 85% accuracy.</p>
-          <a href="#" class="card__link">View Details</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Skills -->
     <section id="skills" class="section" data-aos="fade-up">
       <h2 class="section__title">Skills</h2>
       <div class="skills-grid">
-        <div class="skill-category">
-          <div class="skill-icon" data-category="programming">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="skill-details" id="programming-details">
-            <h3>Programming Languages</h3>
-            <ul>
-              <li>Python</li>
-              <li>Java</li>
-              <li>SQL</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fab fa-python"></i>
+          <span>Python</span>
         </div>
-        <div class="skill-category">
-          <div class="skill-icon" data-category="ai-ml">
-            <i class="fas fa-brain"></i>
-          </div>
-          <div class="skill-details" id="ai-ml-details">
-            <h3>AI/ML Techniques</h3>
-            <ul>
-              <li>Supervised/Unsupervised Learning</li>
-              <li>CNN</li>
-              <li>RNN</li>
-              <li>LSTM</li>
-              <li>GANs</li>
-              <li>Diffusion Models</li>
-              <li>Transformers</li>
-              <li>Model Optimization</li>
-            </ul>
-          </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="150">
+          <i class="fab fa-java"></i>
+          <span>Java</span>
         </div>
-        <div class="skill-category">
-          <div class="skill-icon" data-category="libraries">
-            <i class="fas fa-cubes"></i>
-          </div>
-          <div class="skill-details" id="libraries-details">
-            <h3>Libraries/Frameworks</h3>
-            <ul>
-              <li>NumPy</li>
-              <li>pandas</li>
-              <li>scikit-learn</li>
-              <li>OpenCV</li>
-              <li>Keras</li>
-              <li>TensorFlow</li>
-              <li>PyTorch</li>
-              <li>HuggingFace Transformers</li>
-            </ul>
-          </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-database"></i>
+          <span>SQL</span>
         </div>
-        <div class="skill-category">
-          <div class="skill-icon" data-category="data-engineering">
-            <i class="fas fa-database"></i>
-          </div>
-          <div class="skill-details" id="data-engineering-details">
-            <h3>Data Engineering</h3>
-            <ul>
-              <li>Data Preprocessing</li>
-              <li>Feature Engineering</li>
-              <li>Data Cleaning</li>
-              <li>Pipelines</li>
-            </ul>
-          </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="250">
+          <i class="fab fa-html5"></i>
+          <span>HTML</span>
         </div>
-        <div class="skill-category">
-          <div class="skill-icon" data-category="mlops">
-            <i class="fas fa-cloud-upload-alt"></i>
-          </div>
-          <div class="skill-details" id="mlops-details">
-            <h3>MLOps & Deployment</h3>
-            <ul>
-              <li>Flask</li>
-              <li>Streamlit</li>
-              <li>Gradio</li>
-              <li>Google Cloud Platform (GCP)</li>
-              <li>Hugging Face Spaces</li>
-              <li>AWS (basic)</li>
-              <li>Git</li>
-              <li>REST API Integration</li>
-            </ul>
-          </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fab fa-css3-alt"></i>
+          <span>CSS</span>
         </div>
-        <div class="skill-category">
-          <div class="skill-icon" data-category="web-dev">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <div class="skill-details" id="web-dev-details">
-            <h3>Web Development</h3>
-            <ul>
-              <li>Basic frontend (HTML, CSS, JavaScript)</li>
-            </ul>
-          </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="350">
+          <i class="fab fa-js"></i>
+          <span>JavaScript</span>
         </div>
-        <div class="skill-category">
-          <div class="skill-icon" data-category="databases">
-            <i class="fas fa-server"></i>
-          </div>
-          <div class="skill-details" id="databases-details">
-            <h3>Databases</h3>
-            <ul>
-              <li>MySQL</li>
-              <li>NoSQL (basic)</li>
-            </ul>
-          </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+          <i class="fas fa-brain"></i>
+          <span>Deep Learning</span>
         </div>
-        <div class="skill-category">
-          <div class="skill-icon" data-category="visualization">
-            <i class="fas fa-chart-bar"></i>
-          </div>
-          <div class="skill-details" id="visualization-details">
-            <h3>Visualization & Reporting</h3>
-            <ul>
-              <li>Power BI</li>
-              <li>Tableau</li>
-              <li>Matplotlib</li>
-              <li>Seaborn</li>
-            </ul>
-          </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
+          <i class="fas fa-eye"></i>
+          <span>Computer Vision</span>
+        </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+          <i class="fas fa-language"></i>
+          <span>NLP</span>
+        </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="550">
+          <i class="fas fa-cubes"></i>
+          <span>TensorFlow</span>
+        </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
+          <i class="fas fa-cubes"></i>
+          <span>PyTorch</span>
+        </div>
+        <div class="skill-item" data-aos="zoom-in" data-aos-delay="650">
+          <i class="fas fa-cubes"></i>
+          <span>scikit-learn</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section" data-aos="fade-up">
+      <h2 class="section__title">Work</h2>
+      <div class="cards">
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Drowsiness Detection System</h3>
+          <p>Real-time driver safety system using CNN (ResNet/VGG) and OpenCV, achieving 95% accuracy.</p>
+          <a href="#" class="card__link">View Details</a>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Two-Stage Diabetes Prediction</h3>
+          <p>Ensemble learning model with CatBoost and LightGBM for early diabetes diagnosis, 92% accuracy.</p>
+          <a href="#" class="card__link">View Details</a>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Medical Image Denoising</h3>
+          <p>GAN and diffusion models to enhance medical image clarity by 30%.</p>
+          <a href="#" class="card__link">View Details</a>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="400">
+          <h3>Sentiment Analysis</h3>
+          <p>BERT-based Twitter sentiment classification, optimized for scalability.</p>
+          <a href="#" class="card__link">View Details</a>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="500">
+          <h3>Stock Price Forecasting</h3>
+          <p>LSTM-based time-series prediction model with 85% accuracy.</p>
+          <a href="#" class="card__link">View Details</a>
         </div>
       </div>
     </section>
