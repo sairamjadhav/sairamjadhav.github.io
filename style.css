@@ -197,15 +197,15 @@ body {
 
 @media (max-width: 768px) {
   .skill-card {
-    flex: 0 0 calc(60% - 2rem); /* Wider for tablets/smaller desktops */
-    max-width: 350px; /* Max width to prevent them from becoming too large */
+    flex: 0 0 calc(70% - 2rem); /* Wider for tablets/smaller desktops */
+    max-width: 400px; /* Max width to prevent them from becoming too large */
   }
 }
 
 @media (max-width: 480px) {
   .skill-card {
-    flex: 0 0 calc(80% - 2rem); /* Wider for mobile phones */
-    max-width: 400px; /* Ensure it doesn't get excessively wide on small screens */
+    flex: 0 0 calc(90% - 2rem); /* Significantly wider for mobile phones */
+    max-width: 450px; /* Ensure it doesn't get excessively wide on small screens */
   }
 }
 
@@ -299,15 +299,15 @@ body {
 
 @media (max-width: 768px) {
   .project-card {
-    flex: 0 0 calc(60% - 2rem); /* Wider for tablets/smaller desktops */
-    max-width: 350px; /* Max width to prevent them from becoming too large */
+    flex: 0 0 calc(70% - 2rem); /* Wider for tablets/smaller desktops */
+    max-width: 400px; /* Max width to prevent them from becoming too large */
   }
 }
 
 @media (max-width: 480px) {
   .project-card {
-    flex: 0 0 calc(80% - 2rem); /* Wider for mobile phones */
-    max-width: 400px; /* Ensure it doesn't get excessively wide on small screens */
+    flex: 0 0 calc(90% - 2rem); /* Significantly wider for mobile phones */
+    max-width: 450px; /* Ensure it doesn't get excessively wide on small screens */
   }
 }
 
