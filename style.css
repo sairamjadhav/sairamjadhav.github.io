@@ -97,6 +97,7 @@ body {
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
   color: var(--heading);
+  line-height: 1.2; /* Added for better spacing in Contact section */
 }
 
 .section__subtitle {
@@ -227,14 +228,7 @@ body {
   border-color: var(--accent);
 }
 
-.skill-card-front img {
-  width: 50px;
-  height: 50px;
-  filter: brightness(0) invert(1); /* White icons on dark background */
-}
-
 .skill-card-front p {
-  margin-top: 0.5rem;
   font-size: 1rem;
   color: var(--fg);
 }
@@ -268,7 +262,7 @@ body {
 
 .project-card {
   perspective: 1000px;
-  height: 200px; /* Adjusted height for shorter descriptions */
+  height: 200px;
 }
 
 .project-card-inner {
@@ -309,12 +303,6 @@ body {
   border-color: var(--accent);
 }
 
-.project-card-front img {
-  width: 50px;
-  height: 50px;
-  filter: brightness(0) invert(1); /* White icons on dark background */
-}
-
 .project-card-front .project-icon {
   font-size: 2rem;
   color: #FFFFFF;
@@ -338,23 +326,6 @@ body {
   font-size: 0.85rem;
   color: var(--fg);
   text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.project-tech-stack {
-  text-align: center;
-}
-
-.project-tech-stack p {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--heading);
-  margin-bottom: 0.3rem;
-}
-
-.tech-text {
-  font-size: 0.8rem;
-  color: var(--fg);
 }
 
 /* ====== Contact ====== */
