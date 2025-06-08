@@ -1,12 +1,12 @@
 // Initialize AOS
 AOS.init({ duration: 1000, once: true });
 
-// Typewriter effect for About section
+// Typewriter effect for About section with emojis for visual cues
 const typewriter = new Typed('#typewriter', {
   strings: [
-    "I like to code.py!",
-    "I compile emotions.poetry!",
-    "I run innings.cricket!"
+    "I like to code.py! 💻",
+    "I compile emotions.poetry! ✍️",
+    "I run innings.cricket! 🏏"
   ],
   typeSpeed: 50,
   backSpeed: 30,
