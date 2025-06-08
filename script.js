@@ -1,16 +1,21 @@
-// Scroll-Reveal Animation
-document.addEventListener('DOMContentLoaded', function() {
-  const reveals = document.querySelectorAll('.reveal');
-  const revealOnScroll = function() {
-    for (const reveal of reveals) {
-      const windowHeight = window.innerHeight;
-      const elementTop = reveal.getBoundingClientRect().top;
-      const revealPoint = 150;
-      if (elementTop < windowHeight - revealPoint) {
-        reveal.classList.add('active');
-      }
-    }
-  };
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // trigger on load
+// Toggle mobile menu
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
 });
+
+// Highlight nav link on scroll
+const sections = document.querySelectorAll('section, header');
+const options = { threshold: 0.6 };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const id = entry.target.id;
+    const link = document.querySelector(`nav ul li a[href="#${id}"]`);
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      if (link) link.classList.add('active');
+    }
+  });
+}, options);
+sections.forEach(sec => observer.observe(sec));
