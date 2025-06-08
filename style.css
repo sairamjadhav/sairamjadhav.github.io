@@ -144,35 +144,24 @@ body {
 .typewriter-text i {
   font-size: 1.8rem;
   color: var(--accent);
-  opacity: 0;
-  transform: scale(0.5);
-  animation-play-state: paused;
 }
 
-.typewriter-text i.visible {
-  animation: emojiFadeIn 0.5s ease forwards;
-  animation-play-state: running;
-}
-
-.typewriter-text i.laptop-icon.visible {
+.typewriter-text i.laptop-icon.animate {
   animation: 
     emojiFadeIn 0.5s ease forwards,
     laptopGlow 1s ease infinite 0.5s;
-  animation-play-state: running;
 }
 
-.typewriter-text i.pen-icon.visible {
+.typewriter-text i.pen-icon.animate {
   animation: 
     emojiFadeIn 0.5s ease forwards,
     penWrite 0.8s ease 0.5s;
-  animation-play-state: running;
 }
 
-.typewriter-text i.bat-ball-icon.visible {
+.typewriter-text i.bat-ball-icon.animate {
   animation: 
     emojiFadeIn 0.5s ease forwards,
     batSwing 0.8s ease 0.5s;
-  animation-play-state: running;
 }
 
 @keyframes emojiFadeIn {
@@ -393,6 +382,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-y: auto; /* Enable scrolling for long descriptions */
 }
 
 .project-card-back p {
