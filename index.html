@@ -16,31 +16,15 @@
 <body>
   <nav class="nav" data-aos="fade-in">
     <ul class="nav__links">
-      <!-- Social media icons removed as per request -->
+      <li><a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a></li>
     </ul>
     <a href="#contact" class="nav__cta">
       <span>Get in Touch</span>
       <i class="fas fa-envelope"></i>
     </a>
   </nav>
-
-  <header id="home" class="hero" data-aos="fade-in">
-    <div class="hero__circle-bg"></div>
-    <div class="hero__content">
-      <div class="hero__circle">
-        <img src="profile.jpg" alt="Sairam Jadhav" class="hero__img"/>
-      </div>
-      <p class="hero__role">SOFTWARE ENGINEER</p>
-      <h1 class="hero__title">HI, the name’s SAIRAM <span>I_LIKE_TO_CODE.PY</span></h1>
-    </div>
-    <div class="nav__circle">
-      <a href="#about" class="nav__circle-item nav__circle-about"><span>ABOUT</span></a>
-      <a href="#skills" class="nav__circle-item nav__circle-skills"><span>SKILLS</span></a>
-      <a href="#projects" class="nav__circle-item nav__circle-projects"><span>PROJECTS</span></a>
-      <a href="#contact" class="nav__circle-item nav__circle-contact"><span>CONTACT</span></a>
-      <a href="#home" class="nav__circle-item nav__circle-home active" data-aos="fade-in" data-aos-delay="100"><i class="fas fa-home"></i></a>
-    </div>
-  </header>
 
   <main>
     <!-- About -->
@@ -59,6 +43,7 @@
     <section id="skills" class="section" data-aos="fade-up">
       <p class="section__subtitle">Click on a category to explore my skills</p>
       <div class="skills-grid">
+        <!-- First Row: 4 Cards -->
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
           <div class="skill-card-inner">
             <div class="skill-card-front">
@@ -137,6 +122,7 @@
           </div>
         </div>
 
+        <!-- Second Row: 3 Cards -->
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
           <div class="skill-card-inner">
             <div class="skill-card-front">
@@ -182,66 +168,73 @@
             </div>
           </div>
         </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="450">
-          <div class="skill-card-inner">
-            <div class="skill-card-front">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jira.svg" alt="Soft Skills"/>
-              <p>Soft Skills</p>
-            </div>
-            <div class="skill-card-back">
-              <ul>
-                <li>Problem Solving</li>
-                <li>Team Collaboration</li>
-                <li>Agile Practices</li>
-                <li>Communication</li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="section" data-aos="fade-up">
-      <h2 class="section__title">Project 1: Drowsiness Detection System</h2>
-      <div class="project__content">
-        <img src="https://images.unsplash.com/photo-1508672019048-805c876b663e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&w=500" alt="Drowsiness Detection System" class="project__img"/>
-        <p class="section__text">
-          Real-time detection using CNN (ResNet/VGG) and OpenCV.
-        </p>
-      </div>
+      <h2 class="section__title">P R O J E C T S</h2>
+      <p class="section__subtitle">Click on a project to learn more</p>
+      <div class="projects-grid">
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/opencv.svg" alt="Drowsiness Detection System"/>
+              <p>Drowsiness Detection System</p>
+            </div>
+            <div class="project-card-back">
+              <p>Real-time detection using CNN (ResNet/VGG) and OpenCV.</p>
+            </div>
+          </div>
+        </div>
 
-      <h2 class="section__title">Project 2: Two-Stage Diabetes Prediction</h2>
-      <div class="project__content">
-        <img src="https://images.unsplash.com/photo-1576091160550-2173fdabea77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&w=500" alt="Two-Stage Diabetes Prediction" class="project__img"/>
-        <p class="section__text">
-          Ensemble learning (CatBoost, LightGBM) for early diagnosis.
-        </p>
-      </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/catboost.svg" alt="Two-Stage Diabetes Prediction"/>
+              <p>Two-Stage Diabetes Prediction</p>
+            </div>
+            <div class="project-card-back">
+              <p>Ensemble learning (CatBoost, LightGBM) for early diagnosis.</p>
+            </div>
+          </div>
+        </div>
 
-      <h2 class="section__title">Project 3: Medical Image Denoising</h2>
-      <div class="project__content">
-        <img src="https://images.unsplash.com/photo-1579154204601-89788f2217a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&w=500" alt="Medical Image Denoising" class="project__img"/>
-        <p class="section__text">
-          Developed separate GAN and diffusion models for medical image denoising.
-        </p>
-      </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tensorflow.svg" alt="Medical Image Denoising"/>
+              <p>Medical Image Denoising</p>
+            </div>
+            <div class="project-card-back">
+              <p>Developed separate GAN and diffusion models for medical image denoising.</p>
+            </div>
+          </div>
+        </div>
 
-      <h2 class="section__title">Project 4: Sentiment Analysis</h2>
-      <div class="project__content">
-        <img src="https://images.unsplash.com/photo-1611162617210-7b7e325f1116?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&w=500" alt="Sentiment Analysis" class="project__img"/>
-        <p class="section__text">
-          Twitter sentiment classification using NLP.
-        </p>
-      </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="250">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Sentiment Analysis"/>
+              <p>Sentiment Analysis</p>
+            </div>
+            <div class="project-card-back">
+              <p>Twitter sentiment classification using NLP.</p>
+            </div>
+          </div>
+        </div>
 
-      <h2 class="section__title">Project 5: Stock Price Forecasting</h2>
-      <div class="project__content">
-        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&w=500" alt="Stock Price Forecasting" class="project__img"/>
-        <p class="section__text">
-          Time series prediction using LSTM networks.
-        </p>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/chart-dot-js.svg" alt="Stock Price Forecasting"/>
+              <p>Stock Price Forecasting</p>
+            </div>
+            <div class="project-card-back">
+              <p>Time series prediction using LSTM networks.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -275,7 +268,7 @@
 
   <footer class="footer" data-aos="fade-up">
     <div class="nav__circle">
-      <a href="#home" class="nav__circle-item"><i class="fas fa-home"></i></a>
+      <a href="#about" class="nav__circle-item"><i class="fas fa-home"></i></a>
     </div>
   </footer>
 
