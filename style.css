@@ -31,6 +31,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  background: rgba(247, 247, 247, 0.9); /* Slight transparency like Sparrow */
 }
 
 .nav__links {
@@ -43,7 +44,7 @@ body {
   color: #888;
   font-size: 1.2rem;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav__links a:hover {
@@ -59,15 +60,25 @@ body {
   border: 1px solid #E0E0E0;
   padding: 8px 15px;
   border-radius: 20px;
-  transition: border-color 0.3s, color 0.3s;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.nav__cta span {
+  margin-right: 10px;
 }
 
 .nav__cta i {
-  margin-right: 5px;
+  font-size: 1.1rem;
+  margin: 0 5px;
+  transition: color 0.3s ease;
 }
 
 .nav__cta:hover {
   border-color: var(--accent);
+  color: var(--accent);
+}
+
+.nav__cta:hover i {
   color: var(--accent);
 }
 
@@ -161,7 +172,7 @@ body {
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
-  transition: border-color 0.3s, color 0.3s;
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .nav__circle-item.active,
@@ -221,26 +232,23 @@ body {
 }
 
 /* ====== Skills ====== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 2rem;
+.skills-list {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.skill-item {
-  text-align: center;
+.skills-list h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: var(--fg);
 }
 
-.skill-item img {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.3s;
-}
-
-.skill-item:hover img {
-  transform: scale(1.1);
+.skills-list p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
 }
 
 /* ====== Projects ====== */
@@ -331,7 +339,7 @@ body {
   font-weight: 600;
   text-align: center;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
@@ -383,5 +391,9 @@ body {
 
   .form-row {
     flex-direction: column;
+  }
+
+  .skills-list {
+    text-align: center;
   }
 }
