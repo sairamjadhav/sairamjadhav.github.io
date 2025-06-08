@@ -1,3 +1,6 @@
+// Initialize AOS
+AOS.init({ duration: 800, once: true });
+
 // Mobile nav toggle
 const toggle = document.querySelector('.nav__toggle');
 const links = document.querySelector('.nav__links');
@@ -5,94 +8,35 @@ toggle.addEventListener('click', () => {
   links.classList.toggle('open');
 });
 
-// Theme toggle with persistence
-const themeBtn = document.querySelector('#theme-toggle');
-themeBtn.addEventListener('click', () => {
-  document.body.classList.toggle('lightMode');
-  const icon = themeBtn.querySelector('i');
-  icon.classList.toggle('fa-moon');
-  icon.classList.toggle('fa-sun');
-  localStorage.setItem('theme', document.body.classList.contains('lightMode') ? 'light' : 'dark');
-});
-if (localStorage.getItem('theme') === 'light') {
-  document.body.classList.add('lightMode');
-  themeBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
-}
-
 // Typed.js for hero subtitle
 new Typed('#typed', {
   strings: [
-    'AI/ML Enthusiast'
-    'Deep Learning Innovator',
-    'Generative AI Architect',
+    'AI/ML Engineer @ IBM',
+    'Deep Learning Specialist',
+    'Computer Vision Expert',
+    'Driving Enterprise AI Solutions'
   ],
-  typeSpeed: 60,
-  backSpeed: 30,
-  backDelay: 1500,
+  typeSpeed: 50,
+  backSpeed: 25,
+  backDelay: 2000,
   loop: true
 });
 
-// Enhanced tsparticles background
-tsParticles.load("tsparticles", {
-  fullScreen: { enable: false },
-  background: { color: { value: "transparent" } },
-  fpsLimit: 120,
-  particles: {
-    number: { value: 80, density: { enable: true, area: 800 } },
-    color: { value: "#00d4ff" },
-    shape: { type: "circle" },
-    opacity: { value: 0.5, random: true },
-    size: { value: 3, random: { enable: true, minimumValue: 1 } },
-    links: {
-      enable: true,
-      distance: 150,
-      color: "#00d4ff",
-      opacity: 0.4,
-      width: 1
-    },
-    move: {
-      enable: true,
-      speed: 1,
-      direction: "none",
-      random: false,
-      straight: false,
-      outMode: "bounce"
-    }
-  },
-  interactivity: {
-    events: {
-      onHover: { enable: true, mode: "connect" },
-      onClick: { enable: true, mode: "push" }
-    },
-    modes: {
-      connect: { distance: 100, radius: 200 },
-      push: { quantity: 3 }
-    }
-  }
-});
-
-// Scroll-reveal observer
-const srObserver = new IntersectionObserver((entries, obs) => {
+// Scroll-reveal for skill progress rings
+const skillObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
-      obs.unobserve(entry.target);
-
-      // Animate radial progress bars
-      if (entry.target.classList.contains('radial-progress')) {
-        const level = entry.target.dataset.level;
-        const fill = entry.target.querySelectorAll('.fill');
-        const deg = (level / 100) * 180;
-        fill.forEach(f => {
-          f.style.transform = `rotate(${deg}deg)`;
-        });
-      }
+      const circle = entry.target.querySelector('.progress-ring__circle');
+      const level = entry.target.dataset.level;
+      const circumference = 326.56; // 2 * π * 52
+      circle.style.strokeDashoffset = circumference - (level / 100) * circumference;
+      skillObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.3 });
+}, { threshold: 0.5 });
 
-document.querySelectorAll('.section__text, .card, .skill-item, .contact-form, .footer').forEach(el => {
-  srObserver.observe(el);
+document.querySelectorAll('.skill-progress').forEach(el => {
+  skillObserver.observe(el);
 });
 
 // Filterable projects
@@ -102,7 +46,7 @@ filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const category = btn.dataset.filterButtons;
+    const category = btn.dataset.filter;
     cards.forEach(c => {
       c.style.display = (category === 'all' || c.dataset.category === category) ? 'block' : 'none';
     });
@@ -111,7 +55,7 @@ filterBtns.forEach(btn => {
 
 // Active nav link on scroll
 const sections = document.querySelectorAll('section, header');
-const navLinks = document.querySelectorAll('.nav__links a:not(.theme-toggle)');
+const navLinks = document.querySelectorAll('.nav__links a');
 const navObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
