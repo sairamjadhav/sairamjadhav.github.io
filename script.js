@@ -18,8 +18,19 @@ const typewriter = new Typed('#typewriter', {
     // Show the emoji/icon when the string is fully typed
     const icon = document.querySelector('.typewriter-text i');
     if (icon) {
-      icon.classList.remove('visible'); // Reset animation
-      void icon.offsetWidth; // Trigger reflow to restart animation
+      // Remove existing animation classes to reset
+      icon.classList.remove('visible', 'laptop-icon', 'pen-icon', 'bat-ball-icon');
+      
+      // Add the appropriate class based on the current string
+      if (arrayPos === 0) {
+        icon.classList.add('laptop-icon');
+      } else if (arrayPos === 1) {
+        icon.classList.add('pen-icon');
+      } else if (arrayPos === 2) {
+        icon.classList.add('bat-ball-icon');
+      }
+      
+      // Trigger the animation
       icon.classList.add('visible');
     }
   }
