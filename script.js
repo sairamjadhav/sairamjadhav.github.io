@@ -4,9 +4,9 @@ AOS.init({ duration: 1000, once: true });
 // Typewriter effect for About section with icons
 const typewriter = new Typed('#typewriter', {
   strings: [
-    "I like to code.py <i class='fas fa-laptop'></i>",
-    "I compile emotions.poetry <i class='fas fa-pen'></i>",
-    "I run innings.cricket <i class='fas fa-baseball-bat-ball'></i>"
+    "I like to code.py <i class='fas fa-laptop laptop-icon'></i>",
+    "I compile emotions.poetry <i class='fas fa-pen pen-icon'></i>",
+    "I run innings.cricket <i class='fas fa-baseball-bat-ball bat-ball-icon'></i>"
   ],
   typeSpeed: 50,
   backSpeed: 30,
