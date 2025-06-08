@@ -34,8 +34,8 @@ body {
   align-items: center;
   z-index: 1000;
   background: rgba(26, 26, 26, 0.9);
-  padding: 10px 20px; /* Added padding for better visual spacing */
-  border-radius: 10px; /* Slightly rounded corners for the nav bar */
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .nav__links {
@@ -137,7 +137,7 @@ body {
 }
 
 .typewriter-text {
-  font-size: 2.3rem; /* Adjusted font size */
+  font-size: 2.3rem;
   font-weight: 700;
   color: var(--heading);
   margin-bottom: 1.5rem;
@@ -146,8 +146,8 @@ body {
   align-items: center;
   gap: 10px;
   justify-content: flex-start;
-  white-space: nowrap; /* Prevent wrapping for the Typed.js line */
-  overflow: hidden; /* Hide overflow if content is too wide */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .typewriter-text .typed-text {
@@ -175,15 +175,15 @@ body {
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Aligns items to the center */
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .skill-card {
-  flex: 0 0 calc(25% - 2rem);
+  flex: 0 0 calc(25% - 2rem); /* Default for desktop */
   perspective: 1000px;
-  height: 200px; /* Base height for desktop */
+  height: 200px; /* Default height for desktop */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,21 +197,19 @@ body {
 
 @media (max-width: 768px) {
   .skill-card {
-    flex: 0 0 calc(70% - 2rem); /* Wider for tablets/smaller desktops */
-    max-width: 400px; /* Max width to prevent them from becoming too large */
-    /* Set an aspect ratio instead of fixed height for better proportion */
-    aspect-ratio: 4 / 3; /* Example aspect ratio: width is 4 units, height is 3 units */
-    height: auto; /* Allow height to be determined by aspect-ratio and width */
+    flex: 0 0 calc(70% - 2rem); /* Wider for tablets */
+    max-width: 400px;
+    height: 180px; /* Set a more reasonable fixed height for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .skill-card {
     flex: 0 0 calc(90% - 2rem); /* Significantly wider for mobile phones */
-    max-width: 450px; /* Ensure it doesn't get excessively wide on small screens */
-    /* Dynamic height for mobile phones to maintain aspect ratio */
-    aspect-ratio: 4 / 3; /* Maintain same aspect ratio as tablets for consistency */
-    height: auto; /* Allow height to be determined by aspect-ratio and width */
+    max-width: 450px;
+    height: 160px; /* Crucial: Set a fixed height that works with content */
+    min-height: 150px; /* Ensure a minimum height if content is sparse */
+    /* Remove aspect-ratio here as it was causing content overflow with fixed height */
   }
 }
 
@@ -239,10 +237,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem; /* Adjust padding to give more space for text */
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--card-bg);
+  /* Ensure content doesn't overflow */
+  overflow: hidden;
 }
 
 .skill-card-front {
@@ -255,9 +255,22 @@ body {
 }
 
 .skill-card-front p {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Default font size */
   color: var(--fg);
-  padding: 0 10px; /* Add some horizontal padding to text */
+  padding: 0 10px;
+  line-height: 1.3; /* Adjust line height for better readability */
+  word-break: break-word; /* Allow long words to break */
+}
+
+@media (max-width: 480px) {
+  .skill-card-front p {
+    font-size: 1.1rem; /* Slightly smaller font size on mobile */
+    line-height: 1.2;
+  }
+  .skill-card-front svg { /* Ensure icons don't dominate */
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .skill-card-back {
@@ -279,12 +292,22 @@ body {
   line-height: 1.4;
 }
 
+@media (max-width: 480px) {
+  .skill-card-back ul {
+    font-size: 0.95rem; /* Smaller font for back content on mobile */
+  }
+  .skill-card-back {
+    padding: 1rem; /* Less padding on back for mobile */
+  }
+}
+
+
 /* ====== Projects ====== */
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center; /* Aligns items to the center */
+  justify-content: center;
   margin-top: 2rem;
 }
 
@@ -306,21 +329,19 @@ body {
 
 @media (max-width: 768px) {
   .project-card {
-    flex: 0 0 calc(70% - 2rem); /* Wider for tablets/smaller desktops */
-    max-width: 400px; /* Max width to prevent them from becoming too large */
-    /* Set an aspect ratio instead of fixed height for better proportion */
-    aspect-ratio: 16 / 9; /* Common aspect ratio for project cards, can adjust */
-    height: auto; /* Allow height to be determined by aspect-ratio and width */
+    flex: 0 0 calc(70% - 2rem); /* Wider for tablets */
+    max-width: 400px;
+    height: 220px; /* Set a more reasonable fixed height for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .project-card {
     flex: 0 0 calc(90% - 2rem); /* Significantly wider for mobile phones */
-    max-width: 450px; /* Ensure it doesn't get excessively wide on small screens */
-    /* Dynamic height for mobile phones to maintain aspect ratio */
-    aspect-ratio: 16 / 9; /* Maintain same aspect ratio as tablets */
-    height: auto; /* Allow height to be determined by aspect-ratio and width */
+    max-width: 450px;
+    height: 200px; /* Crucial: Set a fixed height that works with content */
+    min-height: 180px; /* Ensure a minimum height */
+    /* Remove aspect-ratio here */
   }
 }
 
@@ -349,10 +370,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem; /* Adjust padding */
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--card-bg);
+  /* Ensure content doesn't overflow */
+  overflow: hidden;
 }
 
 .project-card-front {
@@ -379,12 +402,25 @@ body {
   margin-top: 0.5rem;
   font-size: 1.2rem;
   color: var(--fg);
-  padding: 0 10px; /* Add some horizontal padding to text */
+  padding: 0 10px;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .project-card-front p {
+    font-size: 1.1rem; /* Slightly smaller font size on mobile */
+    line-height: 1.2;
+  }
+  .project-card-front svg { /* Ensure icons don't dominate */
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .project-card-back {
   transform: rotateY(180deg);
-  padding: 1rem;
+  padding: 1rem; /* Adjusted padding */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -395,6 +431,15 @@ body {
   font-size: 1.1rem;
   color: var(--fg);
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .project-card-back p {
+    font-size: 0.95rem; /* Smaller font for back content on mobile */
+  }
+  .project-card-back {
+    padding: 0.8rem; /* Less padding on back for mobile */
+  }
 }
 
 /* ====== Contact ====== */
@@ -554,9 +599,9 @@ body {
   }
 
   .typewriter-text {
-    font-size: 1.8rem; /* Adjusted for smaller screens */
+    font-size: 1.8rem;
     justify-content: center;
-    white-space: normal; /* Allow wrapping on small screens if needed, adjusted sizing should prevent it */
+    white-space: normal;
   }
 
   .about__img {
@@ -567,10 +612,8 @@ body {
   .skills-grid,
   .projects-grid {
     flex-direction: column;
-    align-items: center; /* Center cards in column layout */
+    align-items: center;
   }
-
-  /* Skill and Project card width and height handled by dedicated media queries above using aspect-ratio */
 
   .form-row {
     flex-direction: column;
@@ -593,6 +636,6 @@ body {
   }
 
   .typewriter-text {
-    font-size: 1.5rem; /* Smallest size for very cramped screens */
+    font-size: 1.5rem;
   }
 }
