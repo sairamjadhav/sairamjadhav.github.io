@@ -184,9 +184,9 @@ body {
   flex: 0 0 calc(25% - 2rem);
   perspective: 1000px;
   height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Added for alignment */
+  justify-content: center; /* Added for alignment */
+  align-items: center; /* Added for alignment */
 }
 
 @media (max-width: 1024px) {
@@ -197,13 +197,15 @@ body {
 
 @media (max-width: 768px) {
   .skill-card {
-    flex: 0 0 calc(50% - 2rem);
+    flex: 0 0 calc(60% - 2rem); /* Wider for tablets/smaller desktops */
+    max-width: 350px; /* Max width to prevent them from becoming too large */
   }
 }
 
 @media (max-width: 480px) {
   .skill-card {
-    flex: 0 0 100%;
+    flex: 0 0 calc(80% - 2rem); /* Wider for mobile phones */
+    max-width: 400px; /* Ensure it doesn't get excessively wide on small screens */
   }
 }
 
@@ -294,6 +296,21 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .project-card {
+    flex: 0 0 calc(60% - 2rem); /* Wider for tablets/smaller desktops */
+    max-width: 350px; /* Max width to prevent them from becoming too large */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    flex: 0 0 calc(80% - 2rem); /* Wider for mobile phones */
+    max-width: 400px; /* Ensure it doesn't get excessively wide on small screens */
+  }
+}
+
 
 .project-card-inner {
   position: relative;
@@ -523,9 +540,9 @@ body {
   }
 
   .typewriter-text {
-    font-size: 1.8rem; /* Further adjusted for very small screens */
+    font-size: 1.8rem; /* Adjusted for smaller screens */
     justify-content: center;
-    white-space: normal; /* Allow wrapping on very small screens if necessary */
+    white-space: normal; /* Allow wrapping on small screens if needed, adjusted sizing should prevent it */
   }
 
   .about__img {
@@ -539,11 +556,7 @@ body {
     align-items: center; /* Center cards in column layout */
   }
 
-  .skills-grid .skill-card,
-  .projects-grid .project-card {
-    flex: 0 0 100%;
-    max-width: 300px; /* Optional: Limit width on mobile for consistent card size */
-  }
+  /* Skill and Project card width handled by dedicated media queries above */
 
   .form-row {
     flex-direction: column;
