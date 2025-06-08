@@ -12,9 +12,9 @@ toggle.addEventListener('click', () => {
 new Typed('#typed', {
   strings: [
     'AI/ML Engineer @ IBM',
-    'Deep Learning Specialist',
-    'Computer Vision Expert',
-    'Driving Enterprise AI Solutions'
+    'Deep Learning Innovator',
+    'Computer Vision Specialist',
+    'Building Scalable AI Solutions'
   ],
   typeSpeed: 50,
   backSpeed: 25,
