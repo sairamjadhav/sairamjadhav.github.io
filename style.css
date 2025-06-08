@@ -141,73 +141,23 @@ body {
   gap: 10px;
 }
 
-.typewriter-text i {
-  font-size: 1.8rem;
-  color: var(--accent);
+.typewriter-logo {
+  width: 30px;
+  height: 30px;
 }
 
-.typewriter-text i.laptop-icon.animate {
-  animation: 
-    emojiFadeIn 0.5s ease forwards,
-    laptopGlow 1s ease infinite 0.5s;
+.typewriter-logo.visible {
+  animation: fadeIn 0.5s ease forwards;
 }
 
-.typewriter-text i.pen-icon.animate {
-  animation: 
-    emojiFadeIn 0.5s ease forwards,
-    penWrite 0.8s ease 0.5s;
-}
-
-.typewriter-text i.bat-ball-icon.animate {
-  animation: 
-    emojiFadeIn 0.5s ease forwards,
-    batSwing 0.8s ease 0.5s;
-}
-
-@keyframes emojiFadeIn {
+@keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0.8);
   }
   100% {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes laptopGlow {
-  0%, 100% {
-    text-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent);
-  }
-  50% {
-    text-shadow: 0 0 15px var(--accent), 0 0 20px var(--accent);
-  }
-}
-
-@keyframes penWrite {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  25% {
-    transform: scale(1) rotate(-15deg);
-  }
-  75% {
-    transform: scale(1) rotate(15deg);
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-  }
-}
-
-@keyframes batSwing {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  50% {
-    transform: scale(1.2) rotate(45deg);
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
   }
 }
 
@@ -318,7 +268,7 @@ body {
 
 .project-card {
   perspective: 1000px;
-  height: 200px;
+  height: 250px; /* Increased height for longer descriptions */
 }
 
 .project-card-inner {
@@ -543,8 +493,9 @@ body {
     font-size: 2rem;
   }
 
-  .typewriter-text i {
-    font-size: 1.4rem;
+  .typewriter-logo {
+    width: 24px;
+    height: 24px;
   }
 
   .skills-grid,
