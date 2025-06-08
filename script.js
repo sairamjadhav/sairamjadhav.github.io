@@ -1,103 +1,140 @@
-// 1) Mobile nav toggle
+// Mobile nav toggle
 const toggle = document.querySelector('.nav__toggle');
 const links = document.querySelector('.nav__links');
-toggle.addEventListener('click', () => links.classList.toggle('open'));
+toggle.addEventListener('click', () => {
+  links.classList.toggle('open');
+});
 
-// 2) Theme toggle + persist
-const themeBtn = document.getElementById('theme-toggle');
+// Theme toggle with persistence
+const themeBtn = document.querySelector('#theme-toggle');
 themeBtn.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
+  document.body.classList.toggle('lightMode');
   const icon = themeBtn.querySelector('i');
   icon.classList.toggle('fa-moon');
   icon.classList.toggle('fa-sun');
-  localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+  localStorage.setItem('theme', document.body.classList.contains('lightMode') ? 'light' : 'dark');
 });
 if (localStorage.getItem('theme') === 'light') {
-  document.body.classList.add('light-mode');
-  themeBtn.querySelector('i').classList.replace('fa-moon','fa-sun');
+  document.body.classList.add('lightMode');
+  themeBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
 }
 
-// 3) Typed.js hero subtitle
+// Typed.js for hero subtitle
 new Typed('#typed', {
   strings: [
-    'AI/ML Engineer @ ChatGPT',
-    'Deep Learning & Generative AI Specialist',
-    'Building Scalable Intelligence'
+    'AI/ML Enthusiast'
+    'Deep Learning Innovator',
+    'Generative AI Architect',
   ],
-  typeSpeed: 50,
-  backSpeed: 25,
-  backDelay: 2000,
+  typeSpeed: 60,
+  backSpeed: 30,
+  backDelay: 1500,
   loop: true
 });
 
-// 4) tsparticles background
+// Enhanced tsparticles background
 tsParticles.load("tsparticles", {
   fullScreen: { enable: false },
-  background: { color: { value: "#0d1117" } },
-  fpsLimit: 60,
+  background: { color: { value: "transparent" } },
+  fpsLimit: 120,
   particles: {
-    number: { value: 60, density: { enable: true, area: 800 } },
-    color: { value: "#58a6ff" },
-    opacity: { value: 0.4 },
-    size: { value: 2, random: { enable: true, minimumValue: 1 } },
-    move: { enable: true, speed: 0.6 }
+    number: { value: 80, density: { enable: true, area: 800 } },
+    color: { value: "#00d4ff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5, random: true },
+    size: { value: 3, random: { enable: true, minimumValue: 1 } },
+    links: {
+      enable: true,
+      distance: 150,
+      color: "#00d4ff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1,
+      direction: "none",
+      random: false,
+      straight: false,
+      outMode: "bounce"
+    }
   },
   interactivity: {
     events: {
-      onHover: { enable: true, mode: "repulse" },
+      onHover: { enable: true, mode: "connect" },
       onClick: { enable: true, mode: "push" }
     },
     modes: {
-      repulse: { distance: 100 },
-      push: { quantity: 4 }
+      connect: { distance: 100, radius: 200 },
+      push: { quantity: 3 }
     }
   }
 });
 
-// 5) Scroll-reveal observer
+// Scroll-reveal observer
 const srObserver = new IntersectionObserver((entries, obs) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('fade-in');
-      obs.unobserve(e.target);
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+      obs.unobserve(entry.target);
 
-      // For skill bars: animate width when in view
-      if (e.target.classList.contains('fill')) {
-        e.target.style.width = e.target.dataset.level;
+      // Animate radial progress bars
+      if (entry.target.classList.contains('radial-progress')) {
+        const level = entry.target.dataset.level;
+        const fill = entry.target.querySelectorAll('.fill');
+        const deg = (level / 100) * 180;
+        fill.forEach(f => {
+          f.style.transform = `rotate(${deg}deg)`;
+        });
       }
     }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.3 });
 
-// Observe text, cards, skill-bars, contact text
-document.querySelectorAll('.section__text, .card, .fill, .skill-bar, .footer').forEach(el => {
+document.querySelectorAll('.section__text, .card, .skill-item, .contact-form, .footer').forEach(el => {
   srObserver.observe(el);
 });
 
-// 6) Filterable projects
+// Filterable projects
 const filterBtns = document.querySelectorAll('.filter-btn');
 const cards = document.querySelectorAll('.card');
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const cat = btn.dataset.filter;
+    const category = btn.dataset.filterButtons;
     cards.forEach(c => {
-      c.style.display = (cat === 'all' || c.dataset.category === cat) ? 'block' : 'none';
+      c.style.display = (category === 'all' || c.dataset.category === category) ? 'block' : 'none';
     });
   });
 });
 
-// 7) Active nav link on scroll
+// Active nav link on scroll
 const sections = document.querySelectorAll('section, header');
 const navLinks = document.querySelectorAll('.nav__links a:not(.theme-toggle)');
-const navObs = new IntersectionObserver((ents) => {
-  ents.forEach(e => {
-    if (e.isIntersecting) {
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
       navLinks.forEach(a => a.classList.remove('active'));
-      const sel = `.nav__links a[href="#${e.target.id}"]`;
-      document.querySelector(sel)?.classList.add('active');
+      const selector = `.nav__links a[href="#${entry.target.id}"]`;
+      document.querySelector(selector)?.classList.add('active');
     }
   });
-}, { threshold: 0.6 });
-sections.forEach(s => navObs.observe(s));
+}, { threshold: 0.5 });
+
+sections.forEach(section => navObserver.observe(section));
+
+// Contact form validation
+const contactForm = document.querySelector('#contact-form');
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.querySelector('#name').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  const message = document.querySelector('#message').value.trim();
+  if (name && email.includes('@') && message) {
+    alert('Message sent successfully!'); // Replace with actual submission logic
+    contactForm.reset();
+  } else {
+    alert('Please fill out all fields correctly.');
+  }
+});
