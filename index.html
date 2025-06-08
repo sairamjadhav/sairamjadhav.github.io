@@ -13,6 +13,8 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Typed.js for typewriter effect -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- EmailJS for form submission -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -53,16 +55,14 @@
           <div class="skill-card-inner">
             <div class="skill-card-front">
               <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Programming Languages"/>
-              <p>Programming Languages</p>
+              <p>🐍 Programming Languages</p>
             </div>
             <div class="skill-card-back">
               <ul>
                 <li>Python</li>
-                <li>Java</li>
+                <li>HTML / CSS / JavaScript</li>
                 <li>SQL</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
+                <li>Java</li>
               </ul>
             </div>
           </div>
@@ -72,18 +72,15 @@
           <div class="skill-card-inner">
             <div class="skill-card-front">
               <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tensorflow.svg" alt="AI/ML Techniques"/>
-              <p>AI/ML Techniques</p>
+              <p>🤖 AI/ML Techniques</p>
             </div>
             <div class="skill-card-back">
               <ul>
-                <li>Supervised/Unsupervised Learning</li>
-                <li>CNN</li>
-                <li>RNN</li>
-                <li>LSTM</li>
-                <li>GANs</li>
-                <li>Diffusion Models</li>
-                <li>Transformers</li>
-                <li>Model Optimization</li>
+                <li>Supervised & Unsupervised Learning</li>
+                <li>Deep Learning (CNN, RNN, LSTM)</li>
+                <li>Transfer Learning</li>
+                <li>NLP Techniques</li>
+                <li>Generative AI (GANs, Diffusion Models)</li>
               </ul>
             </div>
           </div>
@@ -93,14 +90,15 @@
           <div class="skill-card-inner">
             <div class="skill-card-front">
               <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pandas.svg" alt="Libraries"/>
-              <p>Libraries</p>
+              <p>📚 Libraries</p>
             </div>
             <div class="skill-card-back">
               <ul>
-                <li>Data Preprocessing</li>
-                <li>Feature Engineering</li>
-                <li>Data Cleaning</li>
-                <li>Pipelines</li>
+                <li>NumPy / Pandas</li>
+                <li>Scikit-learn</li>
+                <li>TensorFlow / Keras / PyTorch</li>
+                <li>OpenCV</li>
+                <li>NLTK / spaCy / Transformers</li>
               </ul>
             </div>
           </div>
@@ -110,18 +108,16 @@
           <div class="skill-card-inner">
             <div class="skill-card-front">
               <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/flask.svg" alt="MLOps & Deployment"/>
-              <p>MLOps & Deployment</p>
+              <p>🚀 MLOps & Deployment</p>
             </div>
             <div class="skill-card-back">
               <ul>
-                <li>Flask</li>
-                <li>Streamlit</li>
-                <li>Gradio</li>
-                <li>Google Cloud Platform (GCP)</li>
-                <li>Hugging Face Spaces</li>
-                <li>AWS (basic)</li>
-                <li>Git</li>
-                <li>REST API Integration</li>
+                <li>Flask / FastAPI</li>
+                <li>Streamlit / Gradio</li>
+                <li>Docker</li>
+                <li>Git / GitHub</li>
+                <li>HuggingFace Spaces</li>
+                <li>CI/CD Basics</li>
               </ul>
             </div>
           </div>
@@ -132,11 +128,12 @@
           <div class="skill-card-inner">
             <div class="skill-card-front">
               <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" alt="Web Development"/>
-              <p>Web Development</p>
+              <p>🌐 Web Development</p>
             </div>
             <div class="skill-card-back">
               <ul>
-                <li>Basic frontend (HTML, CSS, JavaScript)</li>
+                <li>HTML5 / CSS3 / JavaScript</li>
+                <li>React (basic understanding)</li>
               </ul>
             </div>
           </div>
@@ -146,12 +143,13 @@
           <div class="skill-card-inner">
             <div class="skill-card-front">
               <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" alt="Databases"/>
-              <p>Databases</p>
+              <p>🗄️ Databases</p>
             </div>
             <div class="skill-card-back">
               <ul>
                 <li>MySQL</li>
-                <li>NoSQL (basic)</li>
+                <li>SQLite</li>
+                <li>Basic NoSQL</li>
               </ul>
             </div>
           </div>
@@ -161,14 +159,14 @@
           <div class="skill-card-inner">
             <div class="skill-card-front">
               <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/powerbi.svg" alt="Visualization & Reporting"/>
-              <p>Visualization & Reporting</p>
+              <p>📊 Visualization & Reporting</p>
             </div>
             <div class="skill-card-back">
               <ul>
-                <li>Power BI</li>
-                <li>Tableau</li>
                 <li>Matplotlib</li>
                 <li>Seaborn</li>
+                <li>Plotly</li>
+                <li>Power BI / Tableau</li>
               </ul>
             </div>
           </div>
@@ -207,12 +205,8 @@
             </div>
             <div class="project-card-back">
               <p>
-                A project to improve early diabetes diagnosis using a two-stage approach. Ensemble learning with CatBoost and LightGBM classifies patients based on clinical data. The second stage refines predictions with lifestyle factors for higher accuracy. It empowers doctors to identify at-risk patients early for timely interventions.
+                A project to improve early diabetes diagnosis with a two-stage approach. Ensemble learning classifies patients using clinical and lifestyle data for higher accuracy. It helps doctors identify at-risk patients early.
               </p>
-              <div class="project-tech-stack">
-                <p>Key Tech Stack:</p>
-                <p class="tech-text">Machine Learning, CatBoost, LightGBM</p>
-              </div>
             </div>
           </div>
         </div>
@@ -261,12 +255,8 @@
             </div>
             <div class="project-card-back">
               <p>
-                A project to predict stock prices using historical data. I used LSTM networks to capture temporal patterns, achieving accurate short-term forecasts. Integrated with a Flask web interface, users can input stock symbols to view predictions, bridging AI with finance.
+                A project to predict stock prices using historical data. I used LSTM networks to capture patterns, achieving accurate short-term forecasts. A Flask web interface lets users input stock symbols to view predictions.
               </p>
-              <div class="project-tech-stack">
-                <p>Key Tech Stack:</p>
-                <p class="tech-text">Time Series Analysis, LSTM</p>
-              </div>
             </div>
           </div>
         </div>
@@ -281,7 +271,7 @@
         <p><i class="fas fa-envelope"></i> sairamjadhav12@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</p>
       </div>
-      <form id="contact-form" class="contact-form" action="https://formspree.io/f/sairamjadhav12@gmail.com" method="POST">
+      <form id="contact-form" class="contact-form">
         <div class="form-row">
           <div class="form-group">
             <input type="text" id="name" name="name" placeholder="Name" required/>
@@ -298,6 +288,11 @@
         </div>
         <button type="submit" class="btn">Submit</button>
       </form>
+      <div class="social-links-bottom">
+        <a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
     </section>
   </main>
 
