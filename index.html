@@ -2,121 +2,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sairam Jadhav | ML Engineer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sairam Jadhav | AI-ML Engineer</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAVIGATION -->
   <nav class="navbar">
-    <div class="container">
-      <div class="logo">Sairam Jadhav</div>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+    <div class="logo">Sairam Jadhav</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
+  <section id="hero" class="section hero">
+    <div class="hero-content fade-in">
+      <img src="profile.jpg" alt="Sairam Jadhav" class="profile-pic">
       <h1>Hi, I’m <span>Sairam Jadhav</span></h1>
-      <p>Final-Year Engineering Student | ML Engineer</p>
-      <a href="#projects" class="btn">View My Work</a>
-      <a href="resume.pdf" class="btn btn-outline">Download Resume</a>
-    </div>
-    <div class="scroll-down">
-      <a href="#projects"><img src="arrow-down.svg" alt="Scroll Down"></a>
+      <p>AI/ML Engineer passionate about building data-driven applications, optimizing ML models, and delivering scalable solutions.</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+      <a href="resume.pdf" class="btn" download>Download Resume</a>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
+  <section id="about" class="section about">
+    <div class="container fade-in">
+      <h2>About Me</h2>
+      <p>AI/ML Engineer with strong software fundamentals. Skilled in Python, Java, cloud platforms, deep learning, and modern ML toolchains. I love solving real-world problems with robust, production-ready systems.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section skills">
+    <div class="container fade-in">
+      <h2>Skills</h2>
+      <ul class="skill-list">
+        <li>Python • Java • SQL • HTML/CSS/JS</li>
+        <li>CNN • RNN • LSTM • GANs • Diffusion Models</li>
+        <li>TensorFlow • PyTorch • Keras • HuggingFace</li>
+        <li>Flask • Streamlit • Gradio • GCP • AWS</li>
+        <li>Data Engineering • MLOps • APIs • Git</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section projects">
+    <div class="container fade-in">
       <h2>Projects</h2>
-      <div class="grid">
+      <div class="card-grid">
         <div class="card">
-          <h3>Drowsiness Detection</h3>
-          <p>Real-time detection using CNN, 92% accuracy.</p>
+          <h3>Drowsiness Detection System</h3>
+          <p>Real-time detection using CNN (ResNet/VGG) and OpenCV.</p>
         </div>
         <div class="card">
-          <h3>Diabetes Prediction</h3>
-          <p>Two-stage ensemble, +18% accuracy.</p>
+          <h3>Two-Stage Diabetes Prediction</h3>
+          <p>Ensemble learning (CatBoost, LightGBM) for early diagnosis.</p>
         </div>
         <div class="card">
           <h3>Medical Image Denoising</h3>
-          <p>Deep learning model improves quality.</p>
+          <p>GAN &amp; diffusion models for medical image enhancement.</p>
         </div>
         <div class="card">
           <h3>Sentiment Analysis</h3>
-          <p>Twitter/Reddit sentiment trends.</p>
+          <p>Twitter sentiment classification using NLP pipelines.</p>
         </div>
         <div class="card">
-          <h3>Stock Prediction</h3>
-          <p>LSTM model, +15% vs baseline.</p>
+          <h3>Stock Price Forecasting</h3>
+          <p>Time series prediction with LSTM networks.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section bg-light">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div>
-          <h3>Programming</h3>
-          <p>Python, SQL, Git, GitHub</p>
-        </div>
-        <div>
-          <h3>Machine Learning</h3>
-          <p>Regression, Classification, Clustering</p>
-        </div>
-        <div>
-          <h3>Deep Learning</h3>
-          <p>CNN, RNN, Transformers</p>
-        </div>
-        <div>
-          <h3>Deployment</h3>
-          <p>Flask, Streamlit, AWS, GCP</p>
-        </div>
-      </div>
+  <section id="education" class="section education">
+    <div class="container fade-in">
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li><strong>MIT Academy of Engineering</strong> (2021–2025)<br/>B.Tech, E&TC • CGPA: 8.41/10</li>
+        <li><strong>Nutan Vidya Mandir</strong> (2021)<br/>HSC • 91.33%</li>
+        <li><strong>Strawberry English Medium</strong> (2019)<br/>SSC • 91%</li>
+      </ul>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/mrbzkqdj" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="_replyto" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send</button>
-      </form>
-      <div class="socials">
-        <a href="https://linkedin.com/in/..." target="_blank">LinkedIn</a>
-        <a href="https://github.com/..." target="_blank">GitHub</a>
+  <section id="contact" class="section contact">
+    <div class="container fade-in">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sairamjadhav12@gmail.com">sairamjadhav12@gmail.com</a><br/>Phone: +91-7841996607</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/sairam-jadhav-794a96320" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/sairam_jadhav_?igsh=emg1ZTZqbDFoa2th&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/sairam_jadhav_?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
       </div>
     </div>
   </section>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 Sairam Jadhav. All rights reserved.</p>
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
