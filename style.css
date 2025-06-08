@@ -153,15 +153,15 @@ body {
 }
 
 .typewriter-text i.laptop-icon.visible {
-  animation: emojiFadeIn 0.5s ease forwards, laptopGlow 1s ease infinite;
+  animation: emojiFadeIn 0.5s ease forwards, laptopGlow 1s ease infinite 0.5s;
 }
 
 .typewriter-text i.pen-icon.visible {
-  animation: emojiFadeIn 0.5s ease forwards, penWrite 0.8s ease;
+  animation: emojiFadeIn 0.5s ease forwards, penWrite 0.8s ease 0.5s;
 }
 
 .typewriter-text i.bat-ball-icon.visible {
-  animation: emojiFadeIn 0.5s ease forwards, batSwing 0.8s ease;
+  animation: emojiFadeIn 0.5s ease forwards, batSwing 0.8s ease 0.5s;
 }
 
 @keyframes emojiFadeIn {
@@ -177,37 +177,37 @@ body {
 
 @keyframes laptopGlow {
   0%, 100% {
-    text-shadow: 0 0 5px var(--accent);
+    text-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent);
   }
   50% {
-    text-shadow: 0 0 15px var(--accent);
+    text-shadow: 0 0 15px var(--accent), 0 0 20px var(--accent);
   }
 }
 
 @keyframes penWrite {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1) rotate(0deg);
   }
   25% {
-    transform: rotate(-10deg);
+    transform: scale(1) rotate(-15deg);
   }
   75% {
-    transform: rotate(10deg);
+    transform: scale(1) rotate(15deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: scale(1) rotate(0deg);
   }
 }
 
 @keyframes batSwing {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: scale(1) rotate(0deg);
   }
   50% {
-    transform: rotate(45deg) scale(1.1);
+    transform: scale(1.2) rotate(45deg);
   }
   100% {
-    transform: rotate(0deg) scale(1);
+    transform: scale(1) rotate(0deg);
   }
 }
 
