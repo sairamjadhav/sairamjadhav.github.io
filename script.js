@@ -1,5 +1,5 @@
 // Initialize AOS
-AOS.init({ duration: 1000, once: true });
+AOS.init({ duration: 800, once: true });
 
 // Typewriter effect for About section with emojis for visual cues
 const typewriter = new Typed('#typewriter', {
@@ -10,7 +10,7 @@ const typewriter = new Typed('#typewriter', {
   ],
   typeSpeed: 50,
   backSpeed: 30,
-  backDelay: 2000, // Increased for a more noticeable transition
+  backDelay: 2000,
   loop: true,
   showCursor: true,
   cursorChar: "|"
@@ -30,8 +30,17 @@ document.querySelectorAll('.project-card').forEach(card => {
   });
 });
 
+// Reset flipped cards on mobile resize to prevent layout issues
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.skill-card, .project-card').forEach(card => {
+      card.classList.remove('flipped');
+    });
+  }
+});
+
 // Initialize EmailJS with your Public Key
-emailjs.init("LYOs7Oj5G8m6x86WS"); // Replace with your EmailJS Public Key from Account section
+emailjs.init("LYOs7Oj5G8m6x86WS"); // Replace with your EmailJS Public Key
 
 // Contact form submission with EmailJS
 const contactForm = document.querySelector('#contact-form');
