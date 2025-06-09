@@ -132,7 +132,7 @@ body {
   justify-content: center;
 }
 
-.typeworker-text {
+.typewriter-text {
   font-size: 2rem;
   font-weight: 700;
   color: var(--heading);
@@ -492,25 +492,6 @@ body {
   }
 }
 
-@media (max-width: 1024px) {
-  .section {
-    padding: 3rem 1.5rem;
-  }
-  .nav {
-    padding: 8px 15px;
-  }
-  .nav__links {
-    gap: 10px;
-  }
-  .nav__links a {
-    font-size: 1.3rem;
-  }
-  .nav__cta {
-    font-size: 1rem;
-    padding: 6px 12px;
-  }
-}
-
 @media (max-width: 768px) {
   .nav {
     flex-direction: row;
@@ -523,7 +504,7 @@ body {
   }
 
   .nav__links {
-    justify-content: centerRise;
+    justify-content: center;
   }
 
   .nav__cta {
@@ -555,60 +536,63 @@ body {
     gap: 0.5rem;
   }
 
-  .contact blown-up {
-    .skills-grid,
-    .projects-grid {
-      grid-template-columns: repeat(1, minmax(300px, 1fr));
-    }
+  .contact__info p {
+    margin-bottom: 1rem;
+    text-align: center;
   }
 
-  @media (max-width: 480px) {
-    .section {
-      padding: 2rem 1rem;
-    }
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+}
 
-    .nav {
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      padding: 6px 10px;
-    }
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 1rem;
+  }
 
-    .nav__links a {
-      font-size: 1.2rem;
-    }
+  .nav {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    padding: 6px 10px;
+  }
 
-    .nav__cta {
-      font-size: 0.9rem;
-      padding: 5px 10px;
-    }
+  .nav__links a {
+    font-size: 1.2rem;
+  }
 
-    .section__title {
-      font-size: 2rem;
-    }
+  .nav__cta {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
 
-    .section__subtitle {
-      font-size: 1rem;
-    }
+  .section__title {
+    font-size: 2rem;
+  }
 
-    .about__img {
-      width: 150px;
-      height: 180px;
-    }
+  .section__subtitle {
+    font-size: 1rem;
+  }
 
-    .typewriter-text {
-      font-size: 1.5rem;
-    }
+  .about__img {
+    width: 150px;
+    height: 180px;
+  }
 
-    .skill-card,
-    .project-card {
-      min-height: 180px;
-    }
+  .typewriter-text {
+    font-size: 1.5rem;
+  }
 
-    .skill-card-back,
-    .project-card-back {
-      font-size: 0.9rem;
-      padding: 1rem;
-    }
+  .skill-card,
+  .project-card {
+    min-height: 180px;
+  }
+
+  .skill-card-back,
+  .project-card-back {
+    font-size: 0.9rem;
+    padding: 1rem;
   }
 }
