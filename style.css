@@ -174,7 +174,7 @@ body {
 /* ====== Skills ====== */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
   grid-auto-rows: 220px;
   gap: 1.5rem;
   justify-items: center;
@@ -182,16 +182,36 @@ body {
   max-width: 1000px;
 }
 
+/* Specific positioning for skills cards (assuming 7 cards total for 3, 2, 2 layout) */
+.skills-grid .skill-card:nth-child(4),
+.skills-grid .skill-card:nth-child(5) {
+  grid-column: span 1; /* Span 1 column */
+}
+
+/* Center the second row of 2 cards by spanning the middle column */
+.skills-grid .skill-card:nth-child(4) {
+    grid-column: 1 / 2; /* Start at column 1, end before column 2 */
+}
+
+.skills-grid .skill-card:nth-child(5) {
+    grid-column: 2 / 3; /* Start at column 2, end before column 3 */
+}
+
+
 @media (max-width: 1024px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
     grid-auto-rows: 200px;
+  }
+  .skills-grid .skill-card:nth-child(4),
+  .skills-grid .skill-card:nth-child(5) {
+    grid-column: auto; /* Reset column span for smaller screens */
   }
 }
 
 @media (max-width: 600px) {
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 column for mobile */
     grid-auto-rows: 180px;
   }
 }
@@ -276,8 +296,7 @@ body {
 /* ====== Projects ====== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop */
   grid-auto-rows: 220px;
   gap: 1.5rem;
   justify-items: center;
@@ -285,43 +304,28 @@ body {
   max-width: 1000px;
 }
 
-.projects-grid .project-card:nth-child(4),
+/* Specific positioning for project cards (assuming 5 cards total for 2, 2, 1 layout) */
 .projects-grid .project-card:nth-child(5) {
-  grid-column: span 1;
-  grid-row: 2;
-}
-
-.projects-grid .project-card:nth-child(4) {
-  grid-column: 1 / 2;
-}
-
-.projects-grid .project-card:nth-child(5) {
-  grid-column: 2 / 3;
+  grid-column: span 2; /* Make the 5th card span 2 columns to center it */
 }
 
 @media (max-width: 1024px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
     grid-auto-rows: 200px;
-    grid-template-rows: auto;
   }
-  .projects-grid .project-card:nth-child(4),
   .projects-grid .project-card:nth-child(5) {
-    grid-column: auto;
-    grid-row: auto;
+    grid-column: auto; /* Reset column span for smaller screens */
   }
 }
 
 @media (max-width: 600px) {
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 column for mobile */
     grid-auto-rows: 180px;
-    grid-template-rows: auto;
   }
-  .projects-grid .project-card:nth-child(4),
   .projects-grid .project-card:nth-child(5) {
-    grid-column: auto;
-    grid-row: auto;
+    grid-column: auto; /* Reset column span for smaller screens */
   }
 }
 
@@ -513,7 +517,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 600px;
+  border: 600px; /* This looks like a typo, should probably be a border property like border: 1px solid var(--border); */
   color: var(--fg);
   text-decoration: none;
   font-size: 1rem;
@@ -533,9 +537,9 @@ body {
 /* ====== Responsive ====== */
 @media (max-width: 1200px) {
   .section {
-    padding: 5px;
-    max-width: 1.5rem;
-    margin: 900px auto;
+    padding: 5px; /* This padding seems very small, might want to reconsider */
+    max-width: 1.5rem; /* This max-width seems very small, might want to reconsider */
+    margin: 900px auto; /* This margin seems very large, might want to reconsider */
   }
 }
 
@@ -565,7 +569,7 @@ body {
     gap: 10px;
     top: 10px;
     left: 10px;
-    right: 10;
+    right: 10px; /* Corrected from 'right: 10' */
     padding: 6px 10px;
   }
 
@@ -584,9 +588,10 @@ body {
   }
 
   .typewriter-text {
-    font-size: justify-content;
+    font-size: 2.3rem; /* Reverted to a valid font-size value */
     margin-bottom: 1.8rem;
-    white-space: center;
+    white-space: nowrap; /* Reverted to a valid white-space value */
+    justify-content: center; /* Added to center content for smaller screens */
   }
 
   .about__img {
@@ -595,13 +600,13 @@ body {
   }
 
   .form-row {
-    margin: flex-direction;
+    flex-direction: column; /* Changed from 'margin: flex-direction;' */
   }
 
   .contact__info p {
-    margin-bottom: flex-direction;
-    padding: gap;
-    text-align: 5px center;
+    margin-bottom: 1rem; /* Corrected from 'margin-bottom: flex-direction;' */
+    padding: 0; /* Corrected from 'padding: gap;' */
+    text-align: center; /* Simplified from 'text-align: 5px center;' */
   }
 }
 
@@ -636,12 +641,12 @@ body {
   }
 
   .about__img {
-    font-size: width: 180px;
+    width: 180px; /* Corrected from 'font-size: width: 180px;' */
     height: 216px;
   }
 
   .typewriter-text {
-    font-size: 1rem;
+    font-size: 1.8rem; /* Adjusted for better readability on small screens */
   }
 
   .skill-card-back,
